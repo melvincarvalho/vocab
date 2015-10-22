@@ -45,7 +45,7 @@
 
   <div class="welcome row grad-bg" ng-hide="!loggedIn">
     <div class="absolute-center">
-      <h2><a target="_blank" ng-href="{{translate}}">{{num}}</a></h2>
+      <h2><a target="_blank" ng-href="{{translate}}">{{num}}</a> <a ng-click="reset()">{{points}}</a></h2>
       <div>
         <input placeholder="first" ng-model="first" class="fs-display-2"></input>
       </div>
@@ -56,7 +56,6 @@
         <input placeholder="storageURI" ng-model="storageURI" size="60"></input>
       </div>
       <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
-      <div class="mt fs-subhead"><a ng-click="reset()">{{points}}</a></div>
       <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">
           <span class="tc-light-blue-300">Again
             <br> {{again.length}}</span>
