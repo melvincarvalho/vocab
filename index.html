@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en" ng-app="Vocab" ng-cloak>
+
+<head>
+  <title>Vocab</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta href="doap.ttl#this" rel="http://www.w3.org/ns/solid/app#configuration">
+
+  <style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+      display: none !important;
+    }
+  </style>
+  <base target="_blank">
+  <link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
+  <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="img/png" href="images/favicon.png">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body ng-controller="Main" flow-prevent-drop flex-container="column">
+
+  <!-- Welcome page -->
+
+  <div class="welcome row grad-bg" ng-hide="loggedIn">
+    <div class="absolute-center tc-white-1">
+      <div class="welcome-title">
+        <span class="icon icon--xl icon--flat mdi mdi-clipboard-text tc-white-1"></span>
+        <span class="app-name fs-display-2">Vocab</span>
+      </div>
+      <div class="mt fs-subhead">Your personal vocab</div>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="TLSlogin()">
+        <span class="tc-light-blue-300">{{loginTLSButtonText}}</span>
+      </button>
+      <span class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Signup">
+        <a target="_blank" href="https://linkeddata.github.io/signup/?tab=signup" class="tc-light-blue-300">Signup</a>
+      </span>
+
+    </div>
+    <!-- Login -->
+  </div>
+
+  <div class="welcome row grad-bg" ng-hide="!loggedIn">
+    <div class="absolute-center">
+      <h2>{{num}}</h2>
+      <div>
+        <input placeholder="first" ng-model="first" class="fs-display-2"></input>
+      </div>
+      <div>
+        <input placeholder="second" ng-model="second" class="fs-display-2"></input>
+      </div>
+      <div>
+        <input placeholder="storageURI" ng-model="storageURI" size="60"></input>
+      </div>
+      <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="next()">
+          <span class="tc-light-blue-300">Yes</span>
+      </button>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="no" ng-click="next()">
+          <span class="tc-light-blue-300">No</span>
+      </button>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="next" ng-click="next()">
+          <span class="tc-light-blue-300">Next</span>
+      </button>
+    </div>
+    <!-- Login -->
+  </div>
+
+
+  <!-- Deps -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/velocity/velocity.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
+  <script src="bower_components/lumx/dist/lumx.min.js"></script>
+  <script src="vendor/rdflib.min.js"></script>
+  <script src="vendor/common.js"></script>
+  <!-- App -->
+  <script src="app/app.js"></script>
+</body>
+
+</html>

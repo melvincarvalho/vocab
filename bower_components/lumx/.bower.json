@@ -1,0 +1,63 @@
+{
+  "name": "lumx",
+  "description": "The first responsive front-end framework based on AngularJS & Google Material Design specifications",
+  "kewords": [
+    "AngularJS",
+    "Material Design",
+    "Framework"
+  ],
+  "homepage": "http://ui.lumapps.com",
+  "version": "0.3.95",
+  "authors": [
+    "LumApps"
+  ],
+  "license": "MIT",
+  "main": [
+    "dist/lumx.css",
+    "dist/lumx.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lumapps/lumx.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "libs",
+    "demo",
+    "gulpfile.js",
+    "build",
+    "*.md",
+    "package.json",
+    "index.html",
+    "app.yaml",
+    "app.js",
+    "launch.sh",
+    "/scss",
+    "/favicon.png",
+    "/fonts",
+    "/js",
+    "release.py"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "jquery": "latest",
+    "velocity": "latest",
+    "moment": "latest",
+    "bourbon": "latest",
+    "mdi": "latest"
+  },
+  "devDependencies": {
+    "angular-route": "latest",
+    "highlightjs": "latest"
+  },
+  "_release": "0.3.95",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.95",
+    "commit": "8dc0e535c2ba3ed43dad0f09c55427c02b6b81f1"
+  },
+  "_source": "git://github.com/lumapps/lumX.git",
+  "_target": "~0.3.39",
+  "_originalSource": "lumx"
+}

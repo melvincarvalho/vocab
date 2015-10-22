@@ -1,0 +1,14 @@
+<#this>
+    a <http://usefulinc.com/ns/doap#Project>, <http://www.w3.org/ns/solid/app#Configuration> ;
+    <http://usefulinc.com/ns/doap#description> "A Clipboard App for the SoLiD platform" ;
+    <http://usefulinc.com/ns/doap#download-page> <https://melvincarvalho.github.io/clip/> ;
+    <http://usefulinc.com/ns/doap#homepage> <https://melvincarvalho.github.io/clip/> ;
+    <http://usefulinc.com/ns/doap#license> "mit" ;
+    <http://usefulinc.com/ns/doap#maintainer> <http://melvincarvalho.com/#me> ;
+    <http://usefulinc.com/ns/doap#name> "Clip" ;
+    <http://usefulinc.com/ns/doap#shortdesc> "A Clipcoard App for the SoLiD platform" ;
+    <http://usefulinc.com/ns/doap#shortname> "Clip" ;
+    <http://www.w3.org/ns/solid/app#description> "A Clipboard App for the SoLiD platform" ;
+    <http://www.w3.org/ns/solid/app#homepage> <https://melvincarvalho.github.io/clip/> ;
+    <http://www.w3.org/ns/solid/app#icon> <http://melvincarvalho.github.io/clip/images/icon.png> ;
+    <http://www.w3.org/ns/solid/app#name> "Clip" .
