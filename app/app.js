@@ -135,9 +135,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.next();
   };
 
-  $scope.inchard = function() {
-    if ($scope.hard.indexOf($scope.num) === -1) {
-      $scope.hard.push($scope.num);
+  $scope.inceasy = function() {
+    if ($scope.easy.indexOf($scope.num) === -1) {
+      $scope.easy.push($scope.num);
     }
     $scope.points += 5;
     $scope.next();
@@ -178,7 +178,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.points = 0;
     $scope.again = [];
     $scope.good = [];
-    $scope.hard = [];
+    $scope.easy = [];
 
     // start in memory DB
     g = $rdf.graph();
