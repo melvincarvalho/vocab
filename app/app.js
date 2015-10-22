@@ -122,6 +122,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   $scope.incagain = function() {
     if ($scope.again.indexOf($scope.num) === -1) {
       $scope.again.push($scope.num);
+      localStorage.setItem('again', JSON.stringify($scope.again));
     }
     $scope.points += 5;
     $scope.next();
@@ -130,6 +131,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   $scope.incgood = function() {
     if ($scope.good.indexOf($scope.num) === -1) {
       $scope.good.push($scope.num);
+      localStorage.setItem('good', JSON.stringify($scope.good));
     }
     $scope.points += 5;
     $scope.next();
@@ -138,6 +140,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   $scope.inceasy = function() {
     if ($scope.easy.indexOf($scope.num) === -1) {
       $scope.easy.push($scope.num);
+      localStorage.setItem('easy', JSON.stringify($scope.easy));
     }
     $scope.points += 5;
     $scope.next();
@@ -176,9 +179,21 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.loggedIn = false;
     $scope.loginTLSButtonText = "Login";
     $scope.points = 0;
-    $scope.again = [];
-    $scope.good = [];
-    $scope.easy = [];
+    if (localStorage.getItem('again')) {
+      $scope.again = JSON.parse(localStorage.getItem('again'));
+    } else {
+      $scope.again = [];
+    }
+    if (localStorage.getItem('good')) {
+      $scope.good = JSON.parse(localStorage.getItem('good'));
+    } else {
+      $scope.good = [];
+    }
+    if (localStorage.getItem('easy')) {
+      $scope.easy = JSON.parse(localStorage.getItem('easy'));
+    } else {
+      $scope.easy = [];      
+    }
 
     // start in memory DB
     g = $rdf.graph();
