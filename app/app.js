@@ -166,7 +166,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
         $scope.second = words[i].object.value;
       }
     }
-    $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.second);
+    $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
   };
 
 
@@ -218,7 +218,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
           $scope.second = words[i].object.value;
         }
       }
-      $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.second);
+      $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
       $scope.storageURI = storageURI;
     });
 
