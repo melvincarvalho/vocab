@@ -57,14 +57,17 @@
       </div>
       <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
       <div class="mt fs-subhead"><a ng-click="reset()">{{points}}</a></div>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="again()">
-          <span class="tc-light-blue-300">Again</span>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">
+          <span class="tc-light-blue-300">Again
+            <br> {{again.length}}</span>
       </button>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="good()">
-          <span class="tc-light-blue-300">Good</span>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="incgood()">
+          <span class="tc-light-blue-300">Good
+          <br> {{good.length}}</span>
       </button>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="hard()">
-          <span class="tc-light-blue-300">Easy</span>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="inchard()">
+          <span class="tc-light-blue-300">Hard
+          <br> {{hard.length}}</span>
       </button>
     </div>
     <!-- Login -->

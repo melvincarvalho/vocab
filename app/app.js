@@ -119,17 +119,26 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
 
 
 
-  $scope.again = function() {
+  $scope.incagain = function() {
+    if ($scope.again.indexOf($scope.num) === -1) {
+      $scope.again.push($scope.num);
+    }
     $scope.points += 5;
     $scope.next();
   };
 
-  $scope.good = function() {
+  $scope.incgood = function() {
+    if ($scope.good.indexOf($scope.num) === -1) {
+      $scope.good.push($scope.num);
+    }
     $scope.points += 5;
     $scope.next();
   };
 
-  $scope.hard = function() {
+  $scope.inchard = function() {
+    if ($scope.hard.indexOf($scope.num) === -1) {
+      $scope.hard.push($scope.num);
+    }
     $scope.points += 5;
     $scope.next();
   };
@@ -167,6 +176,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.loggedIn = false;
     $scope.loginTLSButtonText = "Login";
     $scope.points = 0;
+    $scope.again = [];
+    $scope.good = [];
+    $scope.hard = [];
 
     // start in memory DB
     g = $rdf.graph();
