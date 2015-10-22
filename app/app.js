@@ -117,6 +117,24 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
 
   };
 
+
+
+  $scope.yes = function() {
+    $scope.points += 5;
+    $scope.next();
+  };
+
+  $scope.save = function() {
+    $scope.points += 5;
+    $scope.next();
+  };
+
+  $scope.reset = function() {
+    $scope.points = 0;
+    $scope.next();
+  };
+
+
   /**
    * Next value in vocab
    */
@@ -144,6 +162,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.initialized = true;
     $scope.loggedIn = false;
     $scope.loginTLSButtonText = "Login";
+    $scope.points = 0;
 
     // start in memory DB
     g = $rdf.graph();
