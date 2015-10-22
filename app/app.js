@@ -124,7 +124,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       $scope.again.push($scope.num);
       localStorage.setItem('again', JSON.stringify($scope.again));
     }
-    $scope.points += 5;
+    $scope.points += 1;
     $scope.next();
   };
 
@@ -133,7 +133,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       $scope.good.push($scope.num);
       localStorage.setItem('good', JSON.stringify($scope.good));
     }
-    $scope.points += 5;
+    $scope.points += 1;
     $scope.next();
   };
 
@@ -142,7 +142,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       $scope.easy.push($scope.num);
       localStorage.setItem('easy', JSON.stringify($scope.easy));
     }
-    $scope.points += 5;
+    $scope.points += 1;
     $scope.next();
   };
 
@@ -192,7 +192,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     if (localStorage.getItem('easy')) {
       $scope.easy = JSON.parse(localStorage.getItem('easy'));
     } else {
-      $scope.easy = [];      
+      $scope.easy = [];
     }
 
     // start in memory DB
