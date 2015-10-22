@@ -56,15 +56,15 @@
         <input placeholder="storageURI" ng-model="storageURI" size="60"></input>
       </div>
       <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
-      <div class="mt fs-subhead"><a href="{{user}}">{{points}}</a></div>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="yes()">
-          <span class="tc-light-blue-300">Yes</span>
+      <div class="mt fs-subhead"><a ng-click="reset()">{{points}}</a></div>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="again()">
+          <span class="tc-light-blue-300">Again</span>
       </button>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="save()">
-          <span class="tc-light-blue-300">Save</span>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="good()">
+          <span class="tc-light-blue-300">Good</span>
       </button>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="reset()">
-          <span class="tc-light-blue-300">Reset</span>
+      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="hard()">
+          <span class="tc-light-blue-300">Easy</span>
       </button>
     </div>
     <!-- Login -->

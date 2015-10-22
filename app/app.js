@@ -119,19 +119,23 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
 
 
 
-  $scope.yes = function() {
+  $scope.again = function() {
     $scope.points += 5;
     $scope.next();
   };
 
-  $scope.save = function() {
+  $scope.good = function() {
+    $scope.points += 5;
+    $scope.next();
+  };
+
+  $scope.hard = function() {
     $scope.points += 5;
     $scope.next();
   };
 
   $scope.reset = function() {
     $scope.points = 0;
-    $scope.next();
   };
 
 
