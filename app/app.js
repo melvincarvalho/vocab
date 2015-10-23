@@ -148,6 +148,26 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
 
   $scope.reset = function() {
     $scope.points = 0;
+    // TODO people specifi hooks, generalize
+    if ($scope.user === 'http://melvincarvalho.com/#me') {
+      $http({
+        method: 'PUT',
+        url: $scope.storageURI,
+        withCredentials: true,
+        headers: {
+          "Content-Type": "text/turtle"
+        },
+        data: '<> <> ' + (Math.round($scope.points / 5)*5) + ' .',
+      }).
+      success(function(data, status, headers) {
+        LxNotificationService.success('Points saved');
+        $location.search('storageURI', $scope.storageURI);
+        $scope.render();
+      }).
+      error(function(data, status, headers) {
+        LxNotificationService.error('could not save points');
+      });
+    }
   };
 
 
