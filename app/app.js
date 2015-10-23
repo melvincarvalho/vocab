@@ -149,7 +149,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   $scope.reset = function() {
     var points = $scope.points;
     $scope.points = 0;
-    // TODO people specifi hooks, generalize
+    // TODO people specific hooks, generalize
     if ($scope.user === 'http://melvincarvalho.com/#me') {
       $http({
         method: 'PUT',
