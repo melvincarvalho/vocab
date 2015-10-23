@@ -147,6 +147,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   };
 
   $scope.reset = function() {
+    var points = $scope.points;
     $scope.points = 0;
     // TODO people specifi hooks, generalize
     if ($scope.user === 'http://melvincarvalho.com/#me') {
@@ -157,7 +158,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
         headers: {
           "Content-Type": "text/turtle"
         },
-        data: '<> <> ' + (Math.round($scope.points / 5)*5) + ' .',
+        data: '<> <> ' + (Math.round(points / 5)*5) + ' .',
       }).
       success(function(data, status, headers) {
         LxNotificationService.success('Points saved');
