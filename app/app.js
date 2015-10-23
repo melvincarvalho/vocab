@@ -152,7 +152,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     if ($scope.user === 'http://melvincarvalho.com/#me') {
       $http({
         method: 'PUT',
-        url: $scope.storageURI,
+        url: 'https://public.databox.me/Public/inbox/points.ttl',
         withCredentials: true,
         headers: {
           "Content-Type": "text/turtle"
