@@ -155,7 +155,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
    * Next value in vocab
    */
   $scope.next = function() {
-    $scope.num = Math.round( 10000 * Math.random() );
+    $scope.num = Math.round( $scope.max * Math.random() );
     console.log ($scope.num);
     var words = g.statementsMatching($rdf.sym($scope.storageURI + '#' + $scope.num), RDFS('label'));
     for (var i=0; i<words.length; i++) {
@@ -179,6 +179,13 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.loggedIn = false;
     $scope.loginTLSButtonText = "Login";
     $scope.points = 0;
+    $scope.max = 10000;
+
+    if ($location.search().max) {
+      $scope.max = $location.search().max;
+    }
+
+
     if (localStorage.getItem('again')) {
       $scope.again = JSON.parse(localStorage.getItem('again'));
     } else {
