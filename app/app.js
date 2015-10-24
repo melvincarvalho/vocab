@@ -143,12 +143,16 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       localStorage.setItem('easy', JSON.stringify($scope.easy));
     }
     $scope.points += 1;
+    $scope.current += 1;
+    $scope.percent = Math.round((100* $scope.current) / $scope.points);
     $scope.next();
   };
 
   $scope.reset = function() {
     var points = $scope.points;
+    $scope.current = 0;
     $scope.points = 0;
+    $scope.percent = 0;
     // TODO people specific hooks, generalize
     if ($scope.user === 'http://melvincarvalho.com/#me') {
       $http({
@@ -200,6 +204,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.loggedIn = false;
     $scope.loginTLSButtonText = "Login";
     $scope.points = 0;
+    $scope.current = 0;
+    $scope.percent = 0;
     $scope.max = 10000;
 
     if ($location.search().max) {
