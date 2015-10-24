@@ -159,9 +159,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     // TODO people specific hooks, generalize
     var inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
     if (inbox) {
+      console.log('writing to : ' + inbox);
       $http({
         method: 'PUT',
-        url: inbox,
+        url: inbox.value + 'points.ttl',
         withCredentials: true,
         headers: {
           "Content-Type": "text/turtle"
@@ -265,7 +266,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   };
 
   $scope.getSeeAlso = function() {
-    var seeAlso = 'https://melvincarvalho.github.io/data/vocab/czech.ttl';
+    var seeAlso = 'https://melvincarvalho.github.io/vocab/data/seeAlso.ttl';
     if ($location.search().seeAlso) {
       seeAlso = $location.search().seeAlso;
     }
