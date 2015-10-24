@@ -125,6 +125,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       localStorage.setItem('again', JSON.stringify($scope.again));
     }
     $scope.points += 1;
+    $scope.percent = Math.round((100* $scope.current) / $scope.points);
     $scope.next();
   };
 
@@ -134,6 +135,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       localStorage.setItem('good', JSON.stringify($scope.good));
     }
     $scope.points += 1;
+    $scope.percent = Math.round((100* $scope.current) / $scope.points);
     $scope.next();
   };
 
