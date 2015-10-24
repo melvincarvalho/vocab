@@ -155,11 +155,13 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.current = 0;
     $scope.points = 0;
     $scope.percent = 0;
+
     // TODO people specific hooks, generalize
-    if ($scope.user === 'http://melvincarvalho.com/#me') {
+    var inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
+    if (inbox) {
       $http({
         method: 'PUT',
-        url: 'https://public.databox.me/Public/inbox/points.ttl',
+        url: inbox,
         withCredentials: true,
         headers: {
           "Content-Type": "text/turtle"
@@ -258,7 +260,21 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       $scope.storageURI = storageURI;
     });
 
+    $scope.getSeeAlso();
+
   };
+
+  $scope.getSeeAlso = function() {
+    var seeAlso = 'https://melvincarvalho.github.io/data/vocab/czech.ttl';
+    if ($location.search().seeAlso) {
+      seeAlso = $location.search().seeAlso;
+    }
+    f.nowOrWhenFetched(seeAlso, undefined, function(ok, body) {
+      console.log('seeAlso fetched from : ' + seeAlso);
+    });
+
+  };
+
 
   $scope.initApp();
 
