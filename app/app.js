@@ -118,7 +118,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   };
 
 
-
+  /**
+   * incagain increment again
+   */
   $scope.incagain = function() {
     if ($scope.again.indexOf($scope.num) === -1) {
       $scope.again.push($scope.num);
@@ -143,6 +145,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     if ($scope.easy.indexOf($scope.num) === -1) {
       $scope.easy.push($scope.num);
       localStorage.setItem('easy', JSON.stringify($scope.easy));
+      navigator.vibrate(500);
     }
     $scope.points += 1;
     $scope.current += 1;
