@@ -266,7 +266,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     console.log('load from ' + storageURI);
     f.nowOrWhenFetched(storageURI, undefined, function(ok, body) {
       console.log('loaded from ' + storageURI);
-      $scope.num = Math.round( 10000 * Math.random() );
+      $scope.num = Math.round( ($scope.max * Math.random())+1 );
       console.log ($scope.num);
       var words = g.statementsMatching($rdf.sym(storageURI + '#' + $scope.num), RDFS('label'));
       for (var i=0; i<words.length; i++) {
