@@ -81,6 +81,11 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.fetchSeeAlso();
   };
 
+  $scope.setMax = function(max) {
+    $scope.max = max;
+    $location.search('max', $scope.max);
+  };
+
   /**
   * toggle toggles second field
   */
@@ -243,6 +248,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     if ($location.search().max) {
       $scope.max = $location.search().max;
     }
+    $scope.setMax($scope.max);
 
 
     if (localStorage.getItem('again')) {
