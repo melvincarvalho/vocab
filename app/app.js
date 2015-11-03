@@ -78,7 +78,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   * fecthAll fetches everything
   */
   $scope.fetchAll = function() {
-    $scope.getSeeAlso();
+    $scope.fetchSeeAlso();
   };
 
 
@@ -281,7 +281,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       $scope.storageURI = storageURI;
     });
 
-    $scope.getSeeAlso();
+    $scope.fetchSeeAlso();
 
   };
 
@@ -298,8 +298,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     });
   };
 
-
-  $scope.getSeeAlso = function() {
+  /**
+   * fetchSeeAlso fetches the see also
+   */
+  $scope.fetchSeeAlso = function() {
     var seeAlso = 'https://melvincarvalho.github.io/vocab/data/seeAlso.ttl';
     if ($location.search().seeAlso) {
       seeAlso = $location.search().seeAlso;

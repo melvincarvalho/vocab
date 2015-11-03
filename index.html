@@ -1,73 +1,152 @@
-
 <!doctype html>
 <html lang="en" ng-app="Vocab" ng-cloak>
 
 <head>
-  <title>Vocab</title>
+  <title>Words</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta href="doap.ttl#this" rel="http://www.w3.org/ns/solid/app#configuration">
 
   <style>
-    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
-      display: none !important;
-    }
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+    display: none !important;
+  }
   </style>
   <base target="_blank">
   <link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
   <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" type="img/png" href="images/favicon.png">
+  <link rel="shortcut icon" type="img/png" href="images/icon.png">
   <link rel="manifest" href="manifest.json">
 </head>
 
 <body ng-controller="Main" flow-prevent-drop flex-container="column">
 
-  <!-- Welcome page -->
-
+  <!-- welcome page -->
   <div class="welcome row grad-bg" ng-hide="loggedIn">
     <div class="absolute-center tc-white-1">
       <div class="welcome-title">
         <span class="icon icon--xl icon--flat mdi mdi-clipboard-text tc-white-1"></span>
         <span class="app-name fs-display-2">Vocab</span>
       </div>
-      <div class="mt fs-subhead">Your personal vocab</div>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="TLSlogin()">
-        <span class="tc-light-blue-300">{{loginTLSButtonText}}</span>
-      </button>
-      <span class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Signup">
-        <a target="_blank" href="https://linkeddata.github.io/signup/?tab=signup" class="tc-light-blue-300">Signup</a>
-      </span>
-
+      <div class="mt fs-subhead">Your personal word trainer</div>
+      <div>
+        <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="TLSlogin()">
+          <span class="tc-light-blue-300 ng-binding">{{loginTLSButtonText}}</span>
+        </button>
+        <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="">
+          <span><a class="tc-light-blue-300 ng-binding" target="_blank" href="https://linkeddata.github.io/signup/?tab=signup" class="tc-white">Signup</a></span>
+        </button>
+      </div>
     </div>
-    <!-- Login -->
   </div>
+  <!-- end welcome page -->
 
+
+  <!-- main page -->
   <div class="welcome row grad-bg" ng-hide="!loggedIn">
-    <div class="absolute-center">
-      <h2><a target="_blank" ng-href="{{translate}}">{{num}}</a> <a ng-click="reset()">{{points}}</a> ({{percent}}%)</h2>
-      <div>
-        <input placeholder="first" ng-model="first" class="fs-display-2"></input>
+
+    <!-- menu -->
+    <div class="card">
+      <div class="toolbar">
+        <div class="toolbar__left mr+++">
+          <button class="btn btn--l btn--black btn--icon" lx-ripple>
+            <i class="mdi mdi-menu"></i>
+          </button>
+        </div>
+        <span class="toolbar__label fs-title">Words</span>
+        <div class="toolbar__right">
+          <lx-dropdown position="right" from-top>
+            <button class="btn btn--l btn--black btn--icon" lx-ripple lx-dropdown-toggle>
+              <i class="mdi mdi-dots-vertical"></i>
+            </button>
+            <lx-dropdown-menu>
+              <ul>
+                <li><a ng-click="openDialog('about')" class="dropdown-link">About</a></li>
+              </ul>
+            </lx-dropdown-menu>
+          </lx-dropdown>
+        </div>
       </div>
-      <div>
-        <input placeholder="second" ng-model="second" class="fs-display-2"></input>
-      </div>
-      <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">
-          <span class="tc-red-700">Again
-            <br> {{again.length}}</span>
-      </button>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="incgood()">
-          <span class="tc-light-blue-700">Good
-          <br> {{good.length}}</span>
-      </button>
-      <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="inceasy()">
-          <span class="tc-green-700">easy
-          <br> {{easy.length}}</span>
-      </button>
     </div>
-    <!-- Login -->
+    <!-- end menu -->
+
+
+    <!-- flexbox row -->
+    <div class="tc-white-1" flex-container="row">
+
+      <!-- sidebar -->
+      <div flex-item="2" flex-item-order="1">
+        <div class="sidebar sidebar--shown" ng-class="{'sidebar--shown': isVisible()}">
+          <div class="sidebar-menu">
+            <ul>
+              <li><a class="tc-black">Czech</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end sidebar -->
+
+      <!-- main app -->
+      <div flex-item="6" flex-item-order="2">
+
+        <div class="absolute-center">
+          <h2><a target="_blank" ng-href="{{translate}}">{{num}}</a> <a ng-click="reset()">{{points}}</a> ({{percent}}%)</h2>
+          <div>
+            <input placeholder="first" ng-model="first" class="fs-display-2"></input>
+          </div>
+          <div>
+            <input placeholder="second" ng-model="second" class="fs-display-2"></input>
+          </div>
+          <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
+          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">
+              <span class="tc-red-700">Again
+                <br> {{again.length}}</span>
+          </button>
+          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="incgood()">
+              <span class="tc-light-blue-700">Good
+              <br> {{good.length}}</span>
+          </button>
+          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="inceasy()">
+              <span class="tc-green-700">easy
+              <br> {{easy.length}}</span>
+          </button>
+        </div>
+
+      </div>
+      <!-- end main app -->
+
+    </div>
+    <!-- end flexbox row -->
+
   </div>
+  <!-- end main page -->
+
+
+  <!-- about -->
+  <lx-dialog class="dialog dialog--l" auto-close="true" id="about">
+    <div class="dialog__header">
+      <div class="toolbar bgc-blue-A700 pl+">
+        <span class="toolbar__label tc-white fs-title">
+          About Video
+        </span>
+        <div class="toolbar__right">
+          <button class="btn btn--l btn--white btn--icon" lx-ripple lx-dialog-close>
+            <span aria-hidden="true" class="mdi mdi-close"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="dialog__content p+">
+      <p>Video is a personal word trainer, that uses Linked Data to store a video on your personal online datastore.</p>
+      <br>
+      <p>This application follows the <a href="https://github.com/solid/solid-spec/">SoLiD specifications</a> to ensure that your data stays private.</p>
+    </div>
+    <div class="dialog__actions">
+      <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Close</button>
+    </div>
+  </lx-dialog>
+  <!-- end about -->
 
 
   <!-- Deps -->
