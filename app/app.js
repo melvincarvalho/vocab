@@ -52,9 +52,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       var scheme = 'http';
       var user = headers(header);
       if (user && user.length > 0 && user.slice(0,scheme.length) === scheme) {
-        $scope.notify('Login Successful!');
-        $scope.loggedIn = true;
-        $scope.user = user;
+        $scope.loginSuccess(user);
       } else {
         $scope.notify('WebID-TLS authentication failed.', 'error');
       }
@@ -64,6 +62,25 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
       $scope.loginTLSButtonText = 'Login';
     });
   };
+
+  /**
+  * loginSuccess called after successful login
+  * @param  {String} user the logged in user
+  */
+  $scope.loginSuccess = function(user) {
+    $scope.notify('Login Successful!');
+    $scope.loggedIn = true;
+    $scope.user = user;
+    $scope.fetchAll();
+  };
+
+  /**
+  * fecthAll fetches everything
+  */
+  $scope.fetchAll = function() {
+    $scope.getSeeAlso();
+  };
+
 
   /**
   * Logout
@@ -267,6 +284,20 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.getSeeAlso();
 
   };
+
+  /**
+  * openDialog opens a dialog box
+  * @param  {String} elem  The element to display
+  */
+  $scope.openDialog = function(elem) {
+    LxDialogService.open(elem);
+    $(document).keyup(function(e) {
+      if (e.keyCode===27) {
+        LxDialogService.close(elem);
+      }
+    });
+  };
+
 
   $scope.getSeeAlso = function() {
     var seeAlso = 'https://melvincarvalho.github.io/vocab/data/seeAlso.ttl';
