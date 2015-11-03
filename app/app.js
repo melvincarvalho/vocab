@@ -110,7 +110,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   $scope.save = function() {
     var clipboard = $scope.clipboard;
     if (!clipboard) {
-      LxNotificationService.error('clipboard is empty');
+      $scope.notify('clipboard is empty', 'error');
       return;
     }
     console.log(clipboard);
@@ -190,12 +190,12 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
         data: '<> <> ' + (Math.round(points / 5)*5) + ' .',
       }).
       success(function(data, status, headers) {
-        LxNotificationService.success('Points saved');
+        $scope.notify('Points saved');
         $location.search('storageURI', $scope.storageURI);
         $scope.render();
       }).
       error(function(data, status, headers) {
-        LxNotificationService.error('could not save points');
+        $scope.notify('could not save points', 'error');
       });
     }
   };
