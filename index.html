@@ -93,10 +93,10 @@
         <div class="absolute-center">
           <h2><a target="_blank" ng-href="{{translate}}">{{num}}</a> <a ng-click="reset()">{{points}}</a> ({{percent}}%)</h2>
           <div>
-            <input readonly placeholder="first" ng-model="first" class="fs-display-2 tc-black"></input>
+            <input readonly placeholder="first" id="first" ng-model="first" class="fs-display-2 tc-black" ng-click="toggle()"></input>
           </div>
           <div>
-            <input readonly placeholder="second" ng-model="second" class="fs-display-2 tc-black"></input>
+            <input readonly placeholder="second" id="second" ng-model="second" class="fs-display-2 tc-black" ng-click="toggle()"></input>
           </div>
           <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
           <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">

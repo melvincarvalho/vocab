@@ -81,6 +81,13 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.fetchSeeAlso();
   };
 
+  /**
+  * toggle toggles second field
+  */
+  $scope.toggle = function() {
+    $('#second').toggle('tc-black');
+  };
+
 
   /**
   * Logout
