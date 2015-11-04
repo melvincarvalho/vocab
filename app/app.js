@@ -30,6 +30,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
 
   var f,g;
 
+  // INIT
   /**
    * Init app
    */
@@ -37,6 +38,73 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.init();
   };
 
+  /**
+   * Set Initial variables
+   */
+  $scope.init = function() {
+
+    $scope.initialized = true;
+    $scope.loggedIn = false;
+    $scope.loginTLSButtonText = "Login";
+    $scope.points = 0;
+    $scope.current = 0;
+    $scope.percent = 0;
+    $scope.max = 2000;
+
+    if ($location.search().max) {
+      $scope.max = $location.search().max;
+    }
+    $scope.setMax($scope.max);
+
+    if (localStorage.getItem('again')) {
+      $scope.again = JSON.parse(localStorage.getItem('again'));
+    } else {
+      $scope.again = [];
+    }
+    if (localStorage.getItem('good')) {
+      $scope.good = JSON.parse(localStorage.getItem('good'));
+    } else {
+      $scope.good = [];
+    }
+    if (localStorage.getItem('easy')) {
+      $scope.easy = JSON.parse(localStorage.getItem('easy'));
+    } else {
+      $scope.easy = [];
+    }
+
+    // start in memory DB
+    g = $rdf.graph();
+    f = $rdf.fetcher(g);
+
+    var storageURI = 'https://melvincarvalho.github.io/data/vocab/czech.ttl';
+    if ($location.search().storageURI) {
+      storageURI = $location.search().storageURI;
+    }
+
+    console.log('load from ' + storageURI);
+    f.nowOrWhenFetched(storageURI, undefined, function(ok, body) {
+      console.log('loaded from ' + storageURI);
+      $scope.num = Math.round( ($scope.max * Math.random())+1 );
+      console.log ($scope.num);
+      var words = g.statementsMatching($rdf.sym(storageURI + '#' + $scope.num), RDFS('label'));
+      for (var i=0; i<words.length; i++) {
+        if (i===0) {
+          $scope.first = words[i].object.value;
+        }
+        if (i===1) {
+          $scope.second = words[i].object.value;
+        }
+      }
+      $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
+      $scope.storageURI = storageURI;
+    });
+
+    $scope.fetchSeeAlso();
+
+  };
+
+
+  // AUTH
   /**
   * TLS Login with WebID
   */
@@ -76,35 +144,6 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   };
 
   /**
-  * fecthAll fetches everything
-  */
-  $scope.fetchAll = function() {
-    $scope.fetchSeeAlso();
-  };
-
-  $scope.cycleMax = function() {
-    var cycle = [2000, 3000, 5000, 10000, 1000];
-    var ind = cycle.indexOf($scope.max);
-    var next = (ind+1)%(cycle.length);
-    $scope.setMax(cycle[next]);
-  };
-
-  $scope.setMax = function(max) {
-    $scope.max = max;
-    $location.search('max', $scope.max);
-    $scope.notify('Using ' + max + ' words');
-  };
-
-  /**
-  * toggle toggles second field
-  */
-  $scope.toggle = function() {
-    $('#second').show('tc-black');
-    setTimeout(function() { $('#second').hide('tc-black'); }, 600);
-  };
-
-
-  /**
   * Logout
   */
   $scope.logout = function() {
@@ -112,18 +151,27 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.notify('Logout Successful!');
   };
 
+
+  // FETCH
   /**
-  * Notify
-  * @param  {String} message the message to display
-  * @param  {String} type the type of notification, error or success
+  * fecthAll fetches everything
   */
-  $scope.notify = function(message, type) {
-    console.log(message);
-    if (type === 'error') {
-      LxNotificationService.error(message);
-    } else {
-      LxNotificationService.success(message);
+  $scope.fetchAll = function() {
+    $scope.fetchSeeAlso();
+  };
+
+  /**
+   * fetchSeeAlso fetches the see also
+   */
+  $scope.fetchSeeAlso = function() {
+    var seeAlso = 'https://melvincarvalho.github.io/vocab/data/seeAlso.ttl';
+    if ($location.search().seeAlso) {
+      seeAlso = $location.search().seeAlso;
     }
+    f.nowOrWhenFetched(seeAlso, undefined, function(ok, body) {
+      console.log('seeAlso fetched from : ' + seeAlso);
+    });
+
   };
 
   /**
@@ -156,6 +204,21 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
 
   };
 
+
+  // HELPER
+  /**
+  * Notify
+  * @param  {String} message the message to display
+  * @param  {String} type the type of notification, error or success
+  */
+  $scope.notify = function(message, type) {
+    console.log(message);
+    if (type === 'error') {
+      LxNotificationService.error(message);
+    } else {
+      LxNotificationService.success(message);
+    }
+  };
 
   /**
    * incagain increment again
@@ -225,7 +288,6 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     }
   };
 
-
   /**
    * Next value in vocab
    */
@@ -244,71 +306,43 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
   };
 
+  /**
+   * cycle through word lists
+   */
+  $scope.cycleMax = function() {
+    navigator.vibrate(500);
+    var cycle = [2000, 3000, 5000, 10000, 1000];
+    var ind = cycle.indexOf($scope.max);
+    var next = (ind+1)%(cycle.length);
+    $scope.setMax(cycle[next]);
+  };
 
   /**
-   * Set Initial variables
+   * setMax set maximum number of words
+   * @param  {Number} max number or words
    */
-  $scope.init = function() {
+  $scope.setMax = function(max) {
+    $scope.max = max;
+    $location.search('max', $scope.max);
+    $scope.notify('Using ' + max + ' words');
+  };
 
-    $scope.initialized = true;
-    $scope.loggedIn = false;
-    $scope.loginTLSButtonText = "Login";
-    $scope.points = 0;
-    $scope.current = 0;
-    $scope.percent = 0;
-    $scope.max = 2000;
-
-    if ($location.search().max) {
-      $scope.max = $location.search().max;
-    }
-    $scope.setMax($scope.max);
+  /**
+  * toggle toggles second field
+  */
+  $scope.toggle = function() {
+    $('#second').show('tc-black');
+    setTimeout(function() { $('#second').hide('tc-black'); }, 600);
+  };
 
 
-    if (localStorage.getItem('again')) {
-      $scope.again = JSON.parse(localStorage.getItem('again'));
-    } else {
-      $scope.again = [];
-    }
-    if (localStorage.getItem('good')) {
-      $scope.good = JSON.parse(localStorage.getItem('good'));
-    } else {
-      $scope.good = [];
-    }
-    if (localStorage.getItem('easy')) {
-      $scope.easy = JSON.parse(localStorage.getItem('easy'));
-    } else {
-      $scope.easy = [];
-    }
-
-    // start in memory DB
-    g = $rdf.graph();
-    f = $rdf.fetcher(g);
-
-    var storageURI = 'https://melvincarvalho.github.io/data/vocab/czech.ttl';
-    if ($location.search().storageURI) {
-      storageURI = $location.search().storageURI;
-    }
-
-    console.log('load from ' + storageURI);
-    f.nowOrWhenFetched(storageURI, undefined, function(ok, body) {
-      console.log('loaded from ' + storageURI);
-      $scope.num = Math.round( ($scope.max * Math.random())+1 );
-      console.log ($scope.num);
-      var words = g.statementsMatching($rdf.sym(storageURI + '#' + $scope.num), RDFS('label'));
-      for (var i=0; i<words.length; i++) {
-        if (i===0) {
-          $scope.first = words[i].object.value;
-        }
-        if (i===1) {
-          $scope.second = words[i].object.value;
-        }
-      }
-      $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
-      $scope.storageURI = storageURI;
-    });
-
-    $scope.fetchSeeAlso();
-
+  // RENDER
+  /**
+   * render screen
+   */
+  $scope.render = function() {
+    var col = Math.round(($scope.percent*200)/100);
+    $('.percent').css('color', 'rgb(0,'+col+',0)');
   };
 
   /**
@@ -322,28 +356,6 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
         LxDialogService.close(elem);
       }
     });
-  };
-
-  /**
-   * fetchSeeAlso fetches the see also
-   */
-  $scope.fetchSeeAlso = function() {
-    var seeAlso = 'https://melvincarvalho.github.io/vocab/data/seeAlso.ttl';
-    if ($location.search().seeAlso) {
-      seeAlso = $location.search().seeAlso;
-    }
-    f.nowOrWhenFetched(seeAlso, undefined, function(ok, body) {
-      console.log('seeAlso fetched from : ' + seeAlso);
-    });
-
-  };
-
-  /**
-   * render screen
-   */
-  $scope.render = function() {
-    var col = Math.round(($scope.percent*200)/100);
-    $('.percent').css('color', 'rgb(0,'+col+',0)');
   };
 
 
