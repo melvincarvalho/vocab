@@ -2,6 +2,7 @@
  * The main app
  */
 var App = angular.module('Vocab', [
+  'ngAudio',
   'lumx'
 ]);
 
@@ -10,7 +11,7 @@ App.config(function($locationProvider) {
     .html5Mode({ enabled: true, requireBase: false });
 });
 
-App.controller('Main', function($scope, $http, $location, $timeout, LxNotificationService, LxProgressService, LxDialogService) {
+App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxNotificationService, LxProgressService, LxDialogService) {
   // Namespaces
   var CHAT  = $rdf.Namespace("https://ns.rww.io/chat#");
   var CURR  = $rdf.Namespace("https://w3id.org/cc#");

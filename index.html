@@ -32,10 +32,10 @@
       </div>
       <div class="mt fs-subhead">Your personal word trainer</div>
       <div>
-        <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="TLSlogin()">
+        <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="TLSlogin()">
           <span class="tc-light-blue-300 ng-binding">{{loginTLSButtonText}}</span>
         </button>
-        <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="">
+        <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="">
           <span><a class="tc-light-blue-300 ng-binding" target="_blank" href="https://linkeddata.github.io/signup/?tab=signup" class="tc-white">Signup</a></span>
         </button>
       </div>
@@ -100,15 +100,15 @@
             <input readonly placeholder="second" id="second" ng-model="second" class="fs-display-2 tc-black" ng-click="toggle()"></input>
           </div>
           <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
-          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">
+          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">
               <span class="tc-red-700">Again
                 <br> {{again.length}}</span>
           </button>
-          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="incgood()">
+          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="incgood()">
               <span class="tc-light-blue-700">Good
               <br> {{good.length}}</span>
           </button>
-          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="inceasy()">
+          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="inceasy()">
               <span class="tc-green-700">easy
               <br> {{easy.length}}</span>
           </button>
@@ -156,6 +156,7 @@
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
   <script src="bower_components/lumx/dist/lumx.min.js"></script>
+  <script src="bower_components/angular-audio/app/angular.audio.js"></script>
   <script src="vendor/rdflib.min.js"></script>
   <script src="vendor/common.js"></script>
   <!-- App -->

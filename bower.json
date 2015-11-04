@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "lumx": "~0.3.39",
-    "angular-ui": "~0.4.0"
+    "angular-ui": "~0.4.0",
+    "angular-audio": "~1.7.1"
   }
 }
