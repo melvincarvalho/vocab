@@ -51,11 +51,16 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.percent = 0;
     $scope.max = 2000;
 
-    if ($location.search().max) {
-      $scope.max = $location.search().max;
-    }
-    $scope.setMax($scope.max);
+    $scope.initLocalStorage();
+    $scope.initRDF();
+    $scope.initQueryString();
 
+  };
+
+  /**
+   * Get values from localStorage
+   */
+  $scope.initLocalStorage = function() {
     if (localStorage.getItem('again')) {
       $scope.again = JSON.parse(localStorage.getItem('again'));
     } else {
@@ -71,36 +76,49 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     } else {
       $scope.easy = [];
     }
+  };
 
-    // start in memory DB
+  /**
+   * init RDF knowledge base
+   */
+  $scope.initRDF = function() {
     g = $rdf.graph();
     f = $rdf.fetcher(g);
+  };
 
-    var storageURI = 'https://melvincarvalho.github.io/data/vocab/czech.ttl';
-    if ($location.search().storageURI) {
-      storageURI = $location.search().storageURI;
+  /**
+   * init from query string
+   */
+  $scope.initQueryString = function() {
+    if ($location.search().max) {
+      $scope.max = $location.search().max;
     }
+    $scope.setMax($scope.max);
 
-    console.log('load from ' + storageURI);
-    f.nowOrWhenFetched(storageURI, undefined, function(ok, body) {
-      console.log('loaded from ' + storageURI);
-      $scope.num = Math.round( ($scope.max * Math.random())+1 );
-      console.log ($scope.num);
-      var words = g.statementsMatching($rdf.sym(storageURI + '#' + $scope.num), RDFS('label'));
-      for (var i=0; i<words.length; i++) {
-        if (i===0) {
-          $scope.first = words[i].object.value;
-        }
-        if (i===1) {
-          $scope.second = words[i].object.value;
-        }
-      }
-      $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
-      $scope.storageURI = storageURI;
-    });
+    $scope.storageURI = 'https://melvincarvalho.github.io/data/vocab/czech.ttl';
+    if ($location.search().storageURI) {
+      $scope.storageURI = $location.search().storageURI;
+    }
+    $scope.setStorageURI($scope.storageURI);
 
-    $scope.fetchSeeAlso();
+  };
 
+  /**
+   * setMax set maximum number of words
+   * @param  {Number} max number or words
+   */
+  $scope.setMax = function(max) {
+    $scope.max = max;
+    $location.search('max', $scope.max);
+  };
+
+  /**
+   * setStorageURI set the storage URI for words
+   * @param  {String} the storage URI for words
+   */
+  $scope.setStorageURI = function(storageURI) {
+    $scope.storageURI = storageURI;
+    $location.search('storageURI', $scope.storageURI);
   };
 
 
@@ -157,6 +175,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   * fecthAll fetches everything
   */
   $scope.fetchAll = function() {
+    $scope.fetchStorageURI();
     $scope.fetchSeeAlso();
   };
 
@@ -170,6 +189,27 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     }
     f.nowOrWhenFetched(seeAlso, undefined, function(ok, body) {
       console.log('seeAlso fetched from : ' + seeAlso);
+    });
+
+  };
+
+  /**
+   * fetches the word list from the storageURI
+   */
+  $scope.fetchStorageURI = function() {
+    f.nowOrWhenFetched($scope.storageURI, undefined, function(ok, body) {
+      $scope.num = Math.round( ($scope.max * Math.random())+1 );
+      console.log ($scope.num);
+      var words = g.statementsMatching($rdf.sym($scope.storageURI + '#' + $scope.num), RDFS('label'));
+      for (var i=0; i<words.length; i++) {
+        if (i===0) {
+          $scope.first = words[i].object.value;
+        }
+        if (i===1) {
+          $scope.second = words[i].object.value;
+        }
+      }
+      $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
     });
 
   };
@@ -315,16 +355,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     var ind = cycle.indexOf($scope.max);
     var next = (ind+1)%(cycle.length);
     $scope.setMax(cycle[next]);
-  };
-
-  /**
-   * setMax set maximum number of words
-   * @param  {Number} max number or words
-   */
-  $scope.setMax = function(max) {
-    $scope.max = max;
-    $location.search('max', $scope.max);
-    $scope.notify('Using ' + max + ' words');
+    $scope.notify('Using ' + cycle[next] + ' words');
   };
 
   /**
