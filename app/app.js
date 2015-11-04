@@ -72,6 +72,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.loggedIn = true;
     $scope.user = user;
     $scope.fetchAll();
+    $('#second').hide('tc-black');
   };
 
   /**
@@ -90,7 +91,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   * toggle toggles second field
   */
   $scope.toggle = function() {
-    $('#second').toggle('tc-black');
+    $('#second').show('tc-black');
+    setTimeout(function() { $('#second').hide('tc-black'); }, 1500);
+
   };
 
 
