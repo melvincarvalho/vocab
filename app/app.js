@@ -43,6 +43,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
    */
   $scope.init = function() {
 
+    $scope.firstLang = 'cs';
+    $scope.secondLang = 'en';
     $scope.initialized = true;
     $scope.loggedIn = false;
     $scope.loginTLSButtonText = "Login";
@@ -82,8 +84,13 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
    * init RDF knowledge base
    */
   $scope.initRDF = function() {
+    var PROXY = "https://rww.io/proxy.php?uri={uri}";
+    var AUTH_PROXY = "https://rww.io/auth-proxy?uri=";
+    var TIMEOUT = 90000;
+    $rdf.Fetcher.crossSiteProxyTemplate=PROXY;
+
     g = $rdf.graph();
-    f = $rdf.fetcher(g);
+    f = $rdf.fetcher(g, TIMEOUT);
   };
 
   /**
@@ -198,18 +205,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
    */
   $scope.fetchStorageURI = function() {
     f.nowOrWhenFetched($scope.storageURI, undefined, function(ok, body) {
-      $scope.num = Math.round( ($scope.max * Math.random())+1 );
-      console.log ($scope.num);
-      var words = g.statementsMatching($rdf.sym($scope.storageURI + '#' + $scope.num), RDFS('label'));
-      for (var i=0; i<words.length; i++) {
-        if (i===0) {
-          $scope.first = words[i].object.value;
-        }
-        if (i===1) {
-          $scope.second = words[i].object.value;
-        }
-      }
-      $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
+      console.log('vocab list fetched from : ' + $scope.storageURI);
+      $scope.notify('words loaded');
+      $scope.next();
     });
 
   };
@@ -333,13 +331,12 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
    */
   $scope.next = function() {
     $scope.num = Math.round( $scope.max * Math.random() );
-    console.log ($scope.num);
     var words = g.statementsMatching($rdf.sym($scope.storageURI + '#' + $scope.num), RDFS('label'));
     for (var i=0; i<words.length; i++) {
-      if (i===0) {
+      if (words[i].object.lang===$scope.firstLang) {
         $scope.first = words[i].object.value;
       }
-      if (i===1) {
+      if (words[i].object.lang===$scope.secondLang) {
         $scope.second = words[i].object.value;
       }
     }
