@@ -100,7 +100,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   */
   $scope.toggle = function() {
     $('#second').show('tc-black');
-    setTimeout(function() { $('#second').hide('tc-black'); }, 1000);
+    setTimeout(function() { $('#second').hide('tc-black'); }, 800);
 
   };
 
