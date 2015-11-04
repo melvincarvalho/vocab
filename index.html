@@ -13,7 +13,7 @@
   }
   </style>
   <base target="_blank">
-  <link rel="stylesheet" href="lumx.css">
+  <link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
   <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="img/png" href="images/icon.png">
@@ -63,9 +63,6 @@
             <lx-dropdown-menu>
               <ul>
                 <li><a ng-click="openDialog('about')" class="dropdown-link">About</a></li>
-                <li><a ng-click="setMax(1000)" class="dropdown-link">1000</a></li>
-                <li><a ng-click="setMax(2000)" class="dropdown-link">2000</a></li>
-                <li><a ng-click="setMax(10000)" class="dropdown-link">10000</a></li>
               </ul>
             </lx-dropdown-menu>
           </lx-dropdown>
@@ -83,7 +80,7 @@
         <div class="sidebar sidebar--shown" ng-class="{'sidebar--shown': isVisible()}">
           <div class="sidebar-menu">
             <ul>
-              <li><a class="tc-black">Czech {{max}}</a></li>
+              <li class="tc-blue-700"><a ng-click="cycleMax()">Czech {{max}} <span class="icon icon--s icon--flat mdi mdi-arrow-up-bold tc-blue-700"></span></a></li>
             </ul>
           </div>
         </div>
@@ -157,7 +154,7 @@
   <script src="bower_components/velocity/velocity.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
-  <script src="lumx.min.js"></script>
+  <script src="bower_components/lumx/dist/lumx.min.js"></script>
   <script src="vendor/rdflib.min.js"></script>
   <script src="vendor/common.js"></script>
   <!-- App -->

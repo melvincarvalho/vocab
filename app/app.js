@@ -82,6 +82,13 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.fetchSeeAlso();
   };
 
+  $scope.cycleMax = function() {
+    var cycle = [2000, 3000, 5000, 10000, 1000];
+    var ind = cycle.indexOf($scope.max);
+    var next = (ind+1)%(cycle.length);
+    $scope.setMax(cycle[next]);
+  };
+
   $scope.setMax = function(max) {
     $scope.max = max;
     $location.search('max', $scope.max);
@@ -247,7 +254,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.points = 0;
     $scope.current = 0;
     $scope.percent = 0;
-    $scope.max = 10000;
+    $scope.max = 2000;
 
     if ($location.search().max) {
       $scope.max = $location.search().max;
