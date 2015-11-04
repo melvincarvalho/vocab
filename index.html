@@ -80,7 +80,7 @@
         <div class="sidebar sidebar--shown" ng-class="{'sidebar--shown': isVisible()}">
           <div class="sidebar-menu">
             <ul>
-              <li class="tc-blue-700"><a ng-click="cycleMax()">Czech {{max}} <span class="icon icon--s icon--flat mdi mdi-arrow-up-bold tc-blue-700"></span></a></li>
+              <li class="tc-green-700"><a ng-click="cycleMax()"><span class="icon icon--m icon--flat mdi mdi-arrow-up tc-green-700"></span>Czech {{max}}</a></li>
             </ul>
           </div>
         </div>
@@ -98,7 +98,7 @@
           <div>
             <input readonly placeholder="second" id="second" ng-model="second" class="fs-display-2 tc-black" ng-click="toggle()"></input>
           </div>
-          <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
+          <!-- <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div> -->
           <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">
               <span class="tc-red-700">Again
                 <br> {{again.length}}</span>
