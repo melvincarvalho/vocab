@@ -54,9 +54,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.percent = 0;
     $scope.max = 2000;
 
-    $scope.initLocalStorage();
     $scope.initRDF();
     $scope.initQueryString();
+    $scope.initLocalStorage();
 
   };
 
@@ -78,6 +78,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       $scope.easy = JSON.parse(localStorage.getItem('easy'));
     } else {
       $scope.easy = [];
+    }
+    if (localStorage.getItem('user')) {
+      var user = JSON.parse(localStorage.getItem('user'));
+      $scope.loginSuccess(user);
     }
   };
 
@@ -167,6 +171,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.user = user;
     $scope.fetchAll();
     $('#second').hide('tc-black');
+    localStorage.setItem('user', JSON.stringify(user));
   };
 
   /**
@@ -175,6 +180,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   $scope.logout = function() {
     $scope.init();
     $scope.notify('Logout Successful!');
+    localStorage.removeItem('user');
   };
 
 
