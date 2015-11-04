@@ -101,7 +101,6 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   $scope.toggle = function() {
     $('#second').show('tc-black');
     setTimeout(function() { $('#second').hide('tc-black'); }, 600);
-
   };
 
 
@@ -169,6 +168,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.points += 1;
     $scope.percent = Math.round((100* $scope.current) / $scope.points);
     $scope.next();
+
+    var col = Math.round(($scope.percent*192)/100);
+    $('.percent').css('color', 'rgb(0,'+col+',0)');
   };
 
   $scope.incgood = function() {
@@ -179,6 +181,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.points += 1;
     $scope.percent = Math.round((100* $scope.current) / $scope.points);
     $scope.next();
+
+    var col = Math.round(($scope.percent*192)/100);
+    $('.percent').css('color', 'rgb(0,'+col+',0)');
   };
 
   $scope.inceasy = function() {
@@ -191,6 +196,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
     $scope.current += 1;
     $scope.percent = Math.round((100* $scope.current) / $scope.points);
     $scope.next();
+
+    var col = Math.round(($scope.percent*192)/100);
+    $('.percent').css('color', 'rgb(0,'+col+',0)');
   };
 
   $scope.reset = function() {
