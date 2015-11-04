@@ -81,7 +81,7 @@
         <div class="sidebar sidebar--shown" ng-class="{'sidebar--shown': isVisible()}">
           <div class="sidebar-menu">
             <ul>
-              <li class="tc-blue-700"><a ng-click="cycleMax()"><span class="icon icon--m icon--flat mdi mdi-arrow-up tc-blue-700"></span>Czech {{max}}</a></li>
+              <li class="tc-blue-700"><a ng-click="cycleMax()"><span class="icon icon--m icon--flat mdi mdi-rotate-3d tc-blue-700"></span>Czech {{max}}</a></li>
             </ul>
           </div>
         </div>
@@ -92,7 +92,7 @@
       <div flex-item="6" flex-item-order="2">
 
         <div class="absolute-center">
-          <h2><a target="_blank" ng-href="{{translate}}">{{num}}</a> <a class="tc-black" ng-click="reset()">{{points}}</a> <span ng-class="percentClass" class="percent" id="percent">({{percent}}%)</span></h2>
+          <h2><a target="_blank" ng-href="{{translate}}"><span class="icon icon--m icon--flat mdi mdi-chart-bar tc-blue"></span>{{num}}</a> <a class="tc-black" ng-click="reset()">{{points}}</a> <span ng-class="percentClass" class="percent" id="percent">({{percent}}%)</span></h2>
           <div>
             <input readonly placeholder="loading..." id="first" ng-model="first" class="fs-display-2 tc-black" ng-click="toggle()"></input>
           </div>
