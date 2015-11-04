@@ -85,6 +85,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, LxNotificati
   $scope.setMax = function(max) {
     $scope.max = max;
     $location.search('max', $scope.max);
+    $scope.notify('Using ' + max + ' words');
   };
 
   /**
