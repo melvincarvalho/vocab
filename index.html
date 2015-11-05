@@ -92,7 +92,7 @@
       <div flex-item="6" flex-item-order="2">
 
         <div class="absolute-center">
-          <h2><a target="_blank" ng-href="{{translate}}"><span class="icon icon--m icon--flat mdi mdi-chart-bar tc-white"></span>{{num}}</a> <a class="tc-black" ng-click="reset()">{{points}}</a> <span ng-class="percentClass" class="percent" id="percent">({{percent}}%)</span></h2>
+          <h2><a target="_blank" ng-href="{{translate}}"><span class="icon icon--m icon--flat mdi mdi-chart-bar tc-white"></span>{{num}}</a> <a class="tc-black" ng-click="save()">{{points}}</a> <span ng-class="percentClass" class="percent" id="percent">({{percent}}%)</span></h2>
           <div>
             <input readonly placeholder="loading..." id="first" ng-model="first" class="fs-display-2 tc-black" ng-click="toggle()"></input>
           </div>
@@ -100,15 +100,15 @@
             <input readonly placeholder="second" id="second" ng-model="second" class="fs-display-2 tc-black" ng-click="toggle()"></input>
           </div>
           <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
-          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="yes" ng-click="incagain()">
+          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="again" ng-click="incagain()">
               <span class="tc-red-700">Again
                 <br> {{again.length}}</span>
           </button>
-          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Save" ng-click="incgood()">
+          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="good" ng-click="incgood()">
               <span class="tc-light-blue-700">Good
               <br> {{good.length}}</span>
           </button>
-          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="reset" ng-click="inceasy()">
+          <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="easy" ng-click="inceasy()">
               <span class="tc-green-700">easy
               <br> {{easy.length}}</span>
           </button>

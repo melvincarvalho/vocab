@@ -4,8 +4,8 @@ var __scope;
 
 
 /**
- * The main app
- */
+* The main app
+*/
 var App = angular.module('Vocab', [
   'ngAudio',
   'lumx'
@@ -13,7 +13,7 @@ var App = angular.module('Vocab', [
 
 App.config(function($locationProvider) {
   $locationProvider
-    .html5Mode({ enabled: true, requireBase: false });
+  .html5Mode({ enabled: true, requireBase: false });
 });
 
 App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxNotificationService, LxProgressService, LxDialogService) {
@@ -38,15 +38,15 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
 
   // INIT
   /**
-   * Init app
-   */
+  * Init app
+  */
   $scope.initApp = function() {
     $scope.init();
   };
 
   /**
-   * Set Initial variables
-   */
+  * Set Initial variables
+  */
   $scope.init = function() {
 
     $scope.firstLang = 'cs';
@@ -68,8 +68,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * Get values from localStorage
-   */
+  * Get values from localStorage
+  */
   $scope.initLocalStorage = function() {
     if (localStorage.getItem('again')) {
       $scope.again = JSON.parse(localStorage.getItem('again'));
@@ -93,8 +93,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * init RDF knowledge base
-   */
+  * init RDF knowledge base
+  */
   $scope.initRDF = function() {
     var PROXY = "https://rww.io/proxy.php?uri={uri}";
     var AUTH_PROXY = "https://rww.io/auth-proxy?uri=";
@@ -106,8 +106,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * init from query string
-   */
+  * init from query string
+  */
   $scope.initQueryString = function() {
     if ($location.search().max) {
       $scope.max = $location.search().max;
@@ -123,18 +123,18 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * setMax set maximum number of words
-   * @param  {Number} max number or words
-   */
+  * setMax set maximum number of words
+  * @param  {Number} max number or words
+  */
   $scope.setMax = function(max) {
     $scope.max = max;
     $location.search('max', $scope.max);
   };
 
   /**
-   * setStorageURI set the storage URI for words
-   * @param  {String} the storage URI for words
-   */
+  * setStorageURI set the storage URI for words
+  * @param  {String} the storage URI for words
+  */
   $scope.setStorageURI = function(storageURI) {
     $scope.storageURI = storageURI;
     $location.search('storageURI', $scope.storageURI);
@@ -201,8 +201,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * fetchSeeAlso fetches the see also
-   */
+  * fetchSeeAlso fetches the see also
+  */
   $scope.fetchSeeAlso = function() {
     var seeAlso = 'https://melvincarvalho.github.io/vocab/data/seeAlso.ttl';
     if ($location.search().seeAlso) {
@@ -215,8 +215,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * fetches the word list from the storageURI
-   */
+  * fetches the word list from the storageURI
+  */
   $scope.fetchStorageURI = function() {
     var dict = $scope.firstLang + '-' + $scope.secondLang;
     if (localStorage.getItem(dict)) {
@@ -235,38 +235,41 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * Save clip
-   */
+  * Save score
+  */
   $scope.save = function() {
-    var clipboard = $scope.clipboard;
-    if (!clipboard) {
-      $scope.notify('clipboard is empty', 'error');
-      return;
-    }
-    console.log(clipboard);
+    var points = $scope.points;
+    $scope.current = 0;
+    $scope.points = 0;
+    $scope.percent = 0;
 
-    $http({
+    // TODO people specific hooks, generalize
+    var inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
+    if (inbox) {
+      console.log('writing to : ' + inbox);
+      $http({
         method: 'PUT',
-        url: $scope.storageURI,
+        url: inbox.value + 'points.ttl',
         withCredentials: true,
         headers: {
-            "Content-Type": "text/turtle"
+          "Content-Type": "text/turtle"
         },
-        data: '<#this> <urn:tmp:clipboard> """' + clipboard + '""" .',
-    }).
-    success(function(data, status, headers) {
-      $scope.notify('clipboard saved');
-      $location.search('storageURI', $scope.storageURI);
-    }).
-    error(function(data, status, headers) {
-      $scope.notify('could not save clipboard', 'error');
-    });
-
+        data: '<> <> ' + (Math.round(points / 5)*5) + ' .',
+      }).
+      success(function(data, status, headers) {
+        $scope.notify('Points saved');
+        $location.search('storageURI', $scope.storageURI);
+        $scope.render();
+      }).
+      error(function(data, status, headers) {
+        $scope.notify('could not save points', 'error');
+      });
+    }
   };
 
   /**
-   * cache the dictionary
-   */
+  * cache the dictionary
+  */
   $scope.cacheDictionary = function() {
     var dict = $scope.firstLang + '-' + $scope.secondLang;
     var words = [];
@@ -278,8 +281,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * uncache the dictionary
-   */
+  * uncache the dictionary
+  */
   $scope.uncacheDictionary = function() {
     var lit;
     var dict = $scope.firstLang + '-' + $scope.secondLang;
@@ -324,8 +327,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * incagain increment again
-   */
+  * incagain increment again
+  */
   $scope.incagain = function() {
     if ($scope.again.indexOf($scope.num) === -1) {
       $scope.again.push($scope.num);
@@ -361,39 +364,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.render();
   };
 
-  $scope.reset = function() {
-    var points = $scope.points;
-    $scope.current = 0;
-    $scope.points = 0;
-    $scope.percent = 0;
-
-    // TODO people specific hooks, generalize
-    var inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
-    if (inbox) {
-      console.log('writing to : ' + inbox);
-      $http({
-        method: 'PUT',
-        url: inbox.value + 'points.ttl',
-        withCredentials: true,
-        headers: {
-          "Content-Type": "text/turtle"
-        },
-        data: '<> <> ' + (Math.round(points / 5)*5) + ' .',
-      }).
-      success(function(data, status, headers) {
-        $scope.notify('Points saved');
-        $location.search('storageURI', $scope.storageURI);
-        $scope.render();
-      }).
-      error(function(data, status, headers) {
-        $scope.notify('could not save points', 'error');
-      });
-    }
-  };
-
   /**
-   * Next value in vocab
-   */
+  * Next value in vocab
+  */
   $scope.next = function() {
     $scope.num = Math.round( $scope.max * Math.random() );
     var pair = $scope.getPair($scope.num);
@@ -403,10 +376,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * gets a pair of words
-   * @param  {Number} num the number of the word
-   * @return {Object} object with firstLang word, secondLang word
-   */
+  * gets a pair of words
+  * @param  {Number} num the number of the word
+  * @return {Object} object with firstLang word, secondLang word
+  */
   $scope.getPair = function(num) {
     var ret = {};
     var words = g.statementsMatching($rdf.sym($scope.storageURI + '#' + num), RDFS('label'));
@@ -423,8 +396,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * cycle through word lists
-   */
+  * cycle through word lists
+  */
   $scope.cycleMax = function() {
     navigator.vibrate(500);
     var cycle = [2000, 3000, 5000, 10000, 1000];
@@ -445,10 +418,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
 
   // RENDER
   /**
-   * render screen
-   */
+  * render screen
+  */
   $scope.render = function() {
-    var col = 22+Math.round(($scope.percent*170)/100);
+    var col = 30+Math.round(($scope.percent*160)/100);
     $('.percent').css('color', 'rgb(0,'+col+',0)');
   };
 
