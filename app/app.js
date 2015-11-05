@@ -245,11 +245,11 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
 
     // TODO people specific hooks, generalize
     $scope.inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
-    if ($scope.inbox.value) {
-      console.log('writing to : ' + $scope.inbox.value);
+    if ($scope.inbox.uri) {
+      console.log('writing to : ' + $scope.inbox.uri);
       $http({
         method: 'PUT',
-        url: $scope.inbox.value + 'points.ttl',
+        url: $scope.inbox.uri + 'points.ttl',
         withCredentials: true,
         headers: {
           "Content-Type": "text/turtle"
@@ -327,9 +327,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-  * incagain increment again
+  * incAgain increment again
   */
-  $scope.incagain = function() {
+  $scope.incAgain = function() {
     if ($scope.again.indexOf($scope.num) === -1) {
       $scope.again.push($scope.num);
       localStorage.setItem('again', JSON.stringify($scope.again));
@@ -340,7 +340,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.render();
   };
 
-  $scope.incgood = function() {
+  /**
+  * incGood increment good
+   */
+  $scope.incGood = function() {
     if ($scope.good.indexOf($scope.num) === -1) {
       $scope.good.push($scope.num);
       localStorage.setItem('good', JSON.stringify($scope.good));
@@ -351,7 +354,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.render();
   };
 
-  $scope.inceasy = function() {
+  /**
+  * incEasy increment easy
+   */
+  $scope.incEasy = function() {
     if ($scope.easy.indexOf($scope.num) === -1) {
       $scope.easy.push($scope.num);
       localStorage.setItem('easy', JSON.stringify($scope.easy));
