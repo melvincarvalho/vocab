@@ -244,12 +244,12 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.percent = 0;
 
     // TODO people specific hooks, generalize
-    var inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
-    if (inbox) {
-      console.log('writing to : ' + inbox);
+    $scope.inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
+    if ($scope.inbox.value) {
+      console.log('writing to : ' + $scope.inbox.value);
       $http({
         method: 'PUT',
-        url: inbox.value + 'points.ttl',
+        url: $scope.inbox.value + 'points.ttl',
         withCredentials: true,
         headers: {
           "Content-Type": "text/turtle"
