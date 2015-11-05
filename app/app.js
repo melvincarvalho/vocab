@@ -286,8 +286,6 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     var words = JSON.parse(localStorage.getItem(dict));
     var statement;
     for (var i=0; i<words.length; i++) {
-      //console.log(words[i]);
-
       lit = $rdf.lit(words[i][$scope.firstLang]);
       lit.lang = $scope.firstLang;
       g.add(
@@ -305,10 +303,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
         lit,
         $rdf.sym($scope.storageURI)
       );
-
-
     }
     console.log('vocab list fetched from : ' + $scope.storageURI);
+    $scope.next();
   };
 
   // HELPER
