@@ -1,3 +1,8 @@
+// for debug only
+var __kb;
+var __scope;
+
+
 /**
  * The main app
  */
@@ -58,6 +63,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.initQueryString();
     $scope.initLocalStorage();
 
+    __kb = g;
+    __scope = $scope;
   };
 
   /**
@@ -211,10 +218,18 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
    * fetches the word list from the storageURI
    */
   $scope.fetchStorageURI = function() {
+    var dict = $scope.firstLang + '-' + $scope.secondLang;
+    if (localStorage.getItem(dict)) {
+      $scope.uncacheDictionary();
+      return;
+    }
     f.nowOrWhenFetched($scope.storageURI, undefined, function(ok, body) {
       console.log('vocab list fetched from : ' + $scope.storageURI);
       $scope.notify('words loaded');
       $scope.next();
+      if (!localStorage.getItem(dict)) {
+        $scope.cacheDictionary();
+      }
     });
 
   };
@@ -249,6 +264,52 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
 
   };
 
+  /**
+   * cache the dictionary
+   */
+  $scope.cacheDictionary = function() {
+    var dict = $scope.firstLang + '-' + $scope.secondLang;
+    var words = [];
+    for (var i=1; i<=10000; i++) {
+      words.push($scope.getPair(i));
+    }
+    localStorage.setItem(dict, JSON.stringify(words));
+    console.log('dict ' + dict + ' saved');
+  };
+
+  /**
+   * uncache the dictionary
+   */
+  $scope.uncacheDictionary = function() {
+    var lit;
+    var dict = $scope.firstLang + '-' + $scope.secondLang;
+    var words = JSON.parse(localStorage.getItem(dict));
+    var statement;
+    for (var i=0; i<words.length; i++) {
+      //console.log(words[i]);
+
+      lit = $rdf.lit(words[i][$scope.firstLang]);
+      lit.lang = $scope.firstLang;
+      g.add(
+        $rdf.sym($scope.storageURI + '#' + (i + 1)),
+        RDFS('label'),
+        $rdf.lit(words[i][$scope.firstLang]),
+        $rdf.sym($scope.storageURI)
+      );
+
+      lit = $rdf.lit(words[i][$scope.secondLang]);
+      lit.lang = $scope.secondLang;
+      g.add(
+        $rdf.sym($scope.storageURI + '#' + (i + 1)),
+        RDFS('label'),
+        lit,
+        $rdf.sym($scope.storageURI)
+      );
+
+
+    }
+    console.log('vocab list fetched from : ' + $scope.storageURI);
+  };
 
   // HELPER
   /**
@@ -338,16 +399,30 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
    */
   $scope.next = function() {
     $scope.num = Math.round( $scope.max * Math.random() );
-    var words = g.statementsMatching($rdf.sym($scope.storageURI + '#' + $scope.num), RDFS('label'));
+    var pair = $scope.getPair($scope.num);
+    $scope.first = pair[$scope.firstLang];
+    $scope.second = pair[$scope.secondLang];
+    $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
+  };
+
+  /**
+   * gets a pair of words
+   * @param  {Number} num the number of the word
+   * @return {Object} object with firstLang word, secondLang word
+   */
+  $scope.getPair = function(num) {
+    var ret = {};
+    var words = g.statementsMatching($rdf.sym($scope.storageURI + '#' + num), RDFS('label'));
     for (var i=0; i<words.length; i++) {
       if (words[i].object.lang===$scope.firstLang) {
-        $scope.first = words[i].object.value;
+        ret[$scope.firstLang] = words[i].object.value;
       }
       if (words[i].object.lang===$scope.secondLang) {
-        $scope.second = words[i].object.value;
+        ret[$scope.secondLang] = words[i].object.value;
       }
     }
-    $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
+    return ret;
+
   };
 
   /**
