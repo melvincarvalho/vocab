@@ -302,7 +302,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       g.add(
         $rdf.sym($scope.storageURI + '#' + (i + 1)),
         RDFS('label'),
-        lit,
+        $rdf.lit(lit),
         $rdf.sym($scope.storageURI)
       );
 
