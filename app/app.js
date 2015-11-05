@@ -448,7 +448,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
    * render screen
    */
   $scope.render = function() {
-    var col = Math.round(($scope.percent*200)/100);
+    var col = 22+Math.round(($scope.percent*170)/100);
     $('.percent').css('color', 'rgb(0,'+col+',0)');
   };
 
