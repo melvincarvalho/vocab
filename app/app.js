@@ -293,7 +293,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       g.add(
         $rdf.sym($scope.storageURI + '#' + (i + 1)),
         RDFS('label'),
-        $rdf.lit(words[i][$scope.firstLang]),
+        lit,
         $rdf.sym($scope.storageURI)
       );
 
@@ -302,7 +302,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       g.add(
         $rdf.sym($scope.storageURI + '#' + (i + 1)),
         RDFS('label'),
-        $rdf.lit(lit),
+        lit,
         $rdf.sym($scope.storageURI)
       );
 
