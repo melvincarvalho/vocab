@@ -21,8 +21,10 @@ $ bower install
 | Languages | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/gb.png) | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/cz.png) | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/fr.png) |
 | --- |:---:| ---:|---:|
 | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/gb.png) | - | [cs-en](https://melvincarvalho.github.io/vocab/) | fr-en |
-| ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/cz.png) | en-cs | - | fr-cs |
+| ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/cz.png) | [cs-en](https://melvincarvalho.github.io/vocab/?lang1=en&lang2=cs) | - | fr-cs |
 | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/fr.png) | en-fr | cs-fr | - |
+
+Add your own language pair!
 
 # Tutorial
 
