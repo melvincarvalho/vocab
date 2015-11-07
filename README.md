@@ -20,9 +20,9 @@ $ bower install
 
 | Languages | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/gb.png) | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/cz.png) | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/fr.png) |
 | --- |:---:| ---:|---:|
-| ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/gb.png) | - | en-cs | en - fr |
-| ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/cz.png) | [cs-en](https://melvincarvalho.github.io/vocab/) | - | cs-fr |
-| ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/fr.png) | en-fr | fr-en | - |
+| ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/gb.png) | - | [cs-en](https://melvincarvalho.github.io/vocab/) | fr-en |
+| ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/cz.png) | en-cs | - | fr-cs |
+| ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/fr.png) | en-fr | cs-fr | - |
 
 # Tutorial
 
