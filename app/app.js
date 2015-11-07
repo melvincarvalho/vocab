@@ -49,8 +49,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   */
   $scope.init = function() {
 
-    $scope.firstLang = 'cs';
-    $scope.secondLang = 'en';
+    $scope.lang1 = 'cs';
+    $scope.lang2 = 'en';
     $scope.initialized = true;
     $scope.loggedIn = false;
     $scope.loginTLSButtonText = "Login";
@@ -119,6 +119,14 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       $scope.storageURI = $location.search().storageURI;
     }
     $scope.setStorageURI($scope.storageURI);
+
+    if ($location.search().lang1) {
+      $scope.lang1 = $location.search().lang1;
+    }
+
+    if ($location.search().lang2) {
+      $scope.lang2 = $location.search().lang2;
+    }
 
   };
 
@@ -218,7 +226,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   * fetches the word list from the storageURI
   */
   $scope.fetchStorageURI = function() {
-    var dict = $scope.firstLang + '-' + $scope.secondLang;
+    var dict = $scope.lang1 + '-' + $scope.lang2;
     if (localStorage.getItem(dict)) {
       $scope.uncacheDictionary();
       return;
@@ -271,7 +279,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   * cache the dictionary
   */
   $scope.cacheDictionary = function() {
-    var dict = $scope.firstLang + '-' + $scope.secondLang;
+    var dict = $scope.lang1 + '-' + $scope.lang2;
     var words = [];
     for (var i=1; i<=10000; i++) {
       words.push($scope.getPair(i));
@@ -285,12 +293,12 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   */
   $scope.uncacheDictionary = function() {
     var lit;
-    var dict = $scope.firstLang + '-' + $scope.secondLang;
+    var dict = $scope.lang1 + '-' + $scope.lang2;
     var words = JSON.parse(localStorage.getItem(dict));
     var statement;
     for (var i=0; i<words.length; i++) {
-      lit = $rdf.lit(words[i][$scope.firstLang]);
-      lit.lang = $scope.firstLang;
+      lit = $rdf.lit(words[i][$scope.lang1]);
+      lit.lang = $scope.lang1;
       g.add(
         $rdf.sym($scope.storageURI + '#' + (i + 1)),
         RDFS('label'),
@@ -298,8 +306,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
         $rdf.sym($scope.storageURI)
       );
 
-      lit = $rdf.lit(words[i][$scope.secondLang]);
-      lit.lang = $scope.secondLang;
+      lit = $rdf.lit(words[i][$scope.lang2]);
+      lit.lang = $scope.lang2;
       g.add(
         $rdf.sym($scope.storageURI + '#' + (i + 1)),
         RDFS('label'),
@@ -376,25 +384,25 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   $scope.next = function() {
     $scope.num = Math.round( $scope.max * Math.random() );
     var pair = $scope.getPair($scope.num);
-    $scope.first = pair[$scope.firstLang];
-    $scope.second = pair[$scope.secondLang];
-    $scope.translate = "https://translate.google.com/#cs/en/" + encodeURI($scope.first);
+    $scope.first = pair[$scope.lang1];
+    $scope.second = pair[$scope.lang2];
+    $scope.translate = 'https://translate.google.com/#'+ $scope.lang1 +'/'+ $scope.lang2 +'/' + encodeURI($scope.first);
   };
 
   /**
   * gets a pair of words
   * @param  {Number} num the number of the word
-  * @return {Object} object with firstLang word, secondLang word
+  * @return {Object} object with lang1 word, lang2 word
   */
   $scope.getPair = function(num) {
     var ret = {};
     var words = g.statementsMatching($rdf.sym($scope.storageURI + '#' + num), RDFS('label'));
     for (var i=0; i<words.length; i++) {
-      if (words[i].object.lang===$scope.firstLang) {
-        ret[$scope.firstLang] = words[i].object.value;
+      if (words[i].object.lang===$scope.lang1) {
+        ret[$scope.lang1] = words[i].object.value;
       }
-      if (words[i].object.lang===$scope.secondLang) {
-        ret[$scope.secondLang] = words[i].object.value;
+      if (words[i].object.lang===$scope.lang2) {
+        ret[$scope.lang2] = words[i].object.value;
       }
     }
     return ret;
