@@ -26,6 +26,8 @@ $ bower install
 | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/cz.png) | [en-cs](https://melvincarvalho.github.io/vocab/?lang1=en&lang2=cs) | - | fr-cs |
 | ![](http://melvincarvalho.github.io/vocab/flags/flags_iso/48/fr.png) | en-fr | cs-fr | - |
 
+Experimental: [Hungarian](https://melvincarvalho.github.io/vocab/?lang1=hu&lang2=en&storageURI=https:%2F%2Fmelvincarvalho.github.io%2Fdata%2Fvocab%2Fhu-en.ttl&max=1000)
+
 Add your own language pair!
 
 # Tutorial
