@@ -254,15 +254,24 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     // TODO people specific hooks, generalize
     $scope.inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
     if ($scope.inbox.uri) {
-      console.log('writing to : ' + $scope.inbox.uri);
+
+      var tx  = "<#this>\n";
+          tx += "<https://w3id.org/cc#amount> "+(Math.round(points / 5)*5)+"  ;\n";
+          tx += "<https://w3id.org/cc#currency> <https://w3id.org/cc#bit> ;\n";
+          tx += "  <https://w3id.org/cc#destination> <http://melvincarvalho.com/#me> ;\n";
+          tx += "<https://w3id.org/cc#source> <https://workbot.databox.me/profile/card#me> ;\n";
+          tx += "a <https://w3id.org/cc#Credit> .\n";
+
+          console.log('writing to : ' + $scope.inbox.uri);
+          console.log(tx);
       $http({
-        method: 'PUT',
-        url: $scope.inbox.uri + 'points.ttl',
+        method: 'POST',
+        url: $scope.inbox.uri,
         withCredentials: true,
         headers: {
           "Content-Type": "text/turtle"
         },
-        data: '<> <> ' + (Math.round(points / 5)*5) + ' .',
+        data: tx,
       }).
       success(function(data, status, headers) {
         $scope.notify('Points saved');
