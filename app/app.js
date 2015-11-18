@@ -254,7 +254,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     // TODO people specific hooks, generalize
     $scope.inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
     if ($scope.inbox.uri) {
-      localStorage.setItem('inbox', $scope.inbox.uri);
+      localStorage.setItem('inbox', JSON.stringify($scope.inbox.uri));
 
       var tx  = "<#this>\n";
           tx += "<https://w3id.org/cc#amount> "+(Math.round(points / 5)*5)+"  ;\n";
