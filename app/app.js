@@ -247,6 +247,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   */
   $scope.save = function() {
     var points = $scope.points;
+    var percent = $scope.percent;
     $scope.current = 0;
     $scope.points = 0;
     $scope.percent = 0;
@@ -282,8 +283,59 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       error(function(data, status, headers) {
         $scope.notify('could not save points', 'error');
       });
+
+      var message = "You scored " + percent + "% correct, from " + points + " of the top " + $scope.max + " czech words.";
+      var post = createPost($scope.user, message);
+
+          console.log('writing to : ' + $scope.inbox.uri);
+          console.log(post);
+      $http({
+        method: 'POST',
+        url: $scope.inbox.uri,
+        withCredentials: true,
+        headers: {
+          "Content-Type": "text/turtle"
+        },
+        data: post,
+      }).
+      success(function(data, status, headers) {
+        $scope.notify('Post saved');
+        $location.search('storageURI', $scope.storageURI);
+        $scope.render();
+      }).
+      error(function(data, status, headers) {
+        $scope.notify('could not save points', 'error');
+      });
+
+
+
     }
   };
+
+  /**
+   * create a post in turtle
+   * @param  {string} webid       the creator
+   * @param  {string} message     the message to send
+   * @param  {string} application application that created it
+   * @return {string}             the message in turtle
+   */
+  function createPost(webid, message, application) {
+    var turtle;
+    turtle = '<#this> ';
+    turtle += '    <http://purl.org/dc/terms/created> "'+ new Date().toISOString() +'"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;\n';
+    turtle += '    <http://purl.org/dc/terms/creator> <' + webid + '> ;\n';
+    turtle += '    <http://rdfs.org/sioc/ns#content> "'+ message.trim() +'" ;\n';
+    turtle += '    a <http://rdfs.org/sioc/ns#Post> ;\n';
+
+    if (application) {
+      turtle += '    <https://w3.org/ns/solid/app#application> <' + application + '> ;\n';
+    }
+
+    turtle += '    <http://www.w3.org/ns/mblog#author> <'+ webid +'> .\n';
+    return turtle;
+  }
+
+
 
   /**
   * cache the dictionary
