@@ -36,6 +36,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
 
   var f,g;
 
+  var icon = 'https://melvincarvalho.github.io/vocab/images/icon.png';
+
   // INIT
   /**
   * Init app
@@ -285,7 +287,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       });
 
       var message = "You scored " + percent + "% correct, from " + points + " of the top " + $scope.max + " czech words.";
-      var post = createPost($scope.user, message);
+      var post = $scope.createPost($scope.user, message, null, icon);
 
           console.log('writing to : ' + $scope.inbox.uri);
           console.log(post);
@@ -313,13 +315,14 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-   * create a post in turtle
-   * @param  {string} webid       the creator
-   * @param  {string} message     the message to send
-   * @param  {string} application application that created it
-   * @return {string}             the message in turtle
-   */
-  function createPost(webid, message, application) {
+  * create a post in turtle
+  * @param  {string} webid       the creator
+  * @param  {string} message     the message to send
+  * @param  {string} application application that created it
+  * @param  {string} img         img for that post
+  * @return {string}             the message in turtle
+  */
+  $scope.createPost = function(webid, message, application, img) {
     var turtle;
     turtle = '<#this> ';
     turtle += '    <http://purl.org/dc/terms/created> "'+ new Date().toISOString() +'"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;\n';
@@ -331,11 +334,13 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       turtle += '    <https://w3.org/ns/solid/app#application> <' + application + '> ;\n';
     }
 
+    if (img) {
+      turtle += '    <http://xmlns.com/foaf/0.1/img> <' + img + '> ;\n';
+    }
+
     turtle += '    <http://www.w3.org/ns/mblog#author> <'+ webid +'> .\n';
     return turtle;
-  }
-
-
+  };
 
   /**
   * cache the dictionary
