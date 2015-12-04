@@ -529,7 +529,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     // Let's check whether notification permissions have already been granted
     else if (Notification.permission === "granted") {
       // If it's okay let's create a notification
-      var notification = new Notification($scope.first, {body : $scope.second, icon: icon});
+      navigator.serviceWorker.ready.then(function(registration) {
+        registration.showNotification($scope.first, {body : $scope.second, icon: icon});
+      });
+
     }
 
     // Otherwise, we need to ask the user for permission
@@ -537,7 +540,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       Notification.requestPermission(function (permission) {
         // If the user accepts, let's create a notification
         if (permission === "granted") {
-          var notification = new Notification($scope.first, {body : $scope.second, icon: icon});
+          navigator.serviceWorker.ready.then(function(registration) {
+            registration.showNotification($scope.first, {body : $scope.second, icon: icon});
+          });
         }
       });
     }
