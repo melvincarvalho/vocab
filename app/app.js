@@ -520,6 +520,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   $scope.alert = function() {
+    navigator.serviceWorker.register('sw.js');
     // Let's check if the browser supports notifications
     if (!("Notification" in window)) {
       alert("This browser does not support desktop notification");
