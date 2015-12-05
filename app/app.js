@@ -530,7 +530,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     else if (Notification.permission === "granted") {
       // If it's okay let's create a notification
       navigator.serviceWorker.ready.then(function(registration) {
-        registration.showNotification($scope.second, {body : $scope.first, icon: icon});
+        registration.showNotification($scope.second + ' (' + $scope.num + ')', {body : $scope.first, icon: icon});
       });
 
     }
