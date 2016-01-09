@@ -32,6 +32,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   var RDFS  = $rdf.Namespace("http://www.w3.org/2000/01/rdf-schema#");
   var SIOC  = $rdf.Namespace("http://rdfs.org/sioc/ns#");
   var SOLID = $rdf.Namespace("http://www.w3.org/ns/solid/app#");
+  var ST    = $rdf.Namespace("http://www.w3.org/ns/solid/terms#");
   var TMP   = $rdf.Namespace("urn:tmp:");
 
   var f,g;
@@ -99,9 +100,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   * init RDF knowledge base
   */
   $scope.initRDF = function() {
-    var PROXY = "https://rww.io/proxy.php?uri={uri}";
-    var AUTH_PROXY = "https://rww.io/auth-proxy?uri=";
-    var TIMEOUT = 90000;
+    var PROXY = "https://databox.me/,proxy?uri={uri}";
+
+    //var AUTH_PROXY = "https://rww.io/auth-proxy?uri=";
+    var TIMEOUT = 60000;
     $rdf.Fetcher.crossSiteProxyTemplate=PROXY;
 
     g = $rdf.graph();
@@ -222,21 +224,17 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   */
   $scope.fetchAll = function() {
     $scope.fetchStorageURI();
-    $scope.fetchSeeAlso();
+    $scope.fetchUser();
   };
 
   /**
-  * fetchSeeAlso fetches the see also
+  * fetchUser fetches the user
   */
-  $scope.fetchSeeAlso = function() {
-    var seeAlso = 'https://melvincarvalho.github.io/vocab/data/seeAlso.ttl';
-    if ($location.search().seeAlso) {
-      seeAlso = $location.search().seeAlso;
-    }
-    f.nowOrWhenFetched(seeAlso, undefined, function(ok, body) {
-      console.log('seeAlso fetched from : ' + seeAlso);
+  $scope.fetchUser = function() {
+    var user = $scope.user;
+    f.nowOrWhenFetched(user.split('#')[0], undefined, function(ok, body) {
+      console.log('user fetched from : ' + user);
     });
-
   };
 
   /**
@@ -271,6 +269,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
 
     // TODO people specific hooks, generalize
     $scope.inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
+    $scope.timeline = g.any($rdf.sym($scope.user), ST('timeline'));
     if ($scope.inbox.uri) {
       localStorage.setItem('inbox', JSON.stringify($scope.inbox.uri));
 
@@ -302,10 +301,11 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       });
 
       var message = "You scored " + percent + "% correct, from " + points + " of the top " + $scope.max + " czech words.";
-      var post = $scope.createPost($scope.user, message, null, icon);
+      var post = $scope.createPost($scope.user, message, null, icon, $scope.timeline);
 
-          console.log('writing to : ' + $scope.inbox.uri);
-          console.log(post);
+      console.log('writing to : ' + $scope.inbox.uri);
+      console.log(post);
+
       $http({
         method: 'POST',
         url: $scope.inbox.uri,
@@ -324,8 +324,6 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
         $scope.notify('could not save points', 'error');
       });
 
-
-
     }
   };
 
@@ -335,14 +333,16 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   * @param  {string} message     the message to send
   * @param  {string} application application that created it
   * @param  {string} img         img for that post
+  * @param  {string} reply       comment is a reply to
+  * @param  {string} timeline    timeline associated with post
   * @return {string}             the message in turtle
   */
-  $scope.createPost = function(webid, message, application, img) {
+  $scope.createPost = function(webid, message, application, img, reply, timeline) {
     var turtle;
     turtle = '<#this> ';
     turtle += '    <http://purl.org/dc/terms/created> "'+ new Date().toISOString() +'"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;\n';
     turtle += '    <http://purl.org/dc/terms/creator> <' + webid + '> ;\n';
-    turtle += '    <http://rdfs.org/sioc/ns#content> "'+ message.trim() +'" ;\n';
+    turtle += '    <http://rdfs.org/sioc/ns#content> """'+ message.trim() +'""" ;\n';
     turtle += '    a <http://rdfs.org/sioc/ns#Post> ;\n';
 
     if (application) {
@@ -353,7 +353,16 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       turtle += '    <http://xmlns.com/foaf/0.1/img> <' + img + '> ;\n';
     }
 
+    if (reply) {
+      turtle += '    <http://rdfs.org/sioc/ns#reply_to> <' + reply + '> ;\n';
+    }
+
+    if (timeline) {
+      turtle += '    <http://www.w3.org/ns/solid/terms#timeline> <' + timeline + '> ;\n';
+    }
+
     turtle += '    <http://www.w3.org/ns/mblog#author> <'+ webid +'> .\n';
+
     return turtle;
   };
 
