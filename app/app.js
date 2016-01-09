@@ -60,6 +60,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.current = 0;
     $scope.percent = 0;
     $scope.max = 2000;
+    $scope.min = 0;
 
     $scope.initRDF();
     $scope.initQueryString();
@@ -116,6 +117,11 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     }
     $scope.setMax($scope.max);
 
+    if ($location.search().min) {
+      $scope.min = $location.search().min;
+    }
+    $scope.setMin($scope.min);
+
     $scope.storageURI = 'https://melvincarvalho.github.io/data/vocab/czech.ttl';
     if ($location.search().storageURI) {
       $scope.storageURI = $location.search().storageURI;
@@ -133,12 +139,21 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   };
 
   /**
-  * setMax set maximum number of words
+  * setMax set max number of words
   * @param  {Number} max number or words
   */
   $scope.setMax = function(max) {
     $scope.max = max;
     $location.search('max', $scope.max);
+  };
+
+  /**
+  * setMax set min number of words
+  * @param  {Number} min number or words
+  */
+  $scope.setMin = function(min) {
+    $scope.min = min;
+    $location.search('min', $scope.min);
   };
 
   /**
@@ -449,7 +464,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   * Next value in vocab
   */
   $scope.next = function() {
-    $scope.num = Math.round( $scope.max * Math.random() );
+    $scope.num = Math.floor( $scope.max * Math.random() ) + $scope.min + 1;
     var pair = $scope.getPair($scope.num);
     $scope.first = pair[$scope.lang1];
     $scope.second = pair[$scope.lang2];
