@@ -268,9 +268,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     $scope.percent = 0;
 
     // TODO people specific hooks, generalize
-    $scope.inbox = g.any($rdf.sym($scope.user), SOLID('inbox'));
+    $scope.inbox = g.any($rdf.sym($scope.user), ST('inbox'));
     $scope.timeline = g.any($rdf.sym($scope.user), ST('timeline'));
-    if ($scope.inbox.uri) {
+    if ($scope.inbox && $scope.inbox.uri) {
       localStorage.setItem('inbox', JSON.stringify($scope.inbox.uri));
 
       var tx  = "<#this>\n";
