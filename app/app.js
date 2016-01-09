@@ -270,6 +270,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     // TODO people specific hooks, generalize
     $scope.inbox = g.any($rdf.sym($scope.user), ST('inbox'));
     $scope.timeline = g.any($rdf.sym($scope.user), ST('timeline'));
+    if ($scope.timeline && $scope.timeline.uri) {
+      $scope.timeline = $scope.timeline.uri;
+    }
     if ($scope.inbox && $scope.inbox.uri) {
       localStorage.setItem('inbox', JSON.stringify($scope.inbox.uri));
 
@@ -301,7 +304,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       });
 
       var message = "You scored " + percent + "% correct, from " + points + " of the top " + $scope.max + " czech words.";
-      var post = $scope.createPost($scope.user, message, null, icon, $scope.timeline);
+
+      var post = $scope.createPost($scope.user, message, null, icon, null, $scope.timeline);
 
       console.log('writing to : ' + $scope.inbox.uri);
       console.log(post);
