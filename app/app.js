@@ -464,7 +464,8 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
   * Next value in vocab
   */
   $scope.next = function() {
-    $scope.num = Math.floor( $scope.max * Math.random() ) + $scope.min + 1;
+    var min = parseInt($scope.min) || 0;
+    $scope.num = Math.floor( ($scope.max - min) * Math.random() ) + min + 1;
     var pair = $scope.getPair($scope.num);
     $scope.first = pair[$scope.lang1];
     $scope.second = pair[$scope.lang2];
