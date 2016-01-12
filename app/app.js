@@ -514,6 +514,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     var ind = cycle.indexOf($scope.max);
     var next = (ind+1)%(cycle.length);
     $scope.setMax(cycle[next]);
+    $scope.min = 0;
     $scope.notify('Using ' + cycle[next] + ' words');
   };
 
