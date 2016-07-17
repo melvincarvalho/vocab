@@ -49,6 +49,7 @@ In this tutorial we will expand the previous tutorial video into a real world us
 * How to automatically remember a user and login
 * How to prepare language files to be used in vocab training
 * How to add audio to apps
+* How to send to an inbox using [Linked Data Notifications](https://linkedresearch.org/ldn/)
 
 ## The App
 
@@ -96,6 +97,11 @@ Putting these pieces together creates a complete and quite useful Solid applicat
   [Live Demo](http://melvincarvalho.github.io/vocab/)
 
 While the english czech language pair was used as default any word file could be used for vocabulary testing.
+
+## Linked Data Notifications
+
+[Linked Data notifications](https://linkedresearch.org/ldn/) is a spec that allows you to send a notification to a user's inbox.  In this case we will send a summary of the score you got memorizing a selection of words.  The inbox is found using the [discovery](https://linkedresearch.org/ldn/#discovery) section in the spec and an HTTP POST of the [following](https://gist.github.com/melvincarvalho/e468c73c6c397f4ccc89046b68b03a8f) type is sent to that inbox for further processing.
+
 
 ## Summary
 
