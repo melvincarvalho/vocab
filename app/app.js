@@ -270,6 +270,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     // TODO people specific hooks, generalize
     $scope.inbox = g.any($rdf.sym($scope.user), ST('inbox'));
     $scope.wallet = g.any($rdf.sym($scope.user), CURR('wallet'));
+    if ($scope.wallet && $scope.wallet.uri) {
+      $scope.wallet = $scope.wallet.uri;
+    }
     $scope.timeline = g.any($rdf.sym($scope.user), ST('timeline'));
     if ($scope.timeline && $scope.timeline.uri) {
       $scope.timeline = $scope.timeline.uri;
