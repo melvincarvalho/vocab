@@ -277,8 +277,10 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
     if ($scope.inbox && $scope.inbox.uri) {
       localStorage.setItem('inbox', JSON.stringify($scope.inbox.uri));
 
+      var amount = Math.round(points / 5)*5
+
       var tx  = "<#this>\n";
-          tx += "<https://w3id.org/cc#amount> "+(Math.round(points / 5)*5)+"  ;\n";
+          tx += "<https://w3id.org/cc#amount> "+ amount +"  ;\n";
           tx += "<https://w3id.org/cc#currency> <https://w3id.org/cc#bit> ;\n";
           tx += "  <https://w3id.org/cc#destination> <http://melvincarvalho.com/#me> ;\n";
           tx += "<https://w3id.org/cc#source> <https://workbot.databox.me/profile/card#me> ;\n";
