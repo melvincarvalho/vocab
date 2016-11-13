@@ -269,6 +269,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
 
     // TODO people specific hooks, generalize
     $scope.inbox = g.any($rdf.sym($scope.user), ST('inbox'));
+    $scope.wallet = g.any($rdf.sym($scope.user), CURR('wallet'));
     $scope.timeline = g.any($rdf.sym($scope.user), ST('timeline'));
     if ($scope.timeline && $scope.timeline.uri) {
       $scope.timeline = $scope.timeline.uri;
@@ -281,6 +282,9 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
           tx += "<https://w3id.org/cc#currency> <https://w3id.org/cc#bit> ;\n";
           tx += "  <https://w3id.org/cc#destination> <http://melvincarvalho.com/#me> ;\n";
           tx += "<https://w3id.org/cc#source> <https://workbot.databox.me/profile/card#me> ;\n";
+          if ($scope.wallet) {
+            tx += "<https://w3id.org/cc#wallet> <" + $scope.wallet + "> ;\n";
+          }
           tx += "a <https://w3id.org/cc#Credit> .\n";
 
           console.log('writing to : ' + $scope.inbox.uri);
