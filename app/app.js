@@ -285,7 +285,7 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       var tx  = "<#this>\n";
           tx += "<https://w3id.org/cc#amount> "+ amount +"  ;\n";
           tx += "<https://w3id.org/cc#currency> <https://w3id.org/cc#bit> ;\n";
-          tx += "  <https://w3id.org/cc#destination> <http://melvincarvalho.com/#me> ;\n";
+          tx += "  <https://w3id.org/cc#destination> <" + $scope.user + "> ;\n";
           tx += "<https://w3id.org/cc#source> <https://workbot.databox.me/profile/card#me> ;\n";
           if ($scope.wallet) {
             tx += "<https://w3id.org/cc#wallet> <" + $scope.wallet + "> ;\n";
