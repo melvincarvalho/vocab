@@ -320,23 +320,25 @@ App.controller('Main', function($scope, $http, $location, $timeout, ngAudio, LxN
       console.log('writing to : ' + $scope.inbox.uri);
       console.log(post);
 
-      $http({
-        method: 'POST',
-        url: $scope.inbox.uri,
-        withCredentials: true,
-        headers: {
-          "Content-Type": "text/turtle"
-        },
-        data: post,
-      }).
-      success(function(data, status, headers) {
-        $scope.notify('Post saved');
-        $location.search('storageURI', $scope.storageURI);
-        $scope.render();
-      }).
-      error(function(data, status, headers) {
-        $scope.notify('could not save points', 'error');
-      });
+      setTimeout(function() {
+        $http({
+          method: 'POST',
+          url: $scope.inbox.uri,
+          withCredentials: true,
+          headers: {
+            "Content-Type": "text/turtle"
+          },
+          data: post,
+        }).
+        success(function(data, status, headers) {
+          $scope.notify('Post saved');
+          $location.search('storageURI', $scope.storageURI);
+          $scope.render();
+        }).
+        error(function(data, status, headers) {
+          $scope.notify('could not save points', 'error');
+        })
+      }, 5000)
 
     }
   };
