@@ -328,6 +328,112 @@
       .word-secondary { font-size: 1.5rem; }
       .btn { padding: 12px 8px; font-size: 0.9rem; }
     }
+
+    .solid-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .solid-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .solid-user {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 200px;
+    }
+
+    .solid-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .solid-btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .solid-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .solid-btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .solid-btn-primary:hover:not(:disabled) {
+      background: var(--primary-dark);
+    }
+
+    .solid-btn-secondary {
+      background: #e0e0e0;
+      color: var(--text);
+    }
+
+    .solid-btn-secondary:hover:not(:disabled) {
+      background: #d0d0d0;
+    }
+
+    .solid-btn-logout {
+      background: transparent;
+      color: var(--text-light);
+      padding: 8px;
+    }
+
+    .solid-btn-logout:hover {
+      color: var(--danger);
+    }
+
+    .solid-status {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-align: center;
+      padding: 5px;
+    }
+
+    .solid-status.success {
+      color: var(--success);
+    }
+
+    .solid-status.error {
+      color: var(--danger);
+    }
+
+    .login-form {
+      display: flex;
+      gap: 8px;
+    }
+
+    .login-form input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .login-form input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
   </style>
 </head>
 <body>
@@ -337,6 +443,14 @@
     import { h, render } from 'https://esm.sh/preact@10.19.3';
     import { useState, useEffect, useCallback } from 'https://esm.sh/preact@10.19.3/hooks';
     import htm from 'https://esm.sh/htm@3.1.1';
+    import {
+      login,
+      logout,
+      handleIncomingRedirect,
+      getDefaultSession,
+      fetch as solidFetch
+    } from 'https://esm.sh/@inrupt/solid-client-authn-browser@2.2.4';
+    import { SolidLocalStorage } from './lib/solid-localstorage.js';
 
     const html = htm.bind(h);
 
@@ -397,6 +511,13 @@
       const [sessionPoints, setSessionPoints] = useState(0);
       const [sessionCorrect, setSessionCorrect] = useState(0);
 
+      // Solid sync state
+      const [solidSession, setSolidSession] = useState(null);
+      const [solidStatus, setSolidStatus] = useState('');
+      const [solidStatusType, setSolidStatusType] = useState(''); // 'success' | 'error' | ''
+      const [oidcIssuer, setOidcIssuer] = useState(() => storage.get('oidcIssuer', 'https://solidcommunity.net'));
+      const [syncing, setSyncing] = useState(false);
+
       const percent = sessionPoints > 0 ? Math.round((sessionCorrect / sessionPoints) * 100) : 0;
       const rangeSize = maxWords - minWords + 1;
 
@@ -404,6 +525,119 @@
         setToast(msg);
         setTimeout(() => setToast(''), 2000);
       }, []);
+
+      // Handle Solid login redirect
+      useEffect(() => {
+        handleIncomingRedirect({ restorePreviousSession: true }).then((info) => {
+          if (info?.isLoggedIn) {
+            setSolidSession(getDefaultSession());
+            setSolidStatus('Logged in');
+            setSolidStatusType('success');
+          }
+        });
+      }, []);
+
+      // Get pod URL from WebID
+      const getPodUrl = useCallback(async (webId) => {
+        // Simple heuristic: WebID is usually at pod/profile/card#me
+        // So pod URL is everything before /profile/
+        const match = webId.match(/^(https?:\/\/[^/]+\/[^/]+)/);
+        return match ? match[1] : webId.replace(/\/profile\/card#me$/, '');
+      }, []);
+
+      // Solid login
+      const handleSolidLogin = useCallback(async () => {
+        storage.set('oidcIssuer', oidcIssuer);
+        try {
+          await login({
+            oidcIssuer,
+            redirectUrl: window.location.href,
+            clientName: 'Solid Words'
+          });
+        } catch (err) {
+          setSolidStatus(`Login failed: ${err.message}`);
+          setSolidStatusType('error');
+        }
+      }, [oidcIssuer]);
+
+      // Solid logout
+      const handleSolidLogout = useCallback(async () => {
+        await logout();
+        setSolidSession(null);
+        setSolidStatus('');
+        setSolidStatusType('');
+      }, []);
+
+      // Save to Solid
+      const handleSolidSave = useCallback(async () => {
+        if (!solidSession?.info?.webId) return;
+        setSyncing(true);
+        setSolidStatus('Saving...');
+        setSolidStatusType('');
+
+        try {
+          const podUrl = await getPodUrl(solidSession.info.webId);
+          const sync = new SolidLocalStorage({
+            session: solidSession,
+            podUrl,
+            filter: (key) => ['again', 'good', 'easy', 'minWords', 'maxWords', 'reversed'].includes(key)
+          });
+          const result = await sync.save();
+          setSolidStatus(`Saved ${result.keys} keys to pod`);
+          setSolidStatusType('success');
+        } catch (err) {
+          setSolidStatus(`Save failed: ${err.message}`);
+          setSolidStatusType('error');
+        } finally {
+          setSyncing(false);
+        }
+      }, [solidSession, getPodUrl]);
+
+      // Restore from Solid
+      const handleSolidRestore = useCallback(async () => {
+        if (!solidSession?.info?.webId) return;
+        setSyncing(true);
+        setSolidStatus('Restoring...');
+        setSolidStatusType('');
+
+        try {
+          const podUrl = await getPodUrl(solidSession.info.webId);
+          const sync = new SolidLocalStorage({
+            session: solidSession,
+            podUrl,
+            onConflict: 'remote-wins',
+            filter: (key) => ['again', 'good', 'easy', 'minWords', 'maxWords', 'reversed'].includes(key)
+          });
+          const result = await sync.restore();
+
+          if (result.notFound) {
+            setSolidStatus('No saved data found on pod');
+            setSolidStatusType('');
+          } else {
+            // Reload state from localStorage
+            setAgain(storage.get('again', []));
+            setGood(storage.get('good', []));
+            setEasy(storage.get('easy', []));
+            setMinWords(storage.get('minWords', 1));
+            setMaxWords(storage.get('maxWords', 100));
+            setReversed(storage.get('reversed', false));
+            // Reset session
+            setSessionDiscarded(new Set());
+            setSessionAgain(new Set());
+            setSessionGood(new Set());
+            setSessionPoints(0);
+            setSessionCorrect(0);
+
+            setSolidStatus(`Restored ${result.keys} keys from pod`);
+            setSolidStatusType('success');
+          }
+        } catch (err) {
+          setSolidStatus(`Restore failed: ${err.message}`);
+          setSolidStatusType('error');
+        } finally {
+          setSyncing(false);
+        }
+      }, [solidSession, getPodUrl]);
 
       // Load words
       useEffect(() => {
@@ -705,6 +939,41 @@
             <button class="setting-btn" onclick=${resetSession}>
               New Session
             </button>
+          </div>
+
+          <div class="card solid-card">
+            ${solidSession?.info?.isLoggedIn ? html`
+              <div class="solid-header">
+                <span class="solid-user" title=${solidSession.info.webId}>
+                  ${solidSession.info.webId.split('/').pop().replace('#me', '')}
+                </span>
+                <button class="solid-btn solid-btn-logout" onclick=${handleSolidLogout} title="Logout">
+                  ✕
+                </button>
+              </div>
+              <div class="solid-actions">
+                <button class="solid-btn solid-btn-primary" onclick=${handleSolidSave} disabled=${syncing}>
+                  ${syncing ? '...' : '↑'} Save to Pod
+                </button>
+                <button class="solid-btn solid-btn-secondary" onclick=${handleSolidRestore} disabled=${syncing}>
+                  ${syncing ? '...' : '↓'} Restore from Pod
+                </button>
+              </div>
+              ${solidStatus && html`<div class="solid-status ${solidStatusType}">${solidStatus}</div>`}
+            ` : html`
+              <div class="login-form">
+                <input
+                  type="text"
+                  placeholder="Solid provider URL"
+                  value=${oidcIssuer}
+                  onchange=${(e) => setOidcIssuer(e.target.value)}
+                />
+                <button class="solid-btn solid-btn-primary" onclick=${handleSolidLogin}>
+                  Login
+                </button>
+              </div>
+              ${solidStatus && html`<div class="solid-status ${solidStatusType}">${solidStatus}</div>`}
+            `}
           </div>
 
           <div class="toast ${toast ? 'visible' : ''}">${toast}</div>
