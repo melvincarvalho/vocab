@@ -539,9 +539,9 @@
 
       // Get pod URL from WebID
       const getPodUrl = useCallback((webId) => {
-        // Simple heuristic: WebID is usually at pod/profile/card#me
-        const match = webId.match(/^(https?:\/\/[^/]+\/[^/]+)/);
-        return match ? match[1] : webId.replace(/\/profile\/card#me$/, '');
+        // Extract base URL (remove fragment and trailing slashes)
+        const url = new URL(webId);
+        return `${url.protocol}//${url.host}`;
       }, []);
 
       // Solid login
