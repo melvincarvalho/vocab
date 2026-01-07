@@ -379,6 +379,7 @@
       const [lang2, setLang2] = useState('en');
       const [minWords, setMinWords] = useState(() => storage.get('minWords', 1));
       const [maxWords, setMaxWords] = useState(() => storage.get('maxWords', 100));
+      const [reversed, setReversed] = useState(() => storage.get('reversed', false));
 
       // Current word state
       const [currentNum, setCurrentNum] = useState(1);
@@ -562,6 +563,13 @@
         }
       }, [notify]);
 
+      const toggleReversed = useCallback(() => {
+        const newVal = !reversed;
+        setReversed(newVal);
+        storage.set('reversed', newVal);
+        notify(newVal ? 'English → Czech' : 'Czech → English');
+      }, [reversed, notify]);
+
       // Keyboard shortcuts
       useEffect(() => {
         const handleKey = (e) => {
@@ -586,16 +594,24 @@
             case 's': case 'S':
               pickNext();
               break;
+            case 'r': case 'R':
+              toggleReversed();
+              break;
           }
         };
 
         window.addEventListener('keydown', handleKey);
         return () => window.removeEventListener('keydown', handleKey);
-      }, [handleResponse, pickNext]);
+      }, [handleResponse, pickNext, toggleReversed]);
 
       const currentWord = words?.[currentNum];
+
+      // Determine which language to show first based on reversed setting
+      const showLang = reversed ? lang2 : lang1;
+      const hideLang = reversed ? lang1 : lang2;
+
       const translateUrl = currentWord
-        ? `https://translate.google.com/#${lang1}/${lang2}/${encodeURIComponent(currentWord[lang1] || '')}`
+        ? `https://translate.google.com/#${showLang}/${hideLang}/${encodeURIComponent(currentWord[showLang] || '')}`
         : '#';
 
       if (loading) {
@@ -651,10 +667,11 @@
             </div>
 
             <div class="word-display" onclick=${() => setShowTranslation(true)}>
-              <div class="word-primary">${currentWord?.[lang1] || '...'}</div>
-              <div class="word-secondary ${showTranslation ? 'visible' : ''}">${currentWord?.[lang2] || '...'}</div>
+              <div class="word-primary">${currentWord?.[showLang] || '...'}</div>
+              <div class="word-secondary ${showTranslation ? 'visible' : ''}">${currentWord?.[hideLang] || '...'}</div>
               <div class="word-number">
                 <a href=${translateUrl} target="_blank">#${currentNum}</a> of ${maxWords}
+                ${reversed ? ' (EN→CS)' : ' (CS→EN)'}
               </div>
             </div>
 
@@ -672,7 +689,7 @@
                 <span class="btn-count">${easy.length}</span>
               </button>
             </div>
-            <div class="shortcuts">Keys: 1/A 2/G 3/E · 4/Enter/Space=reveal · S=skip</div>
+            <div class="shortcuts">Keys: 1/A 2/G 3/E · 4/Enter/Space=reveal · S=skip · R=reverse</div>
           </div>
 
           <div class="card settings">
@@ -682,6 +699,9 @@
               <span class="range-label">to</span>
               <input type="number" class="range-input" value=${maxWords} onchange=${handleMaxChange} min=${minWords + 1} max="6808" />
             </div>
+            <button class="setting-btn ${reversed ? 'active' : ''}" onclick=${toggleReversed}>
+              ${reversed ? 'EN → CS' : 'CS → EN'}
+            </button>
             <button class="setting-btn" onclick=${resetSession}>
               New Session
             </button>
