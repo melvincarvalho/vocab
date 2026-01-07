@@ -443,13 +443,7 @@
     import { h, render } from 'https://esm.sh/preact@10.19.3';
     import { useState, useEffect, useCallback } from 'https://esm.sh/preact@10.19.3/hooks';
     import htm from 'https://esm.sh/htm@3.1.1';
-    import {
-      login,
-      logout,
-      handleIncomingRedirect,
-      getDefaultSession,
-      fetch as solidFetch
-    } from 'https://esm.sh/@inrupt/solid-client-authn-browser@2.2.4';
+    import { Session } from 'https://esm.sh/solid-oidc';
     import { SolidLocalStorage } from './lib/solid-localstorage.js';
 
     const html = htm.bind(h);
@@ -526,21 +520,26 @@
         setTimeout(() => setToast(''), 2000);
       }, []);
 
-      // Handle Solid login redirect
-      useEffect(() => {
-        handleIncomingRedirect({ restorePreviousSession: true }).then((info) => {
-          if (info?.isLoggedIn) {
-            setSolidSession(getDefaultSession());
+      // Create Solid session (singleton)
+      const [session] = useState(() => new Session({
+        onStateChange: (e) => {
+          setSolidSession(e.detail.isActive ? session : null);
+          if (e.detail.isActive) {
             setSolidStatus('Logged in');
             setSolidStatusType('success');
           }
-        });
-      }, []);
+        }
+      }));
+
+      // Handle Solid login redirect and restore
+      useEffect(() => {
+        session.restore().catch(() => {});
+        session.handleRedirectFromLogin();
+      }, [session]);
 
       // Get pod URL from WebID
-      const getPodUrl = useCallback(async (webId) => {
+      const getPodUrl = useCallback((webId) => {
         // Simple heuristic: WebID is usually at pod/profile/card#me
-        // So pod URL is everything before /profile/
         const match = webId.match(/^(https?:\/\/[^/]+\/[^/]+)/);
         return match ? match[1] : webId.replace(/\/profile\/card#me$/, '');
       }, []);
@@ -549,36 +548,32 @@
       const handleSolidLogin = useCallback(async () => {
         storage.set('oidcIssuer', oidcIssuer);
         try {
-          await login({
-            oidcIssuer,
-            redirectUrl: window.location.href,
-            clientName: 'Solid Words'
-          });
+          await session.login(oidcIssuer, window.location.href);
         } catch (err) {
           setSolidStatus(`Login failed: ${err.message}`);
           setSolidStatusType('error');
         }
-      }, [oidcIssuer]);
+      }, [oidcIssuer, session]);
 
       // Solid logout
       const handleSolidLogout = useCallback(async () => {
-        await logout();
+        await session.logout();
         setSolidSession(null);
         setSolidStatus('');
         setSolidStatusType('');
-      }, []);
+      }, [session]);
 
       // Save to Solid
       const handleSolidSave = useCallback(async () => {
-        if (!solidSession?.info?.webId) return;
+        if (!session?.isActive) return;
         setSyncing(true);
         setSolidStatus('Saving...');
         setSolidStatusType('');
 
         try {
-          const podUrl = await getPodUrl(solidSession.info.webId);
+          const podUrl = getPodUrl(session.webId);
           const sync = new SolidLocalStorage({
-            session: solidSession,
+            session: { fetch: (url, opts) => session.authFetch(url, opts) },
             podUrl,
             filter: (key) => ['again', 'good', 'easy', 'minWords', 'maxWords', 'reversed'].includes(key)
           });
@@ -591,19 +586,19 @@
         } finally {
           setSyncing(false);
         }
-      }, [solidSession, getPodUrl]);
+      }, [session, getPodUrl]);
 
       // Restore from Solid
       const handleSolidRestore = useCallback(async () => {
-        if (!solidSession?.info?.webId) return;
+        if (!session?.isActive) return;
         setSyncing(true);
         setSolidStatus('Restoring...');
         setSolidStatusType('');
 
         try {
-          const podUrl = await getPodUrl(solidSession.info.webId);
+          const podUrl = getPodUrl(session.webId);
           const sync = new SolidLocalStorage({
-            session: solidSession,
+            session: { fetch: (url, opts) => session.authFetch(url, opts) },
             podUrl,
             onConflict: 'remote-wins',
             filter: (key) => ['again', 'good', 'easy', 'minWords', 'maxWords', 'reversed'].includes(key)
@@ -637,7 +632,7 @@
         } finally {
           setSyncing(false);
         }
-      }, [solidSession, getPodUrl]);
+      }, [session, getPodUrl]);
 
       // Load words
       useEffect(() => {
@@ -942,10 +937,10 @@
           </div>
 
           <div class="card solid-card">
-            ${solidSession?.info?.isLoggedIn ? html`
+            ${session?.isActive ? html`
               <div class="solid-header">
-                <span class="solid-user" title=${solidSession.info.webId}>
-                  ${solidSession.info.webId.split('/').pop().replace('#me', '')}
+                <span class="solid-user" title=${session.webId}>
+                  ${session.webId?.split('/').pop().replace('#me', '') || 'User'}
                 </span>
                 <button class="solid-btn solid-btn-logout" onclick=${handleSolidLogout} title="Logout">
                   ✕
