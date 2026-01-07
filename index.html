@@ -1,171 +1,698 @@
-<!doctype html>
-<html lang="en" ng-app="Vocab" ng-cloak>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solid Words</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <meta href="doap.ttl#this" rel="http://www.w3.org/ns/solid/app#configuration">
-
-  <style>
-  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
-    display: none !important;
-  }
-  </style>
-  <base target="_blank">
-  <link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
-  <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" type="img/png" href="images/icon.png">
+  <link rel="icon" href="images/icon.png">
   <link rel="apple-touch-icon" href="images/icon.png">
   <link rel="manifest" href="manifest.json">
+  <style>
+    :root {
+      --primary: #2196F3;
+      --primary-dark: #1976D2;
+      --success: #4CAF50;
+      --warning: #FF9800;
+      --danger: #f44336;
+      --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --text: #333;
+      --text-light: #666;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .header p {
+      opacity: 0.9;
+      margin-top: 5px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+    }
+
+    .percent {
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .word-display {
+      text-align: center;
+      padding: 30px 0;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .word-primary {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      transition: transform 0.2s;
+      user-select: none;
+    }
+
+    .word-primary:hover {
+      transform: scale(1.02);
+    }
+
+    .word-secondary {
+      font-size: 1.8rem;
+      color: var(--text-light);
+      margin-top: 15px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      cursor: pointer;
+    }
+
+    .word-secondary.visible {
+      opacity: 1;
+    }
+
+    .word-number {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 10px;
+    }
+
+    .word-number a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 15px 10px;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.1s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+    .btn-count {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    .btn-again {
+      background: var(--danger);
+      color: white;
+    }
+
+    .btn-good {
+      background: var(--warning);
+      color: white;
+    }
+
+    .btn-easy {
+      background: var(--success);
+      color: white;
+    }
+
+    .settings {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .setting-btn {
+      background: transparent;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .setting-btn:hover {
+      background: #f5f5f5;
+    }
+
+    .setting-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .range-selector {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .range-input {
+      width: 70px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .range-input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .range-label {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    .shortcuts {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 15px;
+      opacity: 0.7;
+    }
+
+    .progress-bar {
+      display: flex;
+      height: 6px;
+      border-radius: 3px;
+      overflow: hidden;
+      background: #eee;
+      margin-top: 10px;
+    }
+
+    .progress-segment {
+      transition: width 0.3s;
+    }
+
+    .progress-easy { background: var(--success); }
+    .progress-good { background: var(--warning); }
+    .progress-again { background: var(--danger); }
+
+    .loading {
+      text-align: center;
+      padding: 50px;
+      color: white;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.8);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    .toast.visible {
+      opacity: 1;
+    }
+
+    .reset-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      color: var(--text-light);
+    }
+
+    .reset-btn:hover {
+      color: var(--danger);
+    }
+
+    @media (max-width: 400px) {
+      .word-primary { font-size: 2rem; }
+      .word-secondary { font-size: 1.5rem; }
+      .btn { padding: 12px 8px; font-size: 0.9rem; }
+    }
+  </style>
 </head>
+<body>
+  <div id="app"></div>
 
-<body ng-controller="Main" flow-prevent-drop flex-container="column">
+  <script type="module">
+    import { h, render } from 'https://esm.sh/preact@10.19.3';
+    import { useState, useEffect, useCallback } from 'https://esm.sh/preact@10.19.3/hooks';
+    import htm from 'https://esm.sh/htm@3.1.1';
 
-  <!-- welcome page -->
-  <div class="welcome row grad-bg" ng-hide="loggedIn">
-    <div class="absolute-center tc-white-1">
-      <div class="welcome-title">
-        <span class="icon icon--xl icon--flat mdi mdi-clipboard-text tc-white-1"></span>
-        <span class="app-name fs-display-2">Words</span>
-      </div>
-      <div class="mt fs-subhead">Your personal word trainer</div>
-      <div>
-        <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="TLSlogin()">
-          <span class="tc-light-blue-300 ng-binding">{{loginTLSButtonText}}</span>
-        </button>
-        <button ng-audio="audio/button-3.mp3" class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="Login" ng-click="">
-          <span><a class="tc-light-blue-300 ng-binding" target="_blank" href="https://databox.me/" class="tc-white">Signup</a></span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- end welcome page -->
+    const html = htm.bind(h);
 
+    // Parse TTL format: <#1> <...#label> "word"@lang .
+    function parseTTL(text) {
+      const words = {};
+      const lines = text.split('\n');
+      const regex = /<#(\d+)>\s+<[^>]+>\s+"([^"]+)"@(\w+)/;
 
-  <!-- main page -->
-  <div class="welcome row grad-bg" ng-hide="!loggedIn">
+      for (const line of lines) {
+        const match = line.match(regex);
+        if (match) {
+          const [, id, word, lang] = match;
+          if (!words[id]) words[id] = {};
+          words[id][lang] = word;
+        }
+      }
+      return words;
+    }
 
-    <!-- menu -->
-    <div class="card">
-      <div class="toolbar">
-        <div class="toolbar__left mr+++">
-          <button class="btn btn--l btn--black btn--icon" lx-ripple>
-            <i class="mdi mdi-menu"></i>
-          </button>
-        </div>
-        <span class="toolbar__label fs-title">Solid Words</span>
-        <div class="toolbar__right">
-          <lx-dropdown position="right" from-top>
-            <button class="btn btn--l btn--black btn--icon" lx-ripple lx-dropdown-toggle>
-              <i class="mdi mdi-dots-vertical"></i>
+    // Storage helpers
+    const storage = {
+      get: (key, def = null) => {
+        try {
+          const val = localStorage.getItem(key);
+          return val ? JSON.parse(val) : def;
+        } catch { return def; }
+      },
+      set: (key, val) => localStorage.setItem(key, JSON.stringify(val))
+    };
+
+    function App() {
+      const [words, setWords] = useState(null);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(null);
+      const [toast, setToast] = useState('');
+
+      // Settings
+      const [lang1, setLang1] = useState('cs');
+      const [lang2, setLang2] = useState('en');
+      const [minWords, setMinWords] = useState(() => storage.get('minWords', 1));
+      const [maxWords, setMaxWords] = useState(() => storage.get('maxWords', 100));
+
+      // Current word state
+      const [currentNum, setCurrentNum] = useState(1);
+      const [showTranslation, setShowTranslation] = useState(false);
+
+      // Progress tracking (persisted)
+      const [again, setAgain] = useState(() => storage.get('again', []));
+      const [good, setGood] = useState(() => storage.get('good', []));
+      const [easy, setEasy] = useState(() => storage.get('easy', []));
+
+      // Session tracking (not persisted - resets on reload)
+      const [sessionDiscarded, setSessionDiscarded] = useState(new Set()); // Easy words this session
+      const [sessionAgain, setSessionAgain] = useState(new Set());         // Again words this session
+      const [sessionGood, setSessionGood] = useState(new Set());           // Good words this session
+      const [sessionPoints, setSessionPoints] = useState(0);
+      const [sessionCorrect, setSessionCorrect] = useState(0);
+
+      const percent = sessionPoints > 0 ? Math.round((sessionCorrect / sessionPoints) * 100) : 0;
+      const rangeSize = maxWords - minWords + 1;
+
+      const notify = useCallback((msg) => {
+        setToast(msg);
+        setTimeout(() => setToast(''), 2000);
+      }, []);
+
+      // Load words
+      useEffect(() => {
+        const url = 'data/czech-en.ttl';  // Local cleaned word list
+        const cacheKey = `words-${lang1}-${lang2}-v2`;
+
+        const cached = storage.get(cacheKey);
+        if (cached) {
+          setWords(cached);
+          setLoading(false);
+          pickNext(cached);
+          return;
+        }
+
+        fetch(url)
+          .then(r => r.text())
+          .then(text => {
+            const parsed = parseTTL(text);
+            storage.set(cacheKey, parsed);
+            setWords(parsed);
+            setLoading(false);
+            pickNext(parsed);
+            notify('Words loaded!');
+          })
+          .catch(err => {
+            setError(err.message);
+            setLoading(false);
+          });
+      }, [lang1, lang2]);
+
+      // Weighted selection algorithm
+      const pickNext = useCallback((wordList = words) => {
+        if (!wordList) return;
+
+        // Build weighted pool of candidates
+        const candidates = [];
+
+        for (let num = minWords; num <= maxWords; num++) {
+          // Skip if discarded this session (marked easy)
+          if (sessionDiscarded.has(num)) continue;
+
+          // Weight: again=1.0, good=0.5, new=1.0
+          let weight = 1.0;
+          if (sessionAgain.has(num)) {
+            weight = 1.0;  // High priority - needs work
+          } else if (sessionGood.has(num)) {
+            weight = 0.5;  // Lower priority - sort of knows it
+          }
+          // New words get weight 1.0 (default)
+
+          candidates.push({ num, weight });
+        }
+
+        if (candidates.length === 0) {
+          // All words in range discarded! Session complete
+          notify(`Session complete! ${sessionDiscarded.size} words mastered`);
+          return;
+        }
+
+        // Weighted random selection
+        const totalWeight = candidates.reduce((sum, c) => sum + c.weight, 0);
+        let random = Math.random() * totalWeight;
+
+        for (const candidate of candidates) {
+          random -= candidate.weight;
+          if (random <= 0) {
+            setCurrentNum(candidate.num);
+            setShowTranslation(false);
+            return;
+          }
+        }
+
+        // Fallback
+        setCurrentNum(candidates[0].num);
+        setShowTranslation(false);
+      }, [words, minWords, maxWords, sessionDiscarded, sessionAgain, sessionGood, notify]);
+
+      const handleResponse = useCallback((type) => {
+        const updateList = (list, setList, key) => {
+          if (!list.includes(currentNum)) {
+            const newList = [...list, currentNum];
+            setList(newList);
+            storage.set(key, newList);
+          }
+        };
+
+        setSessionPoints(p => p + 1);
+
+        if (type === 'again') {
+          updateList(again, setAgain, 'again');
+          // Add to session again pool (will see it again with high weight)
+          setSessionAgain(prev => new Set([...prev, currentNum]));
+          setSessionGood(prev => { const s = new Set(prev); s.delete(currentNum); return s; });
+        } else if (type === 'good') {
+          updateList(good, setGood, 'good');
+          // Add to session good pool (will see it again with lower weight)
+          setSessionGood(prev => new Set([...prev, currentNum]));
+          setSessionAgain(prev => { const s = new Set(prev); s.delete(currentNum); return s; });
+        } else if (type === 'easy') {
+          updateList(easy, setEasy, 'easy');
+          setSessionCorrect(c => c + 1);
+          // Discard from session - won't see it again until session reset
+          setSessionDiscarded(prev => new Set([...prev, currentNum]));
+          setSessionAgain(prev => { const s = new Set(prev); s.delete(currentNum); return s; });
+          setSessionGood(prev => { const s = new Set(prev); s.delete(currentNum); return s; });
+          if (navigator.vibrate) navigator.vibrate(50);
+        }
+
+        pickNext();
+      }, [currentNum, again, good, easy, pickNext]);
+
+      // Range change handlers
+      const handleMinChange = useCallback((e) => {
+        const val = Math.max(1, Math.min(parseInt(e.target.value) || 1, maxWords - 1));
+        setMinWords(val);
+        storage.set('minWords', val);
+        // Reset session when range changes
+        setSessionDiscarded(new Set());
+        setSessionAgain(new Set());
+        setSessionGood(new Set());
+      }, [maxWords]);
+
+      const handleMaxChange = useCallback((e) => {
+        const val = Math.max(minWords + 1, Math.min(parseInt(e.target.value) || 100, 8928));
+        setMaxWords(val);
+        storage.set('maxWords', val);
+        // Reset session when range changes
+        setSessionDiscarded(new Set());
+        setSessionAgain(new Set());
+        setSessionGood(new Set());
+      }, [minWords]);
+
+      const resetSession = useCallback(() => {
+        setSessionDiscarded(new Set());
+        setSessionAgain(new Set());
+        setSessionGood(new Set());
+        setSessionPoints(0);
+        setSessionCorrect(0);
+        notify('Session reset - all words back in deck');
+        pickNext();
+      }, [notify, pickNext]);
+
+      const resetAllProgress = useCallback(() => {
+        if (confirm('Reset ALL progress (including lifetime stats)?')) {
+          setAgain([]);
+          setGood([]);
+          setEasy([]);
+          setSessionDiscarded(new Set());
+          setSessionAgain(new Set());
+          setSessionGood(new Set());
+          setSessionPoints(0);
+          setSessionCorrect(0);
+          storage.set('again', []);
+          storage.set('good', []);
+          storage.set('easy', []);
+          notify('All progress reset');
+        }
+      }, [notify]);
+
+      // Keyboard shortcuts
+      useEffect(() => {
+        const handleKey = (e) => {
+          if (e.target.tagName === 'INPUT') return;
+
+          switch(e.key) {
+            case '1': case 'a': case 'A':
+              handleResponse('again');
+              break;
+            case '2': case 'g': case 'G':
+              handleResponse('good');
+              break;
+            case '3': case 'e': case 'E':
+              handleResponse('easy');
+              break;
+            case ' ':
+            case 'Enter':
+            case '4':
+              e.preventDefault();
+              setShowTranslation(true);
+              break;
+            case 's': case 'S':
+              pickNext();
+              break;
+          }
+        };
+
+        window.addEventListener('keydown', handleKey);
+        return () => window.removeEventListener('keydown', handleKey);
+      }, [handleResponse, pickNext]);
+
+      const currentWord = words?.[currentNum];
+      const translateUrl = currentWord
+        ? `https://translate.google.com/#${lang1}/${lang2}/${encodeURIComponent(currentWord[lang1] || '')}`
+        : '#';
+
+      if (loading) {
+        return html`
+          <div class="container">
+            <div class="loading">
+              <div class="loading-spinner"></div>
+              <p>Loading vocabulary...</p>
+            </div>
+          </div>
+        `;
+      }
+
+      if (error) {
+        return html`
+          <div class="container">
+            <div class="card">
+              <h2>Error loading words</h2>
+              <p>${error}</p>
+            </div>
+          </div>
+        `;
+      }
+
+      return html`
+        <div class="container">
+          <div class="header">
+            <h1>Solid Words</h1>
+            <p>Your personal vocabulary trainer</p>
+          </div>
+
+          <div class="card">
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-value">${sessionDiscarded.size}/${rangeSize}</div>
+                <div class="stat-label">Deck</div>
+              </div>
+              <div class="stat">
+                <span class="percent" style="color: hsl(${percent * 1.2}, 70%, 45%)">${percent}%</span>
+                <div class="stat-label">Correct</div>
+              </div>
+              <div class="stat">
+                <button class="reset-btn" onclick=${resetAllProgress} title="Reset all progress">
+                  <div class="stat-value">${easy.length}</div>
+                </button>
+                <div class="stat-label">Lifetime</div>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-segment progress-easy" style="width: ${(sessionDiscarded.size / rangeSize) * 100}%"></div>
+              <div class="progress-segment progress-good" style="width: ${(sessionGood.size / rangeSize) * 100}%"></div>
+              <div class="progress-segment progress-again" style="width: ${(sessionAgain.size / rangeSize) * 100}%"></div>
+            </div>
+
+            <div class="word-display" onclick=${() => setShowTranslation(true)}>
+              <div class="word-primary">${currentWord?.[lang1] || '...'}</div>
+              <div class="word-secondary ${showTranslation ? 'visible' : ''}">${currentWord?.[lang2] || '...'}</div>
+              <div class="word-number">
+                <a href=${translateUrl} target="_blank">#${currentNum}</a> of ${maxWords}
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="btn btn-again" onclick=${() => handleResponse('again')}>
+                Again
+                <span class="btn-count">${again.length}</span>
+              </button>
+              <button class="btn btn-good" onclick=${() => handleResponse('good')}>
+                Good
+                <span class="btn-count">${good.length}</span>
+              </button>
+              <button class="btn btn-easy" onclick=${() => handleResponse('easy')}>
+                Easy
+                <span class="btn-count">${easy.length}</span>
+              </button>
+            </div>
+            <div class="shortcuts">Keys: 1/A 2/G 3/E · 4/Enter/Space=reveal · S=skip</div>
+          </div>
+
+          <div class="card settings">
+            <div class="range-selector">
+              <span class="range-label">Words</span>
+              <input type="number" class="range-input" value=${minWords} onchange=${handleMinChange} min="1" max=${maxWords - 1} />
+              <span class="range-label">to</span>
+              <input type="number" class="range-input" value=${maxWords} onchange=${handleMaxChange} min=${minWords + 1} max="8928" />
+            </div>
+            <button class="setting-btn" onclick=${resetSession}>
+              New Session
             </button>
-            <lx-dropdown-menu>
-              <ul>
-                <li><a ng-click="openDialog('about')" class="dropdown-link">About</a></li>
-              </ul>
-            </lx-dropdown-menu>
-          </lx-dropdown>
-        </div>
-      </div>
-    </div>
-    <!-- end menu -->
-
-
-    <!-- flexbox row -->
-    <div class="tc-white-1" flex-container="row">
-
-      <!-- sidebar -->
-      <div flex-item="2" flex-item-order="1">
-        <div class="sidebar sidebar--shown" ng-class="{'sidebar--shown': isVisible()}">
-          <div class="sidebar-menu">
-            <ul>
-              <li class="tc-blue-700">
-                <a ng-click="alert()"><span class="icon icon--m icon--flat mdi mdi-comment-alert-outline tc-blue-700">
-                <a ng-click="cycleMax()"><span class="icon icon--m icon--flat mdi mdi-rotate-3d tc-blue-700"></span>Czech {{max}}</a>
-              </li>
-            </ul>
           </div>
+
+          <div class="toast ${toast ? 'visible' : ''}">${toast}</div>
         </div>
-      </div>
-      <!-- end sidebar -->
+      `;
+    }
 
-      <!-- main app -->
-      <div flex-item="6" flex-item-order="2">
-
-        <div class="absolute-center">
-          <h2><a target="_blank" ng-href="{{translate}}"><span class="icon icon--m icon--flat mdi mdi-chart-bar tc-white"></span>{{num}}</a> <a class="tc-black" ng-click="save()">{{points}}</a> <span ng-class="percentClass" class="percent" id="percent">({{percent}}%)</span></h2>
-          <div>
-            <input readonly placeholder="loading..." id="first" ng-model="first" class="fs-display-2 tc-black" ng-click="toggle()"></input>
-          </div>
-          <div>
-            <input readonly placeholder="second" id="second" ng-model="second" class="fs-display-2 tc-black" ng-click="toggle()"></input>
-          </div>
-          <div class="mt fs-subhead"><a href="{{user}}">{{user}}</a></div>
-          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="again" ng-click="incAgain()">
-              <span class="tc-red-700">Again
-                <br> {{again.length}}</span>
-          </button>
-          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="good" ng-click="incGood()">
-              <span class="tc-light-blue-700">Good
-              <br> {{good.length}}</span>
-          </button>
-          <button class="mt++ btn btn--l btn--black bgc-white-1" lx-ripple aria-label="easy" ng-click="incEasy()">
-              <span class="tc-green-700">easy
-              <br> {{easy.length}}</span>
-          </button>
-        </div>
-
-      </div>
-      <!-- end main app -->
-
-    </div>
-    <!-- end flexbox row -->
-
-  </div>
-  <!-- end main page -->
-
-
-  <!-- about -->
-  <lx-dialog class="dialog dialog--l" auto-close="true" id="about">
-    <div class="dialog__header">
-      <div class="toolbar bgc-blue-A700 pl+">
-        <span class="toolbar__label tc-white fs-title">
-          About Words
-        </span>
-        <div class="toolbar__right">
-          <button class="btn btn--l btn--white btn--icon" lx-ripple lx-dialog-close>
-            <span aria-hidden="true" class="mdi mdi-close"></span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="dialog__content p+">
-      <p>Video is a personal word trainer, that uses Linked Data to store a video on your personal online datastore.</p>
-      <br>
-      <p>This application follows the <a target="_blank" href="https://github.com/solid/solid-spec/">SoLiD specifications</a> to ensure that your data stays private.</p>
-      <br>
-      <p><a target="_blank" href="https://github.com/melvincarvalho/vocab/">Source Code</a></p>
-    </div>
-    <div class="dialog__actions">
-      <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Close</button>
-    </div>
-  </lx-dialog>
-  <!-- end about -->
-
-
-  <!-- Deps -->
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/velocity/velocity.min.js"></script>
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
-  <script src="bower_components/lumx/dist/lumx.min.js"></script>
-  <script src="bower_components/angular-audio/app/angular.audio.js"></script>
-  <script src="app/rdflib.js"></script>
-  <script src="app/common.js"></script>
-  <!-- App -->
-  <script src="app/app.js"></script>
+    render(html`<${App} />`, document.getElementById('app'));
+  </script>
 </body>
-
 </html>
