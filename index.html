@@ -509,7 +509,7 @@
       const [solidSession, setSolidSession] = useState(null);
       const [solidStatus, setSolidStatus] = useState('');
       const [solidStatusType, setSolidStatusType] = useState(''); // 'success' | 'error' | ''
-      const [oidcIssuer, setOidcIssuer] = useState(() => storage.get('oidcIssuer', 'https://solidcommunity.net'));
+      const [oidcIssuer, setOidcIssuer] = useState(() => storage.get('oidcIssuer', 'https://solidweb.org'));
       const [syncing, setSyncing] = useState(false);
 
       const percent = sessionPoints > 0 ? Math.round((sessionCorrect / sessionPoints) * 100) : 0;
