@@ -1,19 +1,13 @@
 být	be
 a	and
-v	in
 na	on
-ten	the
+ten	that
 on	he
 že	that
-s	with
-z	from
 který	which
 mít	have
 do	to
 já	I
-o	about
-k	to
-i	and
 jeho	his
 ale	but
 svůj	his
@@ -38,12 +32,11 @@ jeden	one
 jen	only
 můj	my
 jenž	that
-člověk	man
+člověk	person
 ty	you
-stát	stand
-u	at
+stát	state
 muset	have to
-velký	great
+velký	big
 chtít	want
 také	also
 až	until
@@ -58,10 +51,10 @@ však	however
 ani	neither
 vědět	know
 nový	new
-hodně	lot
+hodně	a lot
 podle	by
 další	next
-celý	whole
+celý	round
 jiný	other
 první	first
 mezi	between
@@ -71,12 +64,12 @@ den	day
 tam	there
 kde	where
 doba	time
-každý	everyone
-druhý	other
+každý	every
+druhý	second
 místo	place
 dobrý	good
 takový	such
-strana	page
+strana	side
 protože	because
 nic	nothing
 začít	begin
@@ -85,7 +78,7 @@ něco	something
 vidět	see
 říkat	say
 země	country
-dítě	child
+dítě	baby
 malý	little
 ne	No
 sám	himself
@@ -102,14 +95,14 @@ tři	three
 kdy	when
 město	city
 přijít	come
-dobře	good
+dobře	well
 žena	woman
 muž	man
 teď	now
 kdo	who
 již	already
 nad	above
-asi	about
+asi	probably
 starý	old
 například	for example
 případ	case
@@ -119,30 +112,31 @@ společnost	company
 několik	several
 některý	some
 tedy	therefore
-cesta	journey
+cesta	way
 pokud	if
 dělat	do
 hlava	head
 čas	time
-poslední	latest
+poslední	last
 oko	eye
 právě	just
 tvůj	yours
 věc	thing
 voda	water
+český	Czech
 proti	against
 velmi	very
 jaký	what
 přes	through
-dům	home
+dům	house
 dnes	today
 pan	Mr.
-část	section
+část	part
 třeba	perhaps
 kdyby	if
 brzy	soon
-lze	You can
-firma	business
+lze	possible
+firma	company
 oba	both
 slovo	word
 tenhle	this
@@ -160,9 +154,9 @@ kolem	around
 málo	little
 myslit	think
 stejně	anyway
--li	if
+Český	Czech
 moc	power
-problém	issue
+problém	problem
 milión	million
 nikdo	nobody
 stále	still
@@ -182,7 +176,7 @@ skupina	group
 mladý	young
 způsob	way
 často	often
-řada	advice
+řada	series
 jediný	single
 mluvit	speak
 vrátit	return
@@ -226,6 +220,7 @@ jestli	whether
 situace	situation
 stejný	the same
 hodiny	hours
+měsíc	Moon
 získat	gain
 čtyři	four
 jméno	name
@@ -234,6 +229,7 @@ daleko	far
 otec	father
 znát	know
 změna	change
+evropský	European
 většina	most
 nakonec	eventually
 nyní	now
@@ -247,6 +243,7 @@ znamenat	mean
 vypadat	look
 pět	five
 informace	information
+americký	American
 trochu	a little
 týden	week
 důležitý	important
@@ -261,8 +258,8 @@ téměř	almost
 dlouho	long
 rodina	family
 zatím	yet
-rozhodnout	choose
-výsledek	outcome
+rozhodnout	decide
+výsledek	result
 ano	yes
 pracovat	work
 státní	state
@@ -284,23 +281,25 @@ dost	enough
 základní	basic
 zcela	completely
 přitom	yet
+paní	Ms
 smrt	death
 matka	mother
+sice	Although
 rychle	quickly
 cítit	feel
 minuta	minute
 pár	couple
-procento	percentage
+procento	percent
 program	program
 určitý	some
 večer	evening
 během	during
 existovat	exist
-kvůli	about
+kvůli	because of
 hodnota	value
 bílý	white
-noha	foot
-jistý	some
+noha	leg
+jistý	certain
 jednou	once
 podívat se	look
 včera	yesterday
@@ -317,12 +316,12 @@ hra	game
 počet	count
 tehdy	then
 republika	republic
-přímo	right
+přímo	directly
 stav	status
 banka	bank
 politický	political
-hodina	lesson
-obraz	image
+hodina	hour
+obraz	picture
 zejména	especially
 ať	whatever
 činnost	activity
@@ -346,7 +345,7 @@ platit	pay
 otevřít	open
 vždycky	always
 dávat	give
-cíl	target
+cíl	goal
 psát	write
 chodit	walk
 jednotlivý	single
@@ -363,9 +362,10 @@ skutečnost	reality
 věřit	believe
 pocit	feeling
 dílo	work
-silný	thick
+silný	strong
 sto	hundred
 spolu	together
+německý	German
 vedle	next to
 tvrdit	claim
 základ	foundation
@@ -386,15 +386,15 @@ zatímco	while
 myslet	think
 láska	love
 divadlo	theater
-proces	trial
-podařit se	do well
+proces	process
+podařit se	succeed
 forma	form
 stůl	table
 prý	allegedly
 pokračovat	continue
 sem	here
 názor	opinion
-těžký	heavy
+těžký	difficult
 okno	window
 pomoci	help
 světový	worldwide
@@ -405,8 +405,8 @@ skončit	end
 začínat	begin
 rada	advice
 ležet	lie
-přítel	boyfriend
-kraj	county
+přítel	friend
+kraj	region
 úplně	completely
 třetí	third
 odpovědět	answer
@@ -423,7 +423,7 @@ prezident	president
 role	role
 představovat	represent
 pokoj	room
-období	season
+období	period
 nízký	low
 přesto	yet
 vyjít	come out
@@ -438,19 +438,20 @@ používat	use
 držet	hold
 ministr	minister
 vůz	car
-zároveň	together
+zároveň	at the same time
 dosud	yet
 doktor	doctor
 funkce	function
 naopak	conversely
 volba	option
-zvláštní	strange
+zvláštní	special
 jasný	clear
 syn	son
 teprve	only
-obec	village
+obec	municipality
 akce	action
 zdroj	source
+pražský	Prague
 úroveň	level
 rozdíl	difference
 významný	significant
@@ -488,7 +489,7 @@ společný	common
 tolik	so much
 autor	author
 domácí	home
-náklad	load
+náklad	cost
 návrh	proposal
 kam	where
 finanční	financial
@@ -510,14 +511,14 @@ smět	may
 politika	politics
 půl	half
 schopný	able
-obchod	business
-kolo	wheel
+obchod	shop
+kolo	bike
 rovněž	also
 zápas	match
 umění	art
 hranice	border
 loď	ship
-umět	know
+umět	know how
 vytvořit	create
 doma	home
 určitě	definitely
@@ -529,15 +530,14 @@ místní	local
 zkušenost	experience
 rodič	parent
 bod	point
-pán	lord
-tvořit	generate
+pán	gentleman
+tvořit	create
 osobní	personal
 dívka	girl
-ČR	Czech Republic
 jakýsi	sort of
 výkon	performance
 mimo	outside
-svatý	saint
+svatý	holy
 rámec	framework
 okamžik	moment
 vedení	leadership
@@ -549,12 +549,12 @@ minulý	last
 myšlenka	thought
 zaměstnanec	employee
 představit	present
-poprvé	first
+poprvé	for the first time
 hudba	music
-vzniknout	develop
+vzniknout	arise
 sledovat	watch
 rozhodnutí	decision
-věnovat	pay
+věnovat	dedicate
 skoro	almost
 mnohem	much
 příští	next
@@ -566,7 +566,7 @@ zákazník	customer
 pravý	right
 střední	middle
 množství	quantity
-poznat	learn
+poznat	recognize
 alespoň	at least
 prohlásit	declare
 raději	rather
@@ -584,18 +584,20 @@ stránka	page
 krátký	short
 mnohý	many
 budova	building
-nabízet	bid
+nabízet	offer
 vlas	hair
-list	sheet
+list	leaf
 městský	urban
 součást	component
+USA	USA
 celkový	overall
 víno	wine
+televize	TV
 věk	age
-použít	apply
+použít	use
 úspěch	success
 význam	importance
-podpora	promotion
+podpora	support
 šéf	boss
 moderní	modern
 příklad	example
@@ -617,13 +619,12 @@ metr	meter
 les	forest
 hora	mountain
 bratr	brother
-de	de
-prosit	plead
+prosit	please
 vzduch	air
 text	text
 přidat	add
 přijet	arrive
-jenže	only
+jenže	but
 dolar	dollar
 schopnost	ability
 soutěž	competition
@@ -632,12 +633,14 @@ strach	fear
 hráč	player
 avšak	yet
 mrtvý	dead
+Německo	Germany
 skutečný	real
 dcera	daughter
 zajímavý	interesting
 výstava	exhibition
+francouzský	French
 jakýkoliv	whatever
-energie	power
+energie	energy
 zahraniční	foreign
 policista	policeman
 dvacet	twenty
@@ -647,7 +650,7 @@ počátek	beginning
 boj	fight
 připadat	seem
 poslat	send
-doprava	right
+doprava	transport
 vnitřní	internal
 papír	paper
 koupit	buy
@@ -655,7 +658,7 @@ uvidět	see
 občan	citizen
 rameno	shoulder
 předseda	chairman
-zvíře	beast
+zvíře	animal
 odpovídat	answer
 bát se	fear
 napadnout	attack
@@ -680,14 +683,14 @@ kultura	culture
 pole	field
 zůstávat	stay
 právní	legal
-správný	right
+správný	correct
 červený	red
 krev	blood
 zhruba	roughly
 jmenovat	appoint
 počítat	count
 chlapec	boy
-silnice	highway
+silnice	road
 stavební	structural
 pracovník	worker
 obvykle	usually
@@ -705,11 +708,12 @@ rozvoj	development
 radost	pleasure
 předmět	subject
 sedm	seven
+britský	British
 vedoucí	leader
 šťastný	happy
 území	area
 útok	attack
-jednoduchý	single
+jednoduchý	simple
 chování	behavior
 přestat	stop
 příběh	story
@@ -729,14 +733,14 @@ pochopit	understand
 postava	character
 průběh	course
 zelený	green
-dnešní	contemporary
+dnešní	today's
 vycházet	come out
 měnit	change
 vojenský	military
 závěr	conclusion
 postel	bed
-využít	exploit
-zrovna	right
+využít	use
+zrovna	just now
 prodej	sale
 svoboda	freedom
 běžný	common
@@ -753,13 +757,12 @@ zajímat	interest
 přát	wish
 model	model
 místnost	room
-objekt	building
-čistý	clear
-nabídka	bid
-m	m
+objekt	object
+čistý	clean
+nabídka	offer
 ukazovat	show
 přesvědčit	convince
-spousta	lot
+spousta	many
 majitel	owner
 důsledek	consequence
 nikoliv	not
@@ -781,10 +784,12 @@ příležitost	opportunity
 následující	next
 kvalita	quality
 orgán	organ
+ruský	Russian
 zaplatit	pay
 kus	piece
+EU	EU
 očekávat	expect
-souvislost	relationship
+souvislost	connection
 pustit	let go
 komise	commission
 přicházet	come
@@ -794,14 +799,13 @@ správa	management
 jídlo	food
 výrobek	product
 příprava	preparation
-l	l
-samý	very
+samý	same
 hovořit	talk
 ztráta	loss
 předtím	before that
 zpátky	back
-samotný	very
-fotografie	photos
+samotný	alone
+fotografie	photograph
 povinnost	duty
 příjemný	nice
 provést	perform
@@ -809,22 +813,22 @@ obrátit	turn
 úspěšný	successful
 vůči	towards
 duše	soul
-letošní	this year
+letošní	this year's
 kancelář	office
-g	g
 historie	history
 buď	either
-stávat	becoming
+Václav	Václav
+stávat	become
 čelo	forehead
-hledisko	viewpoint
-škoda	damage
+hledisko	point of view
+škoda	pity
 maso	meat
 slavný	famous
-kontrola	check
+kontrola	control
 zboží	goods
 hluboký	deep
-přímý	straight
-uvedený	given
+přímý	direct
+uvedený	mentioned
 kousek	piece
 nést	carry
 struktura	structure
@@ -839,17 +843,17 @@ stanice	station
 veškerý	all
 sestra	sister
 ústa	mouth
-uvědomit	remember
+uvědomit	realize
 pravidlo	rule
 technika	technology
 historický	historical
-proud	current
+proud	stream
 kdysi	once
 stupeň	degree
-vstup	input
+vstup	entrance
 znít	sound
 majetek	possession
-závod	plant
+závod	race
 podíl	share
 návštěva	visit
 podstata	nature
@@ -862,36 +866,36 @@ manželka	wife
 způsobit	cause
 maminka	mom
 dokud	until
-pokus	trial
+pokus	attempt
 doufat	hope
-vzhledem	due
+vzhledem	due to
 daný	given
 zbytek	rest
 datum	date
 daň	tax
 kostel	church
-položit	lay
+položit	put
+září	September
 šance	chance
 host	guest
 technologie	technology
 dovolit	allow
 kulturní	cultural
-opatření	measures
+opatření	measure
 blízko	close
 nástroj	tool
-půda	soil
-vytvářet	generate
+půda	ground
+vytvářet	create
 okamžitě	immediately
 vyhrát	win
 příčina	cause
 trenér	trainer
 pouhý	mere
 projít	go through
-využívat	exploit
+využívat	use
 soukromý	private
 žák	pupil
 podat	submit
-b	b
 umožňovat	allow
 dít	happen
 zajistit	secure
@@ -899,14 +903,14 @@ všimnout	notice
 si	to
 rozhovor	interview
 záda	back
-docházet	resort
-náměstí	plaza
+docházet	come
+náměstí	square
 minulost	past
 vysoko	high
 veřejnost	public
 scéna	scene
 dovést	lead
-uvádět	featuring
+uvádět	state
 štěstí	happiness
 pokusit se	try
 hotel	hotel
@@ -930,13 +934,14 @@ prvek	element
 pohybovat	move
 riziko	risk
 záležitost	affair
-chovat	rear
+chovat	behave
 dostávat	receive
 nějak	somehow
 mistr	champion
 jezdit	ride
 hodit	throw
 divák	spectator
+neděle	Sunday
 obsah	contents
 cizí	foreign
 výraz	expression
@@ -945,14 +950,15 @@ konkrétní	specific
 připomínat	remind
 pomáhat	help
 dopravní	transport
-údaj	reading
+údaj	data
 řád	order
 počítač	computer
 pořádek	tidiness
-špatně	poorly
+špatně	badly
 plocha	area
 hospodářský	economic
-naděje	hopes
+ODS	ODS
+naděje	hope
 tvar	shape
 příjem	income
 západní	western
@@ -961,75 +967,75 @@ osud	fate
 naprosto	totally
 zabít	kill
 kámen	stone
-paragraf	section
+paragraf	paragraph
 policejní	police
 kluk	boy
-chyba	bug
-bydlet	stay
+chyba	mistake
+bydlet	live
 učit	teach
 dolů	down
 modrý	blue
-současně	together
+současně	at the same time
 souhlasit	agree
 určit	identify
 tentokrát	this time
 celkem	total
 péče	care
-řídit	manage
+řídit	drive
 vysvětlovat	explain
 zabývat se	deal with
+leden	January
 fakt	fact
 pozorovat	watch
 oběť	victim
-projev	token
+projev	speech
 volat	call
+sobota	Saturday
 operace	operation
 snadno	easily
 nabídnout	offer
-amerika	america
 vítr	wind
 bránit	defend
 viz	see
 profesor	professor
 národ	nation
 zvýšit	increase
-veliký	great
+veliký	big
 desítka	ten
 olej	oil
 naučit	learn
-takto	thus
+takto	like this
 čin	act
 aniž	without
-vyprávět	recount
+vyprávět	tell
 zima	winter
 tradiční	traditional
-úprava	treatment
+úprava	modification
 uvažovat	consider
 dohoda	agreement
 požádat	ask
-new	new
 odborník	expert
 poměr	ratio
 zavolat	call
-bolest	ache
+bolest	pain
 odpoledne	afternoon
 pomocí	through
 dojem	impression
 princip	principle
 klient	client
 pojem	notion
-závislý	addicted
-přiznat	grant
+závislý	dependent
+přiznat	admit
 soubor	file
 činit	do
 kůže	skin
 vznik	formation
-příslušný	appropriate
+příslušný	relevant
 pamatovat	remember
 dávno	a long time ago
 pacient	patient
 výrobce	manufacturer
-klid	serenity
+klid	calm
 spojení	link
 učitel	teacher
 společně	together
@@ -1038,13 +1044,14 @@ rostlina	plant
 partner	partner
 ohled	respect
 povídat	chat
-uzavřít	close down
+uzavřít	close
 teorie	theory
-drobný	minor
+drobný	small
 provádět	perform
 hudební	music
+slovenský	Slovak
 karta	card
-rána	blow
+rána	wound
 ven	out
 zahraničí	abroad
 časopis	magazine
@@ -1057,7 +1064,6 @@ opakovat	repeat
 komunikace	communications
 nacházet	finding
 všude	everywhere
-tj.	i.e.
 praxe	practice
 vlastnost	property
 dětský	children
@@ -1079,7 +1085,7 @@ reakce	reaction
 chybět	be missing
 chuť	flavor
 vlak	train
-kapitola	section
+kapitola	chapter
 ozvat se	speak up
 produkt	product
 koncert	concert
@@ -1100,19 +1106,23 @@ nýbrž	but
 výrazně	distinctly
 teplota	temperature
 park	park
+zámek	Castle
 vytáhnout	pull out
-těšit	forward
-krk	throat
-šat	raiment
-prostřednictví	mediation
+těšit	look forward
+krk	neck
+šat	clothing
+prostřednictví	through
 poslanec	deputy
 vyžadovat	require
 umělecký	artistic
 vědomí	consciousness
-slečna	lady
+slečna	miss
 značný	sizable
 chystat	prepare
+Němec	German
 následovat	follow
+květen	May
+červen	June
 vážný	serious
 zvuk	sound
 jasně	clear
@@ -1120,21 +1130,24 @@ jakmile	once
 zvláště	especially
 loňský	last year
 úsměv	smile
+televizní	TV
 tma	darkness
 drahý	expensive
 letadlo	aircraft
 nosit	wear
 potřebný	required
+jo	Yeah
 zpívat	sing
 velikost	size
 norma	standard
 setkat	meet
 kolega	colleague
+internet	Internet
 rozpočet	budget
 ucho	ear
 spojit	join
 výrazný	significant
-připravovat	cook
+připravovat	prepare
 konstrukce	structure
 zisk	profit
 poněkud	somewhat
@@ -1143,13 +1156,14 @@ stanovit	fix
 též	too
 poskytovat	provide
 starost	concern
+Čechy	Bohemia
 studie	study
 tvrdý	tough
 fungovat	work
 průmysl	industry
 médium	medium
 dějiny	history
-domnívat se	I think that
+domnívat se	think
 milý	dear
 dokument	document
 žádat	ask
@@ -1171,9 +1185,10 @@ věda	science
 sdělit	communicate
 uvnitř	inside
 nedostatek	shortage
+říjen	October
 prázdný	empty
 probíhat	take place
-pokoušet	tempt
+pokoušet	try
 nicméně	however
 přítomnost	presence
 sotva	barely
@@ -1183,7 +1198,7 @@ lehký	light
 píseň	song
 pevný	firm
 nijak	no
-kuchyně	cooking
+kuchyně	kitchen
 oddělení	department
 nejprve	first
 víra	faith
@@ -1194,9 +1209,7 @@ záležet	matter
 buňka	cell
 církev	church
 odpad	waste
-le	le
 pryč	gone
-apod.	like.
 poskytnout	grant
 výběr	selection
 vítězství	victory
@@ -1211,22 +1224,24 @@ tábor	camp
 běžet	run
 předpis	prescription
 výjimka	exception
-krajina	scenery
+krajina	landscape
 návštěvník	visitor
-nebe	heaven
+nebe	sky
 herec	actor
 svaz	union
 klasický	classical
+František	Pastille
 akcie	share
 postoj	attitude
-střecha	top
+střecha	roof
 učinit	do
 účel	purpose
 dodávat	deliver
 vyjádřit	express
 neustále	constantly
+listopad	November
 zdravý	healthy
-použití	application
+použití	use
 celek	complex
 zvednout	pick up
 dráha	track
@@ -1236,9 +1251,12 @@ informovat	inform
 potíž	difficulty
 deska	board
 bezpečnost	safety
+březen	March
 domov	home
+srpen	August
 existence	existence
 starosta	mayor
+dozvědět se	Learn
 prodat	sell
 padnout	fall
 předchozí	previous
@@ -1247,6 +1265,7 @@ sníh	snow
 tabulka	table
 liga	league
 adresa	address
+duben	April
 zdravotní	health
 padesát	fifty
 obvyklý	usual
@@ -1283,24 +1302,23 @@ podávat	feed
 vejít	enter
 výbor	committee
 jaro	spring
+informační	Information
 kamarád	pal
-the	the
 dvůr	yard
 umělec	artist
 ostatně	moreover
 filmový	movie
 pravděpodobně	probably
-případně	eventually
+případně	possibly
 poznámka	remark
 utkání	match
-složitý	complex
+složitý	complicated
 pěkný	pretty
 počkat	wait
 motor	engine
 vesnice	village
 trest	punishment
 nedávno	recently
-atd	etc.
 narodit	born
 zvolit	choose
 ryba	fish
@@ -1308,19 +1326,19 @@ kategorie	category
 vůle	will
 bohužel	unfortunately
 omezený	limited
-bavit	entertain
+bavit	amuse
 spor	dispute
-těžko	difficult
-kino	theater
+těžko	hardly
+kino	cinema
 kurs	course
-pocházet	come
-pravit	to edit the
+pocházet	originate
+československý	Czechoslovak
+pravit	say
 využití	utilization
-úzký	close
+úzký	narrow
 hladina	level
 reagovat	react
-Čech	Čech
-vystoupit	alight
+vystoupit	get off
 okolnost	circumstance
 věta	sentence
 důkaz	evidence
@@ -1337,65 +1355,71 @@ udržet	keep
 vládní	governmental
 ticho	silence
 průmyslový	industrial
-dopadnout	strike
-stopa	footprint
-zahájit	launch
+dopadnout	turn out
+stopa	trace
+zahájit	begin
 euro	euro
-vstát	rise
+vstát	stand up
 hledět	look
+pátek	Friday
 budoucí	future
+Američan	American
 vodní	water
 bojovat	fight
 klidně	quietly
 obava	fear
+východ	East
 setkání	meeting
 snížit	reduce
 hrad	castle
 účastník	participant
 tentýž	same
 ženský	female
-sejít	meet
+sejít	come down
 předpoklad	assumption
 kapsa	pocket
 manažer	manager
 režim	mode
-vadit	hinder
+vadit	mind
 připomenout	remind
 zlý	evil
-vazba	weave
+vazba	connection
 východní	east
 výstavba	construction
 představitel	representative
 vnější	outer
 seznam	list
 elektrický	electrical
-zbavit	relieve
+zbavit	get rid of
 hnutí	movement
+únor	February
+italský	Italian
 znalost	knowledge
-přinášet	produce
+přinášet	bring
 ret	lip
 paměť	memory
 jíst	eat
 odjet	leave
 bezpečnostní	security
 nárok	claim
+západ	West
 prodávat	sell
-vydržet	withstand
-podporovat	promote
+vydržet	endure
+prosinec	December
+podporovat	support
 nastat	come
 díl	part
-podlaha	flooring
+podlaha	floor
 dospělý	adult
 původně	originally
 občanský	civil
 novinář	journalist
 cosi	something
 boží	divine
-km	km
-zvlášť	separately
+zvlášť	especially
 ročník	year
 vozidlo	vehicle
-všecek	all the keen
+všecek	all
 krajský	regional
 pozdní	late
 zvýšení	increase
@@ -1409,15 +1433,14 @@ odpor	resistance
 přírodní	natural
 touha	desire
 vzájemný	mutual
-podstatný	substantial
+podstatný	significant
 kontakt	contact
-plzeň	plzeň
 čtvrtý	fourth
 dřevěný	wooden
 mladík	youngster
 chvilka	bit
 průměr	average
-vyrazit	set off
+vyrazit	set out
 nos	nose
 investor	investor
 odmítat	reject
@@ -1427,6 +1450,7 @@ tajný	secret
 vyvolat	cause
 úředník	official
 vzpomínka	memory
+červenec	July
 fáze	phase
 teplý	warm
 účet	bill
@@ -1435,9 +1459,10 @@ snadný	easy
 klást	put
 nápad	idea
 noviny	newspaper
+pondělí	Monday
 účinek	effect
 tiše	quietly
-žádost	application
+žádost	request
 festival	festival
 zkusit	try
 premiér	premier
@@ -1445,6 +1470,7 @@ mozek	brain
 zadní	rear
 nahoru	up
 restaurace	restaurant
+anglický	English
 smích	laughter
 režisér	director
 typický	typical
@@ -1455,7 +1481,7 @@ oblíbený	favorite
 produkce	production
 patnáct	fifteen
 podílet	share
-závislost	addiction
+závislost	dependence
 skvělý	great
 vězení	prison
 sbírka	collection
@@ -1466,7 +1492,7 @@ stálý	stable
 hotový	ready
 termín	deadline
 jízda	ride
-projevit	exhibit
+projevit	show
 nepřítel	enemy
 teplo	heat
 jemný	fine
@@ -1487,7 +1513,7 @@ svobodný	free
 navrhnout	suggest
 dovnitř	inwards
 vnímat	perceive
-spočívat	rest
+spočívat	consist
 přičemž	while
 kruh	circle
 levý	left
@@ -1503,6 +1529,7 @@ náročný	challenging
 objem	volume
 horký	hot
 znak	character
+tatínek	Daddy
 nově	new
 soudce	judge
 překvapit	surprise
@@ -1512,6 +1539,7 @@ generální	general
 dřevo	wood
 jistota	certainty
 soudní	court
+japonský	Japanese
 déšť	rain
 těsně	close
 obyčejný	common
@@ -1521,7 +1549,6 @@ rozhodovat	decide
 generál	general
 několikrát	several times
 roh	corner
-d	d
 básník	poet
 povaha	nature
 holka	girl
@@ -1538,6 +1565,7 @@ spokojený	satisfied
 ovlivnit	affect
 zachránit	rescue
 dávka	dose
+sovětský	Soviet
 uložit	impose
 vědecký	scientific
 věž	tower
@@ -1621,6 +1649,7 @@ pozemek	land
 pád	crash
 pěkně	fine
 poloha	location
+Británie	Britain
 fotbalový	football
 vrchol	top
 román	novel
@@ -1638,6 +1667,7 @@ prokázat	show
 žlutý	yellow
 ihned	immediately
 chytit	catch
+Škoda	Shame
 dávný	old
 fyzický	physical
 kariéra	career
@@ -1652,6 +1682,7 @@ utéci	flee
 uvědomovat	realize
 respektive	respectively
 máslo	butter
+Zdeněk	Zdenek
 vyrábět	produce
 pomyslet	think
 táhnout	drag
@@ -1664,6 +1695,7 @@ zloděj	thief
 daňový	tax
 volební	election
 vyplývat	result
+Itálie	Italy
 hodnocení	reviews
 odkud	whence
 oficiální	official
@@ -1727,6 +1759,7 @@ přátelský	friendly
 umístit	place
 hrůza	horror
 pevně	firm
+okresní	District
 postižený	afflicted
 vzácný	rare
 dech	breath
@@ -1749,6 +1782,7 @@ konference	conference
 prostý	plain
 ochotný	helpful
 centrální	central
+energetický	Energy
 klíčový	key
 památka	monument
 tajemství	mystery
@@ -1759,6 +1793,7 @@ nůž	knife
 kandidát	candidate
 hmota	mass
 probudit	wake
+středa	Wednesday
 pobřeží	coast
 káva	coffee
 příslušník	member
@@ -1819,11 +1854,13 @@ přispět	contribute
 platný	valid
 dluh	debt
 vejce	egg
+čína	China
 blížit se	approach
 internetový	web
 symbol	symbol
 domácnost	household
 literární	literary
+komunista	Communist
 dohromady	together
 čtyřicet	forty
 realita	reality
@@ -1851,6 +1888,7 @@ ročně	per annum
 viset	hang
 spánek	sleep
 trestný	criminal
+investiční	Investment
 vybraný	selected
 onemocnění	illness
 přání	wishes
@@ -1878,6 +1916,7 @@ souviset	related
 sezóna	season
 špička	tip
 pozitivní	positive
+čtvrtek	Thursday
 vložit	insert
 pás	strip
 dokončit	finish
@@ -1886,15 +1925,20 @@ mír	peace
 dohodnout	settle
 zaujmout	take
 výhodný	profitable
+sezona	Season
 opera	opera
 cizinec	foreigner
 mlčet	be silent
 vyjadřovat	express
 pořádně	properly
+čínský	Chinese
+pojišťovna	Insurance
 odlišný	different
 výměna	exchange
+židovský	Jewish
 vzdělání	education
 slza	tear
+rakouský	Austrian
 úsek	section
 rudý	red
 dosahovat	reach
@@ -1927,6 +1971,8 @@ byť	be
 dodávka	supply
 soused	neighbor
 ustanovení	provision
+brněnský	Brno
+komunistický	Communist
 příznivý	favorable
 demokracie	democracy
 zvýšený	increased
@@ -1967,6 +2013,7 @@ vzor	pattern
 stoupat	rise
 slušný	decent
 specifický	specific
+Irák	Iraq
 hrozně	awfully
 opatrně	carefully
 nádraží	railway station
@@ -2002,6 +2049,7 @@ realizace	realization
 prach	dust
 sexuální	sexual
 kombinace	combination
+stáhnout	Download
 demokratický	democratic
 usmívat se	smile
 schválit	approve
@@ -2025,6 +2073,7 @@ současnost	present
 zajít	go
 košile	shirt
 založený	founded
+LN	LN
 mistrovství	championship
 obávat	worry
 květ	flower
@@ -2047,9 +2096,11 @@ směs	mix
 zaměstnavatel	employer
 správní	administrative
 obloha	garnish
+WWW	WWW
 zimní	winter
 záznam	record
 cz	com
+úterý	Tuesday
 trestní	criminal
 zařadit	classify
 dodavatel	contractor
@@ -2060,11 +2111,10 @@ klášter	monastery
 tiskový	press
 bytost	creature
 kamenný	stone
-x	x
+křesťanský	Christian
 hrdina	hero
 kritérium	criterion
 provedení	performance
-cit	emotion
 skála	rock
 mínit	mean
 novina	news
@@ -2123,6 +2173,7 @@ vůdce	leader
 jaderný	nuclear
 kořen	root
 konkurence	competition
+polský	Polish
 říše	empire
 dle	according to
 trasa	itinerary
@@ -2166,6 +2217,7 @@ nechávat	leave
 sluneční	solar
 snášet	suffer
 patrný	noticeable
+Vídeň	Vienna
 choroba	disease
 výklad	interpretation
 zóna	zone
@@ -2199,6 +2251,7 @@ prudce	violently
 spodní	lower
 všeobecný	general
 spolupracovat	cooperate
+jedině	Only
 negativní	negative
 premiéra	premiere
 hustý	thick
@@ -2208,6 +2261,7 @@ profesionální	professional
 kalhoty	trousers
 platnost	validity
 poradit	advise
+Karlův	Charles
 zvaný	known
 varovat	warn
 zahlédnout	catch sight
@@ -2221,6 +2275,7 @@ letět	fly
 telefonní	phone
 oproti	compared to
 vyšetřování	investigation
+lesní	Forestry
 výpověď	notice
 uzavřený	closed
 sektor	sector
@@ -2253,6 +2308,7 @@ podnikání	undertaking
 spustit	run
 zakázka	commission
 překonat	overcome
+Vánoce	Christmas
 připustit	admit
 pokaždé	always
 von	out
@@ -2285,6 +2341,7 @@ pověst	reputation
 zeman	thane
 cestující	passengers
 sebrat	pick
+vnitro	Interior
 počítačový	computer
 stanovený	set
 hnědý	brown
@@ -2334,6 +2391,7 @@ naposledy	last
 popis	description
 ovoce	fruit
 příchod	advent
+Zlín	Zlin
 příkaz	command
 veletrh	fair
 výzva	challenge
@@ -2345,12 +2403,14 @@ tudíž	therefore
 publikum	audience
 sklenice	jar
 věčný	everlasting
+Ježíš	Jesus
 okolní	surrounding
 teta	aunt
 odpovídající	appropriate
 síň	hall
 uznat	recognize
 vojsko	army
+vánoční	Christmas
 základna	base
 sehnat	get
 vykládat	construe
@@ -2378,6 +2438,7 @@ postarat	take care
 tuk	fat
 odložit	postpone
 pořádat	hold
+nákladní	Freight
 stříbrný	silver
 nakrájet	slice
 blesk	lightning
@@ -2421,9 +2482,11 @@ citlivý	sensitive
 usnout	go to sleep
 opravdový	real
 detail	detail
+římský	Roman
 vysvětlení	explanation
 přijetí	adoption
 překážka	hurdle
+OSN	UN
 senát	senate
 zkoumat	examine
 sklad	warehouse
@@ -2434,6 +2497,7 @@ zpěv	singing
 pracoviště	workplace
 rozpor	rift
 právník	lawyer
+Řím	Rome
 pochybovat	doubt
 vybudovat	build
 hladký	smooth
@@ -2446,7 +2510,9 @@ federální	federal
 usilovat	seek
 člun	boat
 snižovat	lower
+kouč	Coach
 věrný	faithful
+Česko	Czech
 dopad	impact
 zázrak	miracle
 kamera	camera
@@ -2473,6 +2539,7 @@ utíkat	run
 redakce	editorial staff
 uslyšet	hear
 vozík	trolley
+Ústí	Estuary
 nápis	inscription
 těžce	heavily
 obal	package
@@ -2486,6 +2553,7 @@ litovat	regret
 skrz	through
 anděl	angel
 povodeň	flood
+španělský	Spanish
 heslo	password
 včas	on time
 veselý	hilarious
@@ -2504,6 +2572,7 @@ omyl	mistake
 jednotný	single
 přítelkyně	girlfriend
 poznatek	finding
+řecký	Greek
 fanoušek	fan
 finále	finals
 technologický	technological
@@ -2548,6 +2617,7 @@ scházet	meet
 tvůrce	creator
 zasedání	session
 album	album
+plzeňský	Pilsner
 stihnout	catch
 opřít	rest
 měření	measurement
@@ -2606,6 +2676,7 @@ plot	fence
 poradce	adviser
 doprovázet	accompany
 umírat	be dying
+Československo	Czechoslovakia
 naslouchat	listen
 houba	fungus
 pevnost	strength
@@ -2667,12 +2738,15 @@ odvést	divert
 rozumný	reasonable
 skočit	jump
 nato	on it
+uspět	Succeed
 výborný	excellent
 popřípadě	or
 naleznout	find an
 uvěřitelný	believable
+jenomže	But
 lůžko	bed
 zahájení	initiation
+česko	Czech
 plod	fetus
 vyjet	start
 pláž	beach
@@ -2682,6 +2756,7 @@ zanechat	leave
 hloubka	depth
 následný	follow-up
 špinavý	dirty
+žid	Jew
 novela	short story
 odehrát	play
 plnění	performance
@@ -2698,11 +2773,13 @@ nález	finding
 hoch	boy
 vypadnout	fall out
 vyvinout	evolve
+NHL	NHL
 točit	spin
 zavrtět	shake
 dárek	gift
 rytmus	rhythm
 posádka	crew
+ČT	CT
 falešný	false
 desetiletí	decade
 obracet	turn
@@ -2764,6 +2841,7 @@ přestávka	break
 advokát	lawyer
 slavnostní	festive
 zastupitelstvo	council
+katolický	Catholic
 hokejista	hockey player
 úcta	esteem
 jeskyně	cave
@@ -2783,10 +2861,12 @@ měna	currency
 živočich	animal
 brýle	eyeglasses
 zahynout	perish
+Španělsko	Spain
 posílit	strengthen
 vlastnictví	property
 dostatek	enough
 úspora	saving
+olomoucký	Olomouc
 dvacátý	twentieth
 vstupovat	enter
 vzájemně	mutually
@@ -2804,6 +2884,7 @@ nenávidět	hate
 plukovník	colonel
 pronést	interject
 salát	salad
+moravský	Moravian
 porážka	defeat
 poškodit	damage
 plátno	screen
@@ -2821,7 +2902,9 @@ překlad	translation
 přednáška	lecture
 vyskočit	jump
 nepochybně	doubtless
+olympijský	Olympic
 prázdniny	holidays
+řetězec	String
 zlepšení	improvement
 zveřejnit	published
 ranní	morning
@@ -2844,8 +2927,10 @@ neboli	or
 příloha	annex
 tamní	local
 dosažení	attainment
+publikace	Publications
 rozvod	divorce
 spis	file
+tragedie	Tragedy
 vlhký	wet
 obránce	defender
 logický	logical
@@ -2887,6 +2972,7 @@ pobočka	branch
 nápadný	noticeable
 spravedlivý	righteous
 nova	nova
+oddíl	Section
 podrobnost	detail
 stolek	table
 kapka	drop
@@ -2959,6 +3045,7 @@ definitivně	finally
 pořadí	order
 ledový	iced
 příznak	symptom
+Špidla	Spidla
 tempo	pace
 formální	formal
 sebevražda	suicide
@@ -3052,6 +3139,7 @@ koberec	carpet
 oděv	clothing
 provozovat	run
 spolehlivý	reliable
+zdravotnictví	Health
 poušť	desert
 úvod	introduction
 každodenní	daily
@@ -3061,6 +3149,7 @@ koupelna	bathroom
 výhradně	only
 ráj	paradise
 lhůta	deadline
+režie	Directing
 čelit	counter
 terén	terrain
 způsobovat	cause
@@ -3077,7 +3166,9 @@ vysílání	broadcasting
 zapomínat	forget
 vysílat	carry
 líto	sorry
+NATO	ON IT
 post	post
+mediální	Media
 reprezentace	representation
 vila	villa
 vztek	rage
@@ -3103,12 +3194,12 @@ vyprávění	story
 běžně	ordinarily
 zjištění	finding
 zpracovat	process
+Vysoký	High
 výpočet	calculation
 vyhýbat	avoiding
 snídaně	breakfast
 tlačit	push
 zvyknout	accustom
-e	e
 rozdílný	different
 zásluha	merit
 spořitelna	savings bank
@@ -3157,6 +3248,7 @@ plánovaný	planned
 organizátor	organizer
 pochybnost	question
 zvolna	slowly
+Lukáš	Luke
 maximálně	maximally
 lézt	climb
 kouř	smoke
@@ -3171,6 +3263,9 @@ valný	Valný
 výuka	tuition
 absolvovat	graduate
 utrpět	suffer
+opozice	Opposition
+vir	Virus
+nedělní	Sunday
 náhlý	sudden
 rozhodčí	referee
 pero	pen
@@ -3195,6 +3290,7 @@ modlitba	prayer
 nízko	low
 požadovaný	required
 smrtelný	deadly
+betonový	Concrete
 poštovní	postal
 vzadu	back
 spolupracovník	co-worker
@@ -3227,9 +3323,11 @@ malba	painting
 navázat	establish
 šaman	shaman
 humor	humor
+ostravský	Ostrava
 podnikový	corporate
 výskyt	occurrence
 objev	discovery
+organizační	Organizational
 ukazatel	pointer
 územní	territorial
 rybník	pond
@@ -3240,14 +3338,18 @@ hromadný	mass
 stezka	trail
 potok	creek
 zbývající	remaining
+komunikační	Communications
 platební	payment
 znova	anew
 tkáň	tissue
 studium	study
+angličtina	English
 automaticky	automatically
 měřítko	scale
 jazykový	language
 klín	wedge
+lahev	Bottle
+šampionát	Championships
 výhled	outlook
 úžasný	amazing
 burza	exchange
@@ -3285,7 +3387,7 @@ těsný	close
 smutek	sadness
 devátý	ninth
 psychologický	psychological
-mj	ia
+izraelský	Israeli
 výročí	anniversary
 hlídka	patrol
 inscenace	productions
@@ -3347,11 +3449,15 @@ výkonnost	efficiency
 zastřelit	shoot
 předek	forefather
 digitální	digital
+sestava	Report
+specializovaný	Specialized
 úhel	angle
 obřad	ceremony
+poškozený	Corrupted
 rušit	disturb
 nalít	infuse
 palec	thumb
+Švejk	Svejk
 dění	events
 pátrat	search
 položka	item
@@ -3373,9 +3479,11 @@ projet	ride
 přitahovat	attract
 kožený	leather
 romantický	romantic
+Maďarsko	Hungary
 zoufalý	desperate
 balíček	package
 podlehnout	succumb
+indický	Indian
 vtip	joke
 respekt	respect
 oficiálně	officially
@@ -3405,6 +3513,7 @@ hluboce	profoundly
 moudrý	wise
 činitel	factor
 odhadnout	estimate
+Švýcarsko	Switzerland
 malovat	paint
 miska	bowl
 pití	drinking
@@ -3415,6 +3524,7 @@ dovolovat	allowing
 logistický	logistic
 mráz	frost
 oblek	suit
+pařížský	Parisian
 rozbít	smash
 zpětný	reverse
 narozeniny	birthday
@@ -3428,7 +3538,10 @@ organizovat	organize
 kdežto	while
 mechanický	mechanical
 definice	definition
+desky	Plates
 venkovský	country
+zákoník	Code
+fórum	Forum
 optimální	optimum
 porušení	violation
 ovládnout	dominate
@@ -3464,7 +3577,9 @@ neustálý	unceasing
 pleť	complexion
 stranický	partial
 zvát	invite
+server	Server
 vyřídit	deal with
+Dvořák	Dvorak
 házet	throw
 šestnáct	sixteen
 postupný	progressive
@@ -3506,6 +3621,7 @@ stisknout	press
 automobilový	motor
 nehet	fingernail
 kývnout	nod
+ukázka	Sample
 konkurs	bankruptcy
 kníže	prince
 roztok	solution
@@ -3534,12 +3650,15 @@ křižovatka	intersection
 plech	sheet
 ocel	steel
 meč	sword
+pardubický	Pardubice
 kabina	cabin
+kanada	Canada
 regulace	regulation
 sukně	skirt
 téci	flow
 kulatý	round
 úleva	relief
+švédský	Swedish
 dlouhodobě	long term
 emise	emission
 paprika	pepper
@@ -3556,6 +3675,7 @@ tah	move
 skladatel	composer
 budovat	construct
 izolace	isolation
+Novák	Novak
 prášek	powder
 využívání	exploitation
 hospodaření	economy
@@ -3573,7 +3693,6 @@ radikální	radical
 pořadatel	organizer
 středověký	medieval
 chudák	wretch
-n	n
 stížnost	complaint
 záchranný	rescue
 svědectví	witness
@@ -3639,14 +3758,18 @@ klinický	clinical
 následně	then
 pusa	kiss
 teoretický	theoretic
+psací	Writing
 dusit	suffocate
 rozhlédnout	look around
 Jaromír	Jaromír
 okamžitý	instant
+maďarský	Hungarian
 šedivý	gray
 dovednost	skill
 znalec	expert
+Ludvík	Lewis
 stráž	guard
+převést	Convert
 odstranění	removal
 schéma	scheme
 lov	hunting
@@ -3654,6 +3777,7 @@ personál	staff
 platba	payment
 výtah	elevator
 and	and
+Austrálie	Australia
 společník	companion
 parlamentní	parliamentary
 porod	childbirth
@@ -3671,7 +3795,9 @@ komunita	community
 nápadně	noticeably
 nejistota	uncertainty
 mýlit	wrong
+slovensko	Slovakia
 udělit	grant
+výzkumný	Research
 koření	spices
 pociťovat	feel
 puška	rifle
@@ -3683,9 +3809,11 @@ vypravit	dispatch
 játra	liver
 dodržovat	follow
 otevření	opening
+arabský	Arabic
 čtvrtina	quarter
 hádat	guess
 oženit	marry
+švýcarský	Swiss
 luxusní	luxury
 úrokový	Interest Rate
 předstírat	feign
@@ -3701,10 +3829,12 @@ uznávat	acknowledge
 nakupovat	buy
 sdělení	communication
 teroristický	terrorist
+londýnský	London
 prodejce	vendor
 úřední	official
 vagón	wagon
 péci	bake
+sobotní	Saturday
 coby	what would
 použitý	used
 laskavý	kind
@@ -3744,10 +3874,12 @@ vyznačovat	distinguish
 opatřit	provide
 tekutina	fluid
 výslech	interrogation
+irácký	Iraqi
 přejet	run over
 rukáv	sleeve
 rýže	rice
 emoce	emotion
+související	Related
 spoléhat	rely
 licence	license
 odkaz	link
@@ -3773,12 +3905,14 @@ komentář	comment
 medicína	medicine
 zvukový	audible
 mýtus	myth
+zpravodajský	News
 zastávat	stand
 jednoznačný	clear
 odrůda	variety
 rozlišovat	distinguish
 hřbet	spine
 upřímný	honest
+sdílet	Share
 pozorování	observation
 zřídka	rarely
 výborně	great
@@ -3789,6 +3923,8 @@ zakladatel	founder
 historka	story
 omlouvat	apologize
 protivník	adversary
+Jindřich	Henry
+karlovarský	Carlsbad
 koneckonců	after all
 operátor	operator
 poranění	injury
@@ -3802,6 +3938,7 @@ sporný	controversial
 ves	village
 uchopit	grasp
 přidávat	add
+vyvést	Remove
 ďábel	devil
 osmdesát	eighty
 provozovatel	operator
@@ -3810,11 +3947,14 @@ dobro	good
 éra	era
 běhat	run
 záplava	flooding
+prezentace	Presentation
 vykazovat	exhibit
 převod	transfer
 oddělit	separate
 vitamín	vitamin
 zakládat	post
+bejt	Beit
+čeština	Czech
 pronikat	permeate
 prevence	prevention
 recept	recipe
@@ -3830,6 +3970,7 @@ oblak	cloud
 nervový	nervous
 vylučovat	secrete
 dojet	reach
+křesťan	Christian
 konkrétně	concretely
 jihočeský	jihočeský
 pálit	fire
@@ -3844,6 +3985,7 @@ terapie	therapy
 usoudit	infer
 všeobecně	universally
 ideál	ideal
+mírový	Peace
 pracující	working
 bojový	fighting
 civilní	civil
@@ -3869,10 +4011,12 @@ odpůrce	respondent
 poslechnout	listen
 vytvořený	created
 podléhat	be subject to
+Švédsko	Sweden
 originální	original
 pozorně	attentively
 šířka	width
 keř	bush
+Polák	Pole
 hlasovat	vote
 minimum	minimum
 řemeslo	craft
@@ -3901,6 +4045,7 @@ uchazeč	applicant
 narozený	born
 alternativní	alternative
 skončení	completion
+ČEZ	CEZ
 normálně	normally
 protestovat	protest
 vonět	smell
@@ -3910,6 +4055,7 @@ mlýn	mill
 otáčet	rotate
 tvor	creature
 barokní	baroque
+citronový	Lemon
 námitka	objection
 řetěz	chain
 upravovat	edited
@@ -3930,12 +4076,14 @@ dozadu	backwards
 unést	abduct
 trpělivě	patiently
 zahrnout	include
+anglicky	English
 havárie	crash
 sedmdesátý	seventieth
 čtvrtletí	quarter
 filozof	philosopher
 kdepak	bloody likely
 uvařit	cook
+Žid	Jew
 rádio	radio
 tajit	concealing
 poznávat	recognize
@@ -3970,6 +4118,7 @@ postižení	infliction
 příjemně	pleasantly
 hradba	wall
 kód	code
+rumunský	Romanian
 van	van
 dej	give
 přinutit	force
@@ -3987,7 +4136,6 @@ vývar	broth
 molekula	molecule
 opoziční	opposite
 schránka	mailbox
-cca	ca.
 dík	thanks
 riskovat	risk
 pasus	pasus
@@ -4021,6 +4169,7 @@ zvolený	elected
 chlapík	guy
 podniknout	undertake
 mravní	moral
+USD	USD
 pouť	pilgrimage
 strýček	uncle
 vážený	honorable
@@ -4031,6 +4180,7 @@ legislativa	legislation
 polibek	kiss
 demonstrace	demonstration
 zastávka	stop
+děda	Grandpa
 odstup	spacing
 sad	park
 řvát	scream
@@ -4056,6 +4206,7 @@ kotel	boiler
 mříž	grille
 namísto	instead
 plést	weave
+webový	Web
 elegantní	elegant
 pestrý	colorful
 sevřít	clench
@@ -4065,7 +4216,9 @@ hněv	anger
 odjezd	departure
 řez	cut
 sir	sir
+Oldřich	Oldrich
 morálka	morality
+Řecko	Greece
 pódium	podium
 semeno	seed
 vzdělaný	educated
@@ -4087,6 +4240,7 @@ zátěž	ballast
 inspirovat	inspire
 půlka	half
 shodnout	agree
+ústecký	Usti
 zakrýt	cover up
 přesnost	accuracy
 navždy	forever
@@ -4101,8 +4255,10 @@ oltář	altar
 horko	hot
 dosah	reach
 báječný	yummy
+Horní	Upper
 organizovaný	organized
 orientovat	orientate
+africký	African
 odebrat	take
 působící	acting
 zábavný	fun
@@ -4114,10 +4270,12 @@ křik	outcry
 ublížit	hurt
 vana	bathtub
 důchodce	pensioner
+kanadský	Canadian
 kolečko	wheelbarrow
 ocenění	appreciation
 odvážit	weigh out
 namítnout	protest
+SNB	SNB
 hubený	thin
 vlhkost	humidity
 převaha	preponderance
@@ -4135,6 +4293,7 @@ osvětlení	lighting
 sekunda	second
 létat	fly
 posloužit	serve
+služební	Business
 trpělivost	patience
 grafický	graphic
 federace	federation
@@ -4165,6 +4324,7 @@ vyhnat	expel
 garáž	garage
 smetana	cream
 žíla	vein
+faktum	FAKTUM
 plakát	poster
 srovnatelný	comparable
 mnich	monk
@@ -4174,12 +4334,14 @@ strašlivý	dreadful
 horečka	fever
 krást	thieve
 zoufalství	despair
+ČSN	CSN
 řadit	shift
 slovní	verbal
 sídlit	reside
 nabývat	acquire
 vznášet	float
 zkoumání	exploration
+ČSSR	CSSR
 prestižní	prestigious
 prkno	board
 přiměřený	adequate
@@ -4237,6 +4399,7 @@ univerzální	universal
 dres	jersey
 kompetence	competence
 publikovat	publish
+palestinský	Palestinian
 estetický	esthetic
 distribuce	distribution
 směšný	ridiculous
@@ -4258,6 +4421,7 @@ dědictví	heritage
 dodržování	compliance
 mše	service
 to	it
+Věra	Vera
 systémový	systemic
 božský	divine
 lidovec	Christian Democrat
@@ -4265,13 +4429,16 @@ milenka	mistress
 milovaný	beloved
 komunální	communal
 psaný	written
+MS	MS
 vzdálit	leave
 zazvonit	ring the bell
+kouzelný	Magical
 propast	abyss
 naložit	load
 shromáždit	gather
 překvapivě	surprisingly
 hovězí	beef
+transformace	Transformation
 zmiňovat	alluding
 počáteční	initial
 srdeční	heart
@@ -4287,12 +4454,15 @@ porozumění	understanding
 rizikový	hazardous
 detektiv	detective
 pedagogický	pedagogic
+Příbram	Pribram
 vyučování	tuition
 aplikovat	apply
 absolvent	graduate
 farma	farm
 šílenství	madness
+doktorka	Doctor
 gólman	goalie
+nebesa	Heavens
 pohon	drive
 zvyšování	increasing
 podnikat	business
@@ -4302,12 +4472,17 @@ ochotně	willingly
 design	design
 stehno	thigh
 odmlčet	pause
+KSČM	KSČM
 popel	ash
 rádium	radium
+vídeňský	Viennese
 Čapek	Čapek
 připojení	connectivity
+listí	Leaves
 celní	customs
+HDP	GDP
 počít	conceive
+Slovák	Slovak
 přibývat	grow
 nikam	nowhere
 podrobit	undergo
@@ -4329,14 +4504,17 @@ menšina	minority
 opakovaně	repeatedly
 přibližovat	draw near
 rozkoš	delight
+turecký	Turkish
 zkušební	probationary
 aparát	apparatus
 komplikovaný	complicated
 splnění	fulfillment
 bojovník	fighter
 uspokojení	satisfaction
+foto	Photo
 náruč	armful
 zákrok	intervention
+komunismus	Communism
 trojice	threesome
 orientovaný	oriented
 administrativní	administrative
@@ -4393,6 +4571,7 @@ dokola	round
 lesklý	bright
 mise	mission
 rozsvítit	switch on
+Aleš	Ales
 čerpat	draw
 kostým	costume
 zemědělec	farmer
@@ -4401,6 +4580,7 @@ smůla	bad luck
 vytrhnout	rip
 korupce	corruption
 šťastně	happily
+Temelín	Temelin
 spolužák	classmate
 tahat	pull
 nositel	bearer
@@ -4449,15 +4629,19 @@ chlad	coldness
 jakož	and
 nájemné	rent
 stvoření	creation
+Jugoslávie	Yugoslavia
 pivovar	brewery
 zánět	inflammation
 vlajka	flag
 evidence	records
 hýbat	stir
 věcný	factual
+křesťanství	Christianity
+romský	Gypsy
 záchod	toilet
 nervózní	nervous
 víčko	cover
+zlínský	Zlin
 obdiv	admiration
 produktivita	productivity
 bílkovina	protein
@@ -4488,6 +4672,7 @@ příště	next
 stádo	herd
 stříbro	silver
 šíření	spreading
+Beneš	Benes
 intelektuální	intellectual
 show	show
 hlavička	header
@@ -4535,6 +4720,7 @@ dočasný	temporary
 promíchat	mix up
 zastoupení	representation
 aha	I see
+Dolní	Lower
 smíchat	mix
 odvětit	rejoin
 hit	hit
@@ -4560,6 +4746,7 @@ zelí	cabbage
 jinam	elsewhere
 porota	jury
 zodpovědný	accountable
+telekomunikační	Telecommunications
 vzorec	formula
 genetický	genetic
 vyplnit	fill
@@ -4575,6 +4762,7 @@ málokdo	hardly anybody
 přechodný	transitory
 zdobit	Dress Up
 stvořit	create
+Angličan	Englishman
 socialismus	socialism
 komponenta	component
 hm	hm
@@ -4589,6 +4777,7 @@ strážce	watchman
 nadšený	enthusiastic
 střevo	intestine
 zavazadlo	luggage
+ČNB	CNB
 lámat	break
 učebnice	textbook
 vybavený	equipped
@@ -4603,6 +4792,7 @@ muzikál	musical
 odstín	hue
 volání	call
 přistupovat	access
+uherský	Hungarian
 honem	come on
 ložisko	bearing
 pila	sawmill
@@ -4676,6 +4866,7 @@ duel	duel
 kvalifikovaný	qualified
 napjatý	tight
 vévoda	duke
+gotický	Gothic
 nádor	tumor
 očistit	cleanse
 placený	paid
@@ -4693,6 +4884,7 @@ tisíciletí	millennium
 vesele	happily
 marketing	marketing
 pouto	bond
+černoch	Negro
 naposled	last
 obytný	residential
 pomůcka	aid
@@ -4701,6 +4893,7 @@ nevýhoda	disadvantage
 pohovka	sofa
 břemeno	burden
 trvání	duration
+česky	Czech
 násilný	violent
 vrazit	thrust
 brigáda	brigade
@@ -4729,6 +4922,7 @@ nouze	emergency
 vpřed	forward
 pozemní	ground
 zlomenina	fracture
+Afghánistán	Afghanistan
 dutina	cavity
 financovat	fund
 hrdý	proud
@@ -4766,6 +4960,7 @@ ojedinělý	unique
 rozlehlý	spacious
 vyndat	put out
 nu	nu
+KSČ	KSC
 poučit	enlighten
 pozvání	invitation
 sleva	discount
@@ -4777,6 +4972,7 @@ vrcholný	top
 uznávaný	recognized
 pokrývat	cover
 tajně	secretly
+obchodování	Trading
 porada	conference
 rockový	rock
 skákat	jump
@@ -4796,6 +4992,7 @@ kontejner	container
 koutek	corner
 snižování	reduction
 zrodit	bring forth
+MF	MF
 probírat	discuss
 připomínající	reminiscent
 uložený	saved
@@ -4807,10 +5004,12 @@ technik	technician
 mezera	space
 nahrávka	record
 vyrovnání	settlement
+Ondřej	Ondrej
 krb	fireplace
 údiv	wonder
 hedvábný	silk
 zaručit	guarantee
+vládce	Ruler
 instalace	installation
 rybář	fisherman
 sjet	snub
@@ -4834,6 +5033,7 @@ muzikant	musician
 vnuk	grandson
 masa	mass
 ml	ml
+Novotný	Novotny
 spálit	burn
 uspokojit	satisfy
 zařvat	yell
@@ -4865,6 +5065,9 @@ ulevit	unburden
 konkurent	competitor
 nastupovat	all aboard
 vrtulník	helicopter
+bible	Bible
+IPB	IPB
+StB	StB
 zdvihnout	raise
 programový	program
 předkládat	submit
@@ -4893,12 +5096,14 @@ ovocný	fruity
 sekce	section
 čekání	waiting
 domovní	residential
+leda	Ice
 obhájce	barrister
 odstoupit	resign
 slušně	decently
 hlubina	depth
 odraz	reflection
 přesun	shift
+žebříček	More
 obtížně	with difficulty
 velení	command
 trosky	debris
@@ -4924,10 +5129,12 @@ lítost	regret
 obklopit	surround
 zeleň	green
 popularita	popularity
+Železný	Iron
 skutek	deed
 souprava	kit
 elita	elite
 kudy	way
+australský	Australian
 nákupní	shopping
 průhledný	clear
 vepřový	pork
@@ -4940,7 +5147,6 @@ tip	tip
 víceméně	more or less
 mocenský	power
 nadávat	scold
-ó	oh
 překvapivý	surprising
 výhrada	reservation
 odvádět	drain
@@ -4956,6 +5162,7 @@ disk	disk
 úvěrový	loan
 výsledný	resultant
 snít	dream
+výchozí	Default
 nežli	than
 provaz	rope
 vcelku	rather
@@ -4970,6 +5177,7 @@ nakoupit	buy
 kompromis	compromise
 viď	vide
 tlačítko	button
+usnesení	Resolution
 zajímavost	attraction
 nahrazovat	replacing
 stručně	concisely
@@ -4986,6 +5194,7 @@ nabrat	gather
 selhání	failure
 vozovka	roadway
 vzbuzovat	inspire
+olympiáda	Olympiad
 částečný	partial
 nadchnout	enthuse
 odolnost	immunity
@@ -5001,6 +5210,7 @@ moucha	fly
 smutně	sadly
 ideologie	ideology
 nadřízený	senior
+nizozemský	Dutch
 kamión	truck
 příkop	ditch
 důvěřovat	trust
@@ -5012,12 +5222,14 @@ zaměstnanost	employment
 oběh	circulation
 moč	urine
 bouřlivý	stormy
+plast	Plastic
 sonda	probe
 zkratka	shortcut
 prohra	loss
 nádvoří	courtyard
 zavádět	deploy
 architektonický	architectural
+Kolín	Cologne
 svěží	fresh
 soucit	compassion
 vstupenka	ticket
@@ -5027,16 +5239,20 @@ zabalit	wrap
 box	box
 hráz	dam
 intelektuál	intellectual
+irský	Irish
 nájemník	tenant
 pouzdro	housing
 partie	game
+latinský	Latin
 ukrýt	shelter
 užitek	benefit
 ochránce	protector
 vlivný	influential
+Vítkovice	Vitkovice
 držitel	holder
 snesitelný	bearable
 zásuvka	outlet
+marketingový	Marketing
 kilo	kilo
 kontrakt	contract
 oloupat	exfoliate
@@ -5068,11 +5284,14 @@ vášnivý	passionate
 vyplácet	pay
 obžaloba	indictment
 zájezd	tour
+egyptský	Egyptian
 střelba	shooting
 fyzikální	physical
 problematický	problematic
 prodloužení	extension
 kotník	ankle
+leasing	Leasing
+ligový	League
 prozrazovat	reveal
 úzce	closely
 zhasnout	fizzle out
@@ -5080,6 +5299,7 @@ kalendář	calendar
 koka	coca
 středočeský	středočeský
 údajný	alleged
+belgický	Belgian
 spekulace	speculation
 panenka	doll
 úhrada	reimbursement
@@ -5103,6 +5323,7 @@ majetkový	property
 nač	what for
 děsit	scare
 Markéta	Markéta
+odpadní	Waste
 bezmála	nearly
 odporný	loathsome
 spravovat	manage
@@ -5125,6 +5346,7 @@ sdělovat	communicate
 škála	range
 zlikvidovat	dispose of
 kádr	cadre
+nacistický	Nazi
 přežití	survival
 přísahat	swear
 uvolněný	loose
@@ -5152,12 +5374,15 @@ naléhavý	urgent
 optický	optical
 holub	pigeon
 profesionál	professional
+DPH	VAT
 obviněný	defendant
 syndrom	syndrome
 kaše	mash
+očividně	Apparently
 stručný	brief
 dopravit	convey
 přestupek	offense
+asijský	Asian
 vypravovat	tell
 čtvereční	square
 samozřejmý	obvious
@@ -5165,22 +5390,28 @@ funkcionář	functionary
 podávání	administration
 akorát	just
 dokládat	demonstrate
+řídicí	Control
 vytahovat	pull
+Štěpán	Stepan
 chronický	chronic
 figura	figure
 pomyšlení	thought
 soustřeďovat	focus
+US	US
 dokonalost	perfection
 připadnout	revert
 sběr	collection
 video	video
 zmatený	confused
 centr	kick
+islámský	Islamic
 končetina	limb
 palba	fire
 proužek	strip
 zatáhnout	retract
 dvojče	twin
+legislativní	Legislative
+přepravní	Transportation
 poselství	message
 vydechnout	breathe out
 docent	docent
@@ -5193,11 +5424,13 @@ bronzový	bronze
 nováček	greenhorn
 vynechat	skip
 hradit	pay
+slovanský	Slavic
 vyřadit	discard
 pilíř	pillar
 pominout	pass away
 kupříkladu	for example,
 odhodit	discard
+zámecký	Castle
 svléknout	undress
 vypovědět	denounce
 sebevědomí	self-confidence
@@ -5219,6 +5452,7 @@ analyzovat	analyze
 hrobka	tomb
 lhostejný	indifferent
 lodní	shipping
+výstupní	Output
 kompozice	composition
 prachy	dough
 spolehlivost	reliability
@@ -5242,15 +5476,18 @@ primitivní	primitive
 trik	trick
 nájem	tenancy
 popřít	disown
+reprezentační	Representation
 zastavení	stopping
 car	tsar
 nastávat	occurring
 sázet	bet
+distribuční	Distribution
 ohlas	response
 osvobození	liberation
 vyšplhat	climb up
 básnický	poetical
 děsivý	awesome
+kancléř	Chancellor
 povolený	allowed
 vyplývající	consequent
 guvernér	governor
@@ -5260,6 +5497,7 @@ stavení	building
 šlechtic	nobleman
 výzdoba	decor
 pokrytý	covered
+studentský	Student
 udávat	indicate
 rozkládat	decay
 důkladný	thorough
@@ -5267,8 +5505,10 @@ odlišovat	distinguished
 odpolední	afternoon
 protiklad	antithesis
 chlápek	bloke
+ohrožený	Endangered
 prohodit	interject
 zanedlouho	soon
+ZOO	ZOO
 dort	cake
 klima	climate
 brod	ford
@@ -5295,6 +5535,7 @@ diplomat	diplomat
 plastový	plastic
 převzetí	assumption
 samospráva	autonomy
+Černý	Black
 předešlý	previous
 et	et
 chudoba	poverty
@@ -5302,6 +5543,7 @@ rozmanitý	diverse
 řasa	alga
 elektronika	electronics
 květináč	flowerpot
+polsko	Polish
 dalekohled	binoculars
 datový	data
 rezervace	reservation
@@ -5332,6 +5574,7 @@ rozhraní	interface
 skříňka	cabinet
 kostra	skeleton
 závodník	racer
+speciálně	Specially
 tíha	heaviness
 výchovný	educational
 nadměrný	excessive
@@ -5370,16 +5613,19 @@ kolikrát	how many times
 bláto	mud
 napsaný	inscribed
 zvědavost	curiosity
+CD	CD
 omítka	plaster
 pohladit	stroke
 sud	barrel
 zapadnout	bog down
+Jeruzalém	Jerusalem
 poutník	pilgrim
 zaznamenávat	record
 blížící	approaching
 favorit	favorite
 zvonit	ring
 jedenáctý	eleventh
+kalifornie	California
 panovník	monarch
 repertoár	repertoire
 vznikající	nascent
@@ -5413,6 +5659,7 @@ sympatie	sympathy
 trčet	stock up
 vizuální	visual
 prognóza	forecast
+Vsetín	Vsetin
 hvězdný	sidereal
 prospěšný	rewarding
 ostrůvek	isle
@@ -5423,17 +5670,23 @@ formule	formula
 krizový	critical
 nákladný	costly
 vybuchnout	explode
+ČSR	Czechoslovakia
 sada	set
 uložení	deposition
 zlomek	fraction
 zúčastněný	participating
+Dánsko	Denmark
+portfolio	Portfolio
+Jágr	Jagr
 pitomý	daft
+laboratorní	Laboratory
 podržet	hold
 vo	within
 přikázat	command
 přivádět	feed
 odolat	resist
 přesáhnout	exceed
+renezanční	Renaissance
 kreslit	draw
 oříšek	nut
 položený	lying
@@ -5469,7 +5722,9 @@ plastika	sculpture
 spaní	sleeping
 materiální	material
 propagace	publicity
+lyžařský	Ski
 keramika	ceramics
+pohoří	Mountains
 přátelsky	in a friendly way
 registrace	registration
 věčnost	eternity
@@ -5491,6 +5746,7 @@ zvonek	bell
 aktivum	asset
 odstartovat	start
 vyzvednout	pick
+Atény	Athens
 reportér	reporter
 splátka	installment
 stavebnictví	building
@@ -5538,6 +5794,8 @@ upoutat	captivate
 zaplnit	fill
 tabák	tobacco
 zápach	odor
+hradiště	Strongholds
+kostička	Bone
 potichu	quietly
 vyloučení	exclusion
 zakázaný	prohibited
@@ -5569,6 +5827,8 @@ shodit	throw
 bohatě	richly
 krysa	rat
 lekce	lessons
+Řek	Greek
+námořnictvo	Navy
 označený	marked
 infarkt	heart attack
 moderátor	moderator
@@ -5578,17 +5838,21 @@ trup	hull
 vyzývat	urge
 zkáza	destruction
 náklaďák	truck
+pánbůh	God
 týdeník	weekly
 hanba	shame
 každopádně	In any event,
 zhluboka	deep
 vzdávat	give up
+FMV	FMV
 přestavba	reconstruction
 směna	shift
 umožňující	enabling
 verdikt	verdict
+přilákat	Attract
 čištění	cleaning
 jedovatý	toxic
+finský	Finnish
 výslovně	expressly
 důstojnost	dignity
 dvířka	door
@@ -5603,6 +5867,7 @@ image	image
 naživu	alive
 rozlišení	distinction
 větrný	windy
+Benátky	Venice
 pouliční	street
 valit	roll
 vypořádat	deal
@@ -5618,6 +5883,7 @@ vědění	knowledge
 věrnost	faithfulness
 vráska	wrinkle
 dálkový	remote
+Indián	Indian
 lucerna	lantern
 půvab	gracefulness
 zapomenutý	forgotten
@@ -5636,6 +5902,7 @@ shora	above
 výčitka	reproach
 zabírat	occupy
 zvenčí	from without
+dánský	Danish
 těhotný	pregnant
 mávnout	wave
 šle	suspenders
@@ -5662,7 +5929,9 @@ rozdávat	give out
 konstrukční	structural
 příznačný	symptomatic
 rozdělovat	dole out
+vytápění	Heating
 odletět	fly out
+koaliční	Coalition
 podívaná	sight
 rybí	fish
 sortiment	assortment
@@ -5671,9 +5940,11 @@ otázat	inquire
 operní	opera
 potřetí	third
 sloužící	serving
+zachycovat	Capturing
 housle	violin
 nejenže	Not only
 laskavě	kindly
+povzdechnout	Sigh
 převažovat	outbalance
 velet	command
 zvládat	cope
@@ -5684,8 +5955,10 @@ rovnat	match
 zobrazovat	show
 zpomalit	slow down
 jáma	pit
+Klára	Clare
 průchod	passage
 balvan	boulder
+německy	German
 sprcha	shower
 vstupné	admission
 zamumlat	mutter
@@ -5708,10 +5981,12 @@ pohonný	driving
 důsledně	consistently
 přikrýt	cover
 přivolat	call
+Žižkov	Zizkov
 oprávnění	authorization
 zemina	soil
 zemní	terrestrial
 kvést	flower
+rybářský	Fisheries
 panika	panic
 potýkat	contend
 proudit	flow
@@ -5721,6 +5996,7 @@ nátěr	coating
 rodák	native
 vybojovat	to fight
 doprovodit	escort
+páteční	Friday
 propojit	link
 šero	dimness
 úkor	expense
@@ -5731,11 +6007,14 @@ překvapeně	surprise
 zesilovač	amplifier
 ptačí	can
 tygr	tiger
+holding	Holding
 křeč	cramp
 kW	kW
 postranní	side
 světský	secular
+holandský	Dutch
 výdělek	earnings
+vyskytnout	Occur
 zemětřesení	earthquake
 autobusový	bus
 vynikat	excel
@@ -5752,14 +6031,15 @@ harmonie	harmony
 lyže	skis
 nadcházející	coming
 říkávat	říkávat
+Sára	Sarah
 škodit	harm
 sekundární	secondary
 story	story
-tzn	ie
 zvážit	consider
 děvčátko	girl
 exponát	exhibit
 najíst	eat
+argentinský	Argentine
 dopravce	carrier
 interpretovat	interpret
 kombinovat	combine
@@ -5771,10 +6051,13 @@ srst	fur
 citlivost	sensitivity
 krajan	homeboy
 ironie	irony
+beseda	Beseda
 fyzika	physics
 zajisté	surely
 četba	reading
+přednosta	Head
 dieta	diet
+DNA	DNA
 nadechnout	breathe
 stýkat	consort
 výplata	paycheck
@@ -5798,6 +6081,7 @@ resort	department
 startovat	take off
 zkrátit	shorten
 soumrak	twilight
+školení	Training
 dočasně	temporarily
 fotografický	photographic
 ochránit	protect
@@ -5815,13 +6099,16 @@ lesk	sheen
 zrada	betrayal
 exotický	exotic
 řítit	tear
+udržitelný	Sustainable
 živočišný	animal
 mlít	grind
 soudobý	contemporary
 zavádění	implementation
 obsažený	contained
+Saddám	Saddam
 slaný	briny
 bahno	mud
+Baník	Miner
 rozpálený	hot
 zakoupit	purchase
 odjakživa	always
@@ -5833,11 +6120,13 @@ kolekce	collection
 vychovávat	educate
 povstání	insurrection
 prchat	fleeing
+Vilém	William
 kryt	housing
 opakování	repetition
 rubrika	section
 vpředu	ahead
 zavinit	cause
+Kristův	Christ
 kuchař	cook
 uhradit	reimburse
 naplněný	replete
@@ -5845,6 +6134,7 @@ občanství	citizenship
 spojka	clutch
 vyhlížet	watch for
 žert	prank
+doprovodný	Accompanying
 poručit	command
 příslušnost	affiliation
 reportáž	reportage
@@ -5855,11 +6145,13 @@ vodopád	waterfall
 vymezení	demarcation
 kontaktní	contact
 ozdobit	decorate
+pochvalovat	Pochvalov
 příjemce	recipient
 stíhačka	fighter
 šokovat	shock
 vyplynout	result
 kouření	smoking
+penzijní	Retirement
 selhat	fail
 tučný	bold
 ucházet	bid
@@ -5874,7 +6166,9 @@ smyslný	sensual
 oční	eye
 osvědčit	witness
 prožitek	experience
+technicky	Technically
 zdanění	taxation
+muslim	Muslim
 prospět	benefit
 sádlo	lard
 sousedství	neighborhood
@@ -5884,6 +6178,8 @@ dotáhnout	tighten
 torpédoborec	destroyer
 vyjednávání	negotiation
 čarodějnice	witch
+Číňan	Chinese
+srbský	Serbian
 dožít	live
 pojistné	premium
 prázdnota	void
@@ -5897,8 +6193,10 @@ partnerství	partnership
 prosba	plea
 přirozenost	nature
 pud	instinct
+strojírenský	Engineering
 vážnost	seriousness
 ikona	icon
+music	Music
 vznést	raise
 charta	charter
 katedra	department
@@ -5908,6 +6206,7 @@ předměstí	suburb
 varhany	organ
 levicový	leftist
 naplánovat	schedule
+katolík	Catholic
 penze	pension
 podmíněný	conditioned
 těžit	profit
@@ -5925,6 +6224,7 @@ bezmocný	helpless
 čekaně	waiting
 motocykl	motorcycle
 odeslat	send
+Soňa	Sona
 psychiatr	psychiatrist
 mrknout	nictate
 obcházet	circumvent
@@ -5933,6 +6233,7 @@ zjištěný	detected
 čistit	clean
 napříč	across
 porovnat	compare
+soutěžní	Competition
 výtisk	copy
 kulka	bullet
 spoření	saving
@@ -5952,7 +6253,6 @@ supermarket	supermarket
 vědomě	consciously
 záhon	flowerbed
 zřítit	crash
-j	j
 mikrofon	microphone
 mladistvý	youthful
 vylíčit	describe
@@ -5975,15 +6275,18 @@ pláň	wold
 pokušení	temptation
 police	shelf
 záliba	predilection
+hradecký	Hradec
 korespondence	correspondence
 poradenský	advisory
 solidní	solid
 vyvolaný	developed
+Bagdád	Baghdad
 bratranec	cousin
 stráň	hillside
 strukturální	structural
 vaření	cooking
 vymezený	circumscribed
+balení	Package
 dotek	touch
 pozemský	earthly
 prorok	prophet
@@ -6004,18 +6307,20 @@ fialový	violet
 okupace	occupation
 opravovat	repair
 plachta	sail
+Prostějov	Prostejov
+Varšava	Warsaw
 dirigent	conductor
 lóže	lodge
 odporovat	resist
 výstaviště	exhibition grounds
 opepřit	pepper
+přijímací	Drawing
 sluníčko	sun
 tisícovka	thousand
 buněčný	cellular
 dom	house
 ňadra	bosom
 nastavení	adjustment
-p	p
 pečivo	pastry
 namítat	object
 oznamovat	report
@@ -6025,12 +6330,15 @@ panelový	panel
 unavit	weary
 veličina	quantity
 perla	pearl
+aut	Rental
+filosofický	Philosophical
 hladový	hungry
 natož	let alone
 efektivnost	efficiency
 jazz	jazz
 magazín	magazine
 stanout	stand
+pavilon	Pavilion
 propadat	fall
 spatřovat	seen
 obývací	living
@@ -6047,6 +6355,7 @@ národnost	nationality
 plno	lot
 pomsta	revenge
 poukázat	refer
+ziskový	Profitable
 aktivista	activist
 domorodec	native
 husa	goose
@@ -6061,11 +6370,13 @@ pokročilý	advanced
 restrukturalizace	restructuring
 dočíst	finish
 kanalizace	canalization
+nacista	Nazi
 sešit	notebook
 hornina	rock
 membrána	membrane
 zásobník	magazine
 kapalina	fluid
+němčina	German
 pronajmout	rent
 strmý	steep
 zkazit	spoil
@@ -6074,6 +6385,7 @@ pocta	tribute
 svetr	jumper
 školák	schoolboy
 bona	nursemaid
+ministryně	Secretary
 Nedvěd	Nedvěd
 obr	giant
 registrovat	register
@@ -6087,6 +6399,7 @@ regál	bookshelf
 soužití	cohabitation
 zaklepat	knock
 optimismus	optimism
+play	Play
 bouda	booth
 uskutečňovat	carry
 dopadat	turn out
@@ -6101,21 +6414,25 @@ přehnaný	exaggerated
 trhnout	jerk
 usnadnit	facilitate
 včela	bee
+BBC	BBC
 křižník	cruiser
 dýchání	breathing
 leták	flyer
 motýl	butterfly
 přikládat	attachments
 vyrovnávat	leveling
+Brazílie	Brazil
 definovaný	defined
 dvorek	yard
 podivit	wonder
 rum	rum
 semifinále	semifinal
+profesní	Professional
 přesvědčený	convinced
 vyspat	sleep
 azyl	asylum
 pospíchat	rush
+renezance	Renaissance
 utrhnout	pluck
 vypálit	burn
 čelní	frontal
@@ -6140,14 +6457,18 @@ revolver	revolver
 zamávat	wave
 bolestný	painful
 poloostrov	peninsula
+ES	ES
 odsud	from here
 předvolební	election
 ubírat	subtract
 zamyšleně	pensively
+indiánský	Indian
 mastný	greasy
 růž	rouge
 upevnit	consolidate
 vrozený	congenital
+gravitační	Gravitational
+kasárna	Barracks
 obléknout	clothe
 písemně	writing
 chřipka	flu
@@ -6157,10 +6478,12 @@ pohodlí	comfort
 zoologický	zoological
 doporučený	registered
 poplatník	taxpayer
+regulační	Regulatory
 směnka	bill
 totální	total
 armádní	army
 bušit	throb
+MMF	IMF
 koupat	bathe
 oživit	revive
 vězeňský	prison
@@ -6179,6 +6502,7 @@ terminál	terminal
 kolegyně	colleague
 tečka	dot
 odradit	discourage
+václavský	Wenceslaus
 vyděšený	frightened
 nátlak	compulsion
 ohnivý	fiery
@@ -6205,12 +6529,16 @@ získávání	acquisition
 naříkat	wail
 šéfredaktor	editor in chief
 zaměstnaný	employed
+hollywoodský	Hollywood
+SSSR	USSR
 čočka	lens
 plastický	plastic
 uchýlit	resort
 výlučně	exclusively
 dosažený	achieved
+hrozen	Grape
 nemocniční	hospital
+Pohár	Cup
 hostit	entertain
 masivní	massive
 prokazovat	show
@@ -6218,6 +6546,7 @@ vyhrknout	blurt
 krmit	feed
 petice	petition
 preventivní	preventive
+spojenecký	Allied
 neutrální	neutral
 odbýt	put off
 poprosit	ask
@@ -6232,8 +6561,10 @@ konvenční	conventional
 odkázat	refer
 telegram	telegram
 trápení	vexation
+živnostenský	Licensing
 experimentální	experimental
 kéž	I wish
+raněný	Hurt
 sedící	sitting
 zakončit	conclude
 argentina	argentina
@@ -6247,6 +6578,7 @@ třídní	class
 argumentovat	argue
 předepsaný	prescribed
 stavitel	builder
+Hašek	Hasek
 invaze	invasion
 jihovýchodní	southeast
 potkávat	meet
@@ -6259,7 +6591,9 @@ zlomený	broken
 činný	active
 pohádkový	fairytale
 uspořádaný	orderly
+ISO	ISO
 pasivní	passive
+Vojtěch	Vojtech
 divoce	wildly
 chirurg	surgeon
 obráběcí	machining
@@ -6278,6 +6612,7 @@ slavnostně	solemnly
 sluch	hearing
 džungle	jungle
 jelen	deer
+Písek	Sand
 přípustný	permissible
 znečištění	pollution
 kroužit	circle
@@ -6289,6 +6624,7 @@ poloviční	half
 status	status
 uchovávat	store
 zmírnit	relieve
+Děčín	Decin
 klasifikace	classification
 vyhrávat	winning
 zavazovat	bind
@@ -6297,6 +6633,7 @@ přezdívka	nickname
 ctnost	virtue
 leccos	many things
 vyhlášený	renowned
+členka	Member
 nakolik	how much
 pokorný	lowly
 popíjet	sup
@@ -6322,6 +6659,7 @@ zvláštnost	specialty
 hostinec	inn
 chápání	understanding
 kočár	carriage
+muslimský	Muslim
 uklidit	clean up
 chybný	wrong
 nápor	onslaught
@@ -6344,8 +6682,10 @@ zmoci	emerge again
 dovolený	allowable
 nakreslit	draw
 šlapat	tread
+tlakový	Pressure
 doutník	cigar
 loučit	say goodbye
+síťový	Network
 trvající	ongoing
 devatenáct	nineteen
 donedávna	Until recently,
@@ -6353,10 +6693,12 @@ koncertní	concert
 zaplacení	repayment
 plachý	shy
 venkovní	outdoor
+cholesterol	Cholesterol
 kravata	tie
 procedura	procedure
 veterán	veteran
 celník	customs officer
+jugoslávský	Yugoslav
 sled	sequence
 zjevení	revelation
 nikterak	no way
@@ -6386,8 +6728,10 @@ rozchod	gauge
 spěch	rush
 vycítit	feel
 da	da
+norský	Norwegian
 vypsat	list
 důchodový	retirement
+preference	Preferences
 krejčí	tailor
 kontrast	contrast
 neklid	unrest
@@ -6402,14 +6746,18 @@ překračovat	exceed
 analytický	analytical
 průčelí	frontage
 tříletý	three-year
+záchranář	Rescuer
 demonstrovat	demonstrate
+komorní	Chamber
 postihovat	affect
 působivý	impressive
 chemie	chemistry
 nákaza	infection
 spolknout	swallow
 stejnojmenný	homonymous
+be	Be
 potopit	sink
+Rakušan	Austrian
 reprodukce	reproduction
 set	set
 dámský	lady's
@@ -6430,6 +6778,7 @@ statický	static
 úd	limb
 vcházet	to enter
 dělnický	Workers'
+mariánský	Marian
 oslovovat	address
 překvapovat	surprise
 vzrušující	exciting
@@ -6447,6 +6796,7 @@ ustat	surcease
 jamka	hole
 schvalovat	approve
 vloupat	burgle
+citron	Lemon
 cola	cola
 fúze	merger
 napovídat	prompt
@@ -6464,25 +6814,31 @@ otáčka	revolution
 rvát	rend
 seriózní	serious
 Šumava	Šumava
+vybavovat	Outfitting
 efektivně	effectively
 exploze	explosion
 opona	curtain
 pobavit	entertain
 vzpoura	insurgency
 kandidovat	run
+lázeňský	Spa
 rozšiřování	expansion
 špína	dirt
 urážka	insult
 veselí	cheerfulness
 zábrana	barrier
 začínající	beginning
+ahoj	Hello
+bitevní	Battleship
 hostina	feast
 nábřeží	embankment
 navržený	designed by
 popředí	foreground
 prováděný	conducted
+ručně	Manually
 vládnoucí	ruling
 cibulka	bulb
+památkový	Heritage
 mísit	mix
 pyramida	pyramid
 tamhle	there
@@ -6490,11 +6846,13 @@ vyčíst	read
 pentlička	ribbons
 přemoci	overwhelm
 spekulovat	speculate
+střešní	Roof
 širý	expansive
 úsudek	opinion
 obývat	inhabit
 vyvinutý	developed
 zabývající	dealing
+moskevský	Muscovite
 prdel	ass
 rýsovat	draw
 sloučenina	compound
@@ -6502,6 +6860,8 @@ vír	swirl
 dotčený	issue
 pobíhat	run about
 zapamatovat	remember
+agenda	Agenda
+českobudějovický	Budweis
 dub	oak
 dražba	auction
 volnost	freedom
@@ -6510,12 +6870,15 @@ antibiotikum	antibiotic
 hostinský	innkeeper
 ukradnout	steal
 červ	worm
+Írán	Iran
+můra	Nightmare
 skóre	score
 spolehlivě	reliably
 vízum	visa
 zdvořile	courteously
 zvětšovat	increasing
 adaptace	adaptation
+carský	Czarist
 doběhnout	bamboozle
 ústí	mouth
 zátoka	cove
@@ -6539,6 +6902,7 @@ ušklíbnout	grin
 utkat	fight
 autorův	the author
 gang	gang
+předsednictvo	Bureau
 rozličný	sundry
 spotřebitelský	consumer
 tupý	edgeless
@@ -6549,8 +6913,10 @@ zneužití	abuse
 křoví	bushes
 Třebíč	Třebíč
 úděl	lot
+atlantik	Atlantic
 baterka	flashlight
 distributor	distributor
+shromažďovat	Collect
 svařování	welding
 mandle	almonds
 papoušek	parrot
@@ -6562,6 +6928,7 @@ prasknout	crack
 středoevropský	Central Europe
 svit	shine
 troufat	dare
+konkursní	Bankruptcy
 přeměnit	convert
 senior	senior
 čtvrť	district
@@ -6575,6 +6942,7 @@ hrubě	roughly
 chybějící	missing
 malířství	painting
 cosinus	cosine
+projekce	Projection
 předsedkyně	chairwoman
 uveřejnit	publish
 kopnout	kick
@@ -6599,7 +6967,6 @@ reaktor	reactor
 světec	saint
 tancovat	dance
 výtvor	creation
-y	y
 ponožka	sock
 spása	salvation
 domněnka	assumption
@@ -6644,8 +7011,10 @@ rub	reverse
 říční	fluvial
 zorganizovat	organize
 dvorní	court
+hraní	Play
 injekce	injection
 malířský	pictorial
+nadrobno	Finely
 parní	steam
 účes	hairstyle
 zesnulý	deceased
@@ -6665,6 +7034,7 @@ jiskra	sparkle
 uhodit	hit
 vyzařovat	irradiate
 zbavovat	get rid of
+partnerka	Partner
 porodit	give birth
 promítnout	projected
 přihláška	application
@@ -6673,10 +7043,12 @@ zareagovat	react
 zvětšit	enlarge
 kolektiv	team
 poražený	defeated
+propad	Drawdown
 utřít	wipe
 hojně	profusely
 pozitivně	positively
 víkendový	weekend
+přilba	Helmet
 spalování	combustion
 vyčerpaný	exhausted
 bílek	albumen
@@ -6707,9 +7079,11 @@ kytice	bouquet
 podivuhodný	prodigious
 studna	well
 ošetření	treatment
+Procházka	Stroll
 titulní	title
 uklidňovat	easing
 indikátor	indicator
+jihlavský	Jihlava
 zahradník	gardener
 chlubit	flaunt
 kapr	carp
@@ -6719,6 +7093,7 @@ nahlížet	inspect
 navrhovaný	proposed
 badatel	researcher
 Litvínov	Litvínov
+partnerský	Affiliate
 propaganda	propaganda
 prostitutka	prostitute
 třicetiletý	thirty
@@ -6728,10 +7103,13 @@ kovář	smith
 kriminální	criminal
 pitný	drinking
 pokrývka	cover
+kdekdo	Everybody
 schodek	deficit
 dohnat	catch up
+Jičín	Jicin
 jihomoravský	South Moravian
 soustředěný	intent
+Milán	Milan
 stolní	table
 ghetto	ghetto
 návaznost	continuity
@@ -6752,8 +7130,10 @@ archeologický	archaeological
 rajský	tomato
 zeleninový	vegetable
 autentický	authentic
+displej	Screen
 dodatečně	additionally
 dýmka	pipe
+Havířov	Havirov
 pól	pole
 přehodit	throw
 sjednocení	unification
@@ -6761,6 +7141,7 @@ sjednocení	unification
 intervence	intervention
 konfrontace	confrontation
 ztuhnout	congeal
+živě	Live
 borovice	pine
 dospělost	adulthood
 očištěný	refined
@@ -6770,13 +7151,16 @@ vrtět	wiggle
 plodný	fruitful
 prodlužovat	extend
 zdravit	salute
+letadlový	Airplane
 poučení	enlightenment
+HTTP	HTTP
 navenek	externally
 novodobý	modern
 úroda	crop
 zmlknout	shut up
 hejno	covey
 překvapený	surprised
+HN	HN
 nechť	let
 postřehnout	espy
 zdobený	decorated
@@ -6792,6 +7176,7 @@ doplnění	completion
 krytý	indoor
 lom	quarry
 povlak	coating
+CSc	Ph.D.
 hej	hey
 intenzivně	heavily
 nepatrný	slight
@@ -6807,6 +7192,7 @@ trám	beam
 bohoslužba	worship
 impérium	empire
 lyžař	skier
+mexický	Mexican
 vyvrcholit	climax
 citovaný	cited
 dna	gout
@@ -6819,7 +7205,9 @@ ježek	hedgehog
 jogurt	yogurt
 přikrývka	blanket
 tribuna	tribune
+šampaňské	Champagne
 zvířecí	animal
+berlínský	Berlin
 editor	editor
 negativně	negative
 peří	feather
@@ -6829,6 +7217,8 @@ zaregistrovat	register
 zářící	gleaming
 aktér	actor
 lékárna	pharmacy
+Líza	Lisa
+bank	Banks
 cestička	path
 izolovaný	isolated
 okenní	window
@@ -6881,6 +7271,7 @@ přiběhnout	run up
 topit	stoke
 upírat	denied
 klouzat	slide
+projektový	Project
 průběžný	running
 vyměňovat	exchange
 zamlouvat	liking
@@ -6890,15 +7281,21 @@ dírka	hole
 e-mail	E-mail address
 rozlišit	distinguish
 vyjíždět	drive out
+podpůrný	Support
 vyhodnocení	evaluation
+Bedřich	Bedrich
+francouzština	French
 magie	magic
 životopis	resume
 ad	ad
+FBI	FBI
 formovat	shape
 jmenování	appointment
 komický	comic
 zakotvit	anchor
 los	moose
+MUDr	MD
+produktivní	Productive
 respondent	respondent
 sklízet	harvest
 vězet	inhere
@@ -6909,6 +7306,7 @@ mentální	mental
 nasednout	remount
 přírůstek	growth
 vtrhnout	invade
+Alžběta	Elizabeth
 dokumentovat	document
 šelma	beast
 koupání	bathing
@@ -6918,12 +7316,14 @@ neschopnost	inability
 překonávat	overcome
 ptáček	bird
 solidarita	solidarity
+škodovka	Skoda
 uhelný	coal
 exemplář	specimen
 sanitka	ambulance
 střízlivý	sober
 urychlit	accelerate
 reál	real
+ukrajinský	Ukrainian
 dál	farther
 fascinovat	fascinate
 ječet	yell
@@ -6949,10 +7349,12 @@ výloha	shop window
 diagnostika	diagnostics
 mrazivý	frosty
 patřící	belonging
+Přerov	Prerov
 šíje	is
 zničení	destruction
 hromádka	pile
 pásek	strap
+pěvecký	Singing
 radostně	gleefully
 střetnout	clash
 pečený	baked
@@ -6961,6 +7363,7 @@ vertikální	vertical
 hlaveň	barrel
 oslavovat	celebrate
 poskytovaný	provided
+rozpuštěný	Dissolved
 závoj	veil
 dobrota	goodness
 kohoutek	withers
@@ -6982,27 +7385,34 @@ preparát	preparation
 šroub	bolt
 zapisovat	enter
 monarchie	monarchy
+skotský	Scottish
 vodka	vodka
 zbožný	pious
 zveřejnění	disclosure
 zpracovaný	processed
 fakultní	faculty
+materiálový	Material
 slabě	faintly
 hypotéka	mortgage
+svalový	Muscle
+sdělovací	Communication
 hierarchie	hierarchy
 kašel	cough
 obrábění	machining
+opáčit	Opacity
 žal	heartbreak
 doleva	to the left
 Kroměříž	Kroměříž
 křiknout	shout
 monopol	monopoly
+osmahnout	Brown
 pejsek	doggie
 projednávat	discuss
 spisovatelka	authoress
 vodík	hydrogen
 diskotéka	discotheque
 dlouze	long
+hospodin	LORD
 svobodně	freely
 tyčit	rear
 vyučovací	teaching
@@ -7026,6 +7436,8 @@ socialista	socialist
 svislý	vertical
 špitál	hospital
 uklízet	clean up
+vyšetřovací	Investigation
+arab	Arab
 blaho	welfare
 clo	duty
 okrajový	marginal
@@ -7035,11 +7447,13 @@ kronika	chronicle
 namáhat	strain
 plynoucí	flowing
 prodavačka	saleswoman
+Španěl	Spaniard
 ubývat	wane
 zdolat	overpower
 dědek	dědek
 kocour	tomcat
 konkurovat	compete
+monsieur	Monsieur
 natažený	taut
 odseknout	retort
 splývat	merge
@@ -7067,6 +7481,7 @@ fyziologický	physiological
 nahrát	record
 povstat	rise
 přebytek	surplus
+vysoká	High
 vystačit	scrape by
 zdání	appearance
 dodatek	supplement
@@ -7077,10 +7492,13 @@ vodovod	water supply
 bulvár	boulevard
 delegát	delegate
 JUDr	JUDr
+potravinářský	Food
 bezvýznamný	meaningless
 hospodyně	housekeeper
+madame	Madame
 odstrčit	push
 sprostý	indecent
+sváteční	Festive
 vypočítat	calculate
 bezdomovec	homeless
 bloudit	wander
@@ -7112,6 +7530,7 @@ starobylý	ancient
 riskantní	risky
 samička	female
 soutěžit	compete
+Třinec	Trinec
 leasingový	leasing
 útlý	slender
 člověče	man
@@ -7133,6 +7552,7 @@ křest	baptism
 mělký	shallow
 perspektivní	perspective
 vhodně	appropriately
+Vít	Bind
 vyvážený	balanced
 lítat	flying
 mg	mg
@@ -7154,6 +7574,7 @@ zasvětit	consecrate
 doplatit	pay
 napodobovat	imitate
 přesvědčivě	convincingly
+románský	Romance
 zpáteční	return
 žába	frog
 dokořán	wide open
@@ -7165,6 +7586,7 @@ hadr	rag
 off	off
 topení	heating
 uvíznout	jam
+Cikán	Gypsy
 kazit	spoil
 nalezený	found
 písečný	sandy
@@ -7177,13 +7599,18 @@ stanovovat	set
 bič	whip
 metodika	methodics
 spotřebovat	consume
+SRN	Germany
 dvacetiletý	twenty
 konzerva	tin
+Maďar	Hungarian
 praktika	practice
+softwarový	Software
+blahý	Blah
 diamant	diamond
 kamení	rocks
 napomáhat	assist
 terénní	landscaping
+zemanův	Zeman
 kurt	court
 páka	lever
 pojmenování	designation
@@ -7203,6 +7630,7 @@ sílit	grow
 švagr	brother in law
 dechový	woodwind
 lahvička	phial
+nika	Niche
 hrůzný	creepy
 pozdravovat	acclaim
 hlídač	watchman
@@ -7233,10 +7661,12 @@ vyznačovat	distinguish
 opatřit	provide
 tekutina	fluid
 výslech	interrogation
+irácký	Iraqi
 přejet	run over
 rukáv	sleeve
 rýže	rice
 emoce	emotion
+související	Related
 spoléhat	rely
 licence	license
 odkaz	link
@@ -7262,12 +7692,14 @@ komentář	comment
 medicína	medicine
 zvukový	audible
 mýtus	myth
+zpravodajský	News
 zastávat	stand
 jednoznačný	clear
 odrůda	variety
 rozlišovat	distinguish
 hřbet	spine
 upřímný	honest
+sdílet	Share
 pozorování	observation
 zřídka	rarely
 výborně	great
@@ -7278,6 +7710,8 @@ zakladatel	founder
 historka	story
 omlouvat	apologize
 protivník	adversary
+Jindřich	Henry
+karlovarský	Carlsbad
 koneckonců	after all
 operátor	operator
 poranění	injury
@@ -7291,6 +7725,7 @@ sporný	controversial
 ves	village
 uchopit	grasp
 přidávat	add
+vyvést	Remove
 ďábel	devil
 osmdesát	eighty
 provozovatel	operator
@@ -7299,11 +7734,14 @@ dobro	good
 éra	era
 běhat	run
 záplava	flooding
+prezentace	Presentation
 vykazovat	exhibit
 převod	transfer
 oddělit	separate
 vitamín	vitamin
 zakládat	post
+bejt	Beit
+čeština	Czech
 pronikat	permeate
 prevence	prevention
 recept	recipe
@@ -7319,6 +7757,7 @@ oblak	cloud
 nervový	nervous
 vylučovat	secrete
 dojet	reach
+křesťan	Christian
 konkrétně	concretely
 jihočeský	jihočeský
 pálit	fire
@@ -7333,6 +7772,7 @@ terapie	therapy
 usoudit	infer
 všeobecně	universally
 ideál	ideal
+mírový	Peace
 pracující	working
 bojový	fighting
 civilní	civil
@@ -7358,10 +7798,12 @@ odpůrce	respondent
 poslechnout	listen
 vytvořený	created
 podléhat	be subject to
+Švédsko	Sweden
 originální	original
 pozorně	attentively
 šířka	width
 keř	bush
+Polák	Pole
 hlasovat	vote
 minimum	minimum
 řemeslo	craft
@@ -7390,6 +7832,7 @@ uchazeč	applicant
 narozený	born
 alternativní	alternative
 skončení	completion
+ČEZ	CEZ
 normálně	normally
 protestovat	protest
 vonět	smell
@@ -7399,6 +7842,7 @@ mlýn	mill
 otáčet	rotate
 tvor	creature
 barokní	baroque
+citronový	Lemon
 námitka	objection
 řetěz	chain
 upravovat	edited
@@ -7419,12 +7863,14 @@ dozadu	backwards
 unést	abduct
 trpělivě	patiently
 zahrnout	include
+anglicky	English
 havárie	crash
 sedmdesátý	seventieth
 čtvrtletí	quarter
 filozof	philosopher
 kdepak	bloody likely
 uvařit	cook
+Žid	Jew
 rádio	radio
 tajit	concealing
 poznávat	recognize
@@ -7459,6 +7905,7 @@ postižení	infliction
 příjemně	pleasantly
 hradba	wall
 kód	code
+rumunský	Romanian
 van	van
 dej	give
 přinutit	force
@@ -7476,7 +7923,6 @@ vývar	broth
 molekula	molecule
 opoziční	opposite
 schránka	mailbox
-cca	ca.
 dík	thanks
 riskovat	risk
 pasus	pasus
@@ -7510,6 +7956,7 @@ zvolený	elected
 chlapík	guy
 podniknout	undertake
 mravní	moral
+USD	USD
 pouť	pilgrimage
 strýček	uncle
 vážený	honorable
@@ -7520,6 +7967,7 @@ legislativa	legislation
 polibek	kiss
 demonstrace	demonstration
 zastávka	stop
+děda	Grandpa
 odstup	spacing
 sad	park
 řvát	scream
@@ -7545,6 +7993,7 @@ kotel	boiler
 mříž	grille
 namísto	instead
 plést	weave
+webový	Web
 elegantní	elegant
 pestrý	colorful
 sevřít	clench
@@ -7554,7 +8003,9 @@ hněv	anger
 odjezd	departure
 řez	cut
 sir	sir
+Oldřich	Oldrich
 morálka	morality
+Řecko	Greece
 pódium	podium
 semeno	seed
 vzdělaný	educated
@@ -7576,6 +8027,7 @@ zátěž	ballast
 inspirovat	inspire
 půlka	half
 shodnout	agree
+ústecký	Usti
 zakrýt	cover up
 přesnost	accuracy
 navždy	forever
@@ -7590,8 +8042,10 @@ oltář	altar
 horko	hot
 dosah	reach
 báječný	yummy
+Horní	Upper
 organizovaný	organized
 orientovat	orientate
+africký	African
 odebrat	take
 působící	acting
 zábavný	fun
@@ -7603,10 +8057,12 @@ křik	outcry
 ublížit	hurt
 vana	bathtub
 důchodce	pensioner
+kanadský	Canadian
 kolečko	wheelbarrow
 ocenění	appreciation
 odvážit	weigh out
 namítnout	protest
+SNB	SNB
 hubený	thin
 vlhkost	humidity
 převaha	preponderance
@@ -7624,6 +8080,7 @@ osvětlení	lighting
 sekunda	second
 létat	fly
 posloužit	serve
+služební	Business
 trpělivost	patience
 grafický	graphic
 federace	federation
@@ -7654,6 +8111,7 @@ vyhnat	expel
 garáž	garage
 smetana	cream
 žíla	vein
+faktum	FAKTUM
 plakát	poster
 srovnatelný	comparable
 mnich	monk
@@ -7663,12 +8121,14 @@ strašlivý	dreadful
 horečka	fever
 krást	thieve
 zoufalství	despair
+ČSN	CSN
 řadit	shift
 slovní	verbal
 sídlit	reside
 nabývat	acquire
 vznášet	float
 zkoumání	exploration
+ČSSR	CSSR
 prestižní	prestigious
 prkno	board
 přiměřený	adequate
@@ -7726,6 +8186,7 @@ univerzální	universal
 dres	jersey
 kompetence	competence
 publikovat	publish
+palestinský	Palestinian
 estetický	esthetic
 distribuce	distribution
 směšný	ridiculous
@@ -7747,6 +8208,7 @@ dědictví	heritage
 dodržování	compliance
 mše	service
 to	it
+Věra	Vera
 systémový	systemic
 božský	divine
 lidovec	Christian Democrat
@@ -7754,13 +8216,16 @@ milenka	mistress
 milovaný	beloved
 komunální	communal
 psaný	written
+MS	MS
 vzdálit	leave
 zazvonit	ring the bell
+kouzelný	Magical
 propast	abyss
 naložit	load
 shromáždit	gather
 překvapivě	surprisingly
 hovězí	beef
+transformace	Transformation
 zmiňovat	alluding
 počáteční	initial
 srdeční	heart
@@ -7776,12 +8241,15 @@ porozumění	understanding
 rizikový	hazardous
 detektiv	detective
 pedagogický	pedagogic
+Příbram	Pribram
 vyučování	tuition
 aplikovat	apply
 absolvent	graduate
 farma	farm
 šílenství	madness
+doktorka	Doctor
 gólman	goalie
+nebesa	Heavens
 pohon	drive
 zvyšování	increasing
 podnikat	business
@@ -7791,12 +8259,17 @@ ochotně	willingly
 design	design
 stehno	thigh
 odmlčet	pause
+KSČM	KSČM
 popel	ash
 rádium	radium
+vídeňský	Viennese
 Čapek	Čapek
 připojení	connectivity
+listí	Leaves
 celní	customs
+HDP	GDP
 počít	conceive
+Slovák	Slovak
 přibývat	grow
 nikam	nowhere
 podrobit	undergo
@@ -7818,14 +8291,17 @@ menšina	minority
 opakovaně	repeatedly
 přibližovat	draw near
 rozkoš	delight
+turecký	Turkish
 zkušební	probationary
 aparát	apparatus
 komplikovaný	complicated
 splnění	fulfillment
 bojovník	fighter
 uspokojení	satisfaction
+foto	Photo
 náruč	armful
 zákrok	intervention
+komunismus	Communism
 trojice	threesome
 orientovaný	oriented
 administrativní	administrative
@@ -7882,6 +8358,7 @@ dokola	round
 lesklý	bright
 mise	mission
 rozsvítit	switch on
+Aleš	Ales
 čerpat	draw
 kostým	costume
 zemědělec	farmer
@@ -7890,6 +8367,7 @@ smůla	bad luck
 vytrhnout	rip
 korupce	corruption
 šťastně	happily
+Temelín	Temelin
 spolužák	classmate
 tahat	pull
 nositel	bearer
@@ -7938,15 +8416,19 @@ chlad	coldness
 jakož	and
 nájemné	rent
 stvoření	creation
+Jugoslávie	Yugoslavia
 pivovar	brewery
 zánět	inflammation
 vlajka	flag
 evidence	records
 hýbat	stir
 věcný	factual
+křesťanství	Christianity
+romský	Gypsy
 záchod	toilet
 nervózní	nervous
 víčko	cover
+zlínský	Zlin
 obdiv	admiration
 produktivita	productivity
 bílkovina	protein
@@ -7977,6 +8459,7 @@ příště	next
 stádo	herd
 stříbro	silver
 šíření	spreading
+Beneš	Benes
 intelektuální	intellectual
 show	show
 hlavička	header
@@ -8024,6 +8507,7 @@ dočasný	temporary
 promíchat	mix up
 zastoupení	representation
 aha	I see
+Dolní	Lower
 smíchat	mix
 odvětit	rejoin
 hit	hit
@@ -8049,6 +8533,7 @@ zelí	cabbage
 jinam	elsewhere
 porota	jury
 zodpovědný	accountable
+telekomunikační	Telecommunications
 vzorec	formula
 genetický	genetic
 vyplnit	fill
@@ -8064,6 +8549,7 @@ málokdo	hardly anybody
 přechodný	transitory
 zdobit	Dress Up
 stvořit	create
+Angličan	Englishman
 socialismus	socialism
 komponenta	component
 hm	hm
@@ -8078,6 +8564,7 @@ strážce	watchman
 nadšený	enthusiastic
 střevo	intestine
 zavazadlo	luggage
+ČNB	CNB
 lámat	break
 učebnice	textbook
 vybavený	equipped
@@ -8092,6 +8579,7 @@ muzikál	musical
 odstín	hue
 volání	call
 přistupovat	access
+uherský	Hungarian
 honem	come on
 ložisko	bearing
 pila	sawmill
@@ -8102,11 +8590,14 @@ užití	use
 jmění	fortune
 prsa	breast
 jednostranný	one-sided
+korejský	Korean
 publicista	publicist
 včasný	early
 bronz	bronze
 dopouštět	commit
+Mojžíš	Moses
 padající	falling
+portugalský	Portuguese
 poslušnost	obedience
 rozkvět	florescence
 sirotek	orphan
@@ -8138,6 +8629,7 @@ vynutit	enforce
 zámořský	overseas
 kvalitativní	qualitative
 podsvětí	underworld
+senátní	Senate
 tolerovat	tolerate
 vůdčí	leading
 zbrojní	arms
@@ -8154,6 +8646,7 @@ zprostředkovat	convey
 dívenka	girl
 horizontální	horizontal
 močový	urine
+afghánský	Afghan
 Bož	Of God
 čaroděj	wizard
 dramaticky	dramatically
@@ -8168,6 +8661,7 @@ masáž	massage
 udat	state
 únavný	tiresome
 ustavičně	incessantly
+mzdový	Wages
 ručička	needle
 široko	wide
 toxický	toxic
@@ -8176,11 +8670,13 @@ vyznávat	worship
 zachraňovat	rescue
 odboj	revolt
 samo	itself
+sudí	Judges
 zavrčet	growl
 foukat	blow
 chovatel	breeder
 rozebrat	dismantle
 statný	portly
+topný	Heating
 přistání	landing
 spálený	burnt
 větvička	twig
@@ -8188,6 +8684,8 @@ výběžek	spit
 zatěžovat	burden
 zrod	birth
 důstojně	dignity
+kontrolovaný	Controlled
+Ládin	Laden
 představený	introduced
 složitost	complexity
 ustavit	establish
@@ -8197,6 +8695,7 @@ karosérie	bodywork
 realismus	realism
 řezat	cut
 společensky	socially
+VB	UK
 atlet	athlete
 komfort	comfort
 malér	scrape
@@ -8210,6 +8709,7 @@ kompenzace	compensation
 měšťanský	burgess
 odkazovat	reference
 podvozek	chassis
+půldruhý	Ninety
 rozhodovací	decision
 sklidit	clear away
 teologie	theology
@@ -8218,6 +8718,7 @@ ubrus	cloth
 žralok	shark
 banální	banal
 diagnostický	diagnostic
+kreditní	Credit
 rozeznávat	distinguish
 různorodý	varied
 spojitost	connection
@@ -8231,6 +8732,7 @@ smečka	pack
 spravit	mend
 vystupování	manner
 žurnalista	journalist
+kladenský	Kladno
 komentátor	commentator
 masakr	massacre
 národnostní	national
@@ -8245,18 +8747,24 @@ starostka	mayoress
 kontinentální	continental
 přiměřeně	adequately
 spára	gap
+Mělník	Melnik
 objektivně	objectively
 orlice	eagle
 předstih	advance
 šev	seam
+tuzemsko	Domestic
 zrnko	grain
 číslice	digit
 elementární	elementary
+herní	Gaming
 nížina	lowland
 dýka	dagger
+finálový	Final
 současník	contemporary
 vysvědčení	certificate
 fazole	beans
+orientální	Oriental
+rallye	Rally
 rozpoutat	unleash
 sporně	controversially
 vrstevník	contemporary
@@ -8274,6 +8782,7 @@ vychladlý	cooled down
 pat	stalemate
 trpící	sufferers
 utěšovat	comfort
+benátský	Venetian
 hučet	hum
 charita	charity
 listovat	browse
@@ -8284,11 +8793,14 @@ třídění	classification
 zalíbit	please
 zmáčknout	squeeze
 zranitelný	vulnerable
+červnový	June
 čip	chip
 kosmetický	cosmetic
 obývák	living room
 okouzlit	enrapture
 platforma	platform
+propojený	Linked
+západočeský	Westbohemian
 archív	archive
 kočárek	stroller
 konzumace	eating
@@ -8314,6 +8826,7 @@ vjem	sensation
 živobytí	living
 bažina	swamp
 dodržení	compliance
+extrémně	Extremely
 facto	facto
 napravo	right
 osnova	outline
@@ -8337,11 +8850,13 @@ amatér	amateur
 kandidatura	candidacy
 munice	ammunition
 přihrávka	pass
+růstový	Growth
 vánek	breeze
 vášnivě	heatedly
 hluchý	deaf
 prodávaný	sold
 siréna	siren
+SMS	SMS
 vzrušeně	excitedly
 zatočit	turn
 zjev	appearance
@@ -8374,12 +8889,15 @@ rozpadat	crumble
 střevíc	shoe
 vařící	boiling
 vtáhnout	pull in
+bednění	Formwork
 dealer	dealer
 motat	wind up
+nuže	Well
 opodál	aloof
 praskat	creak
 ztuhlý	stiff
 geologický	geological
+MV	MV
 obdivuhodný	admirable
 podélný	longitudinal
 potit	perspire
@@ -8387,6 +8905,7 @@ předložený	submitted
 trn	thorn
 elegance	elegance
 integrovat	integrate
+misie	Missions
 postřeh	observation
 špaček	starling
 garda	guard
@@ -8404,6 +8923,7 @@ správnost	rightness
 víla	fairy
 vraždit	murder
 bit	bit
+dohodnutý	Agreed
 estetika	aesthetics
 chovanec	inmate
 mrav	manners
@@ -8422,12 +8942,14 @@ pískat	whistle
 pokřtít	christen
 přislíbit	vow
 rybička	tiddler
+vypravěč	Narrator
 kvóta	quota
 palubní	board
 pamětní	memorial
 patnáctý	fifteenth
 přidržovat	hold
 dovážet	import
+dvojka	Pair
 hojný	abundant
 peníz	coin
 podezírat	suspect
@@ -8440,7 +8962,9 @@ naložený	loaded
 pohraniční	border
 poklidný	placid
 spěšně	hastily
+SR	SR
 vršek	top
+zlatka	Zlatko
 invalidní	disabled
 křivda	injustice
 opar	haze
@@ -8449,18 +8973,21 @@ rušný	eventful
 zahajovat	launch
 zvědavě	curiously
 čtyřicátý	fortieth
+Ráchel	Rachel
 viditelně	visibly
 vpadnout	raid
 biskupský	episcopal
 hraběnka	countess
 pootevřený	ajar
 posedlost	obsession
+postěžovat	Complain
 servisní	service
 telekomunikace	telecommunication
 výmluvný	eloquent
 zásobovat	supply
 horák	burner
 koridor	corridor
+kytarista	Guitarist
 monumentální	monumental
 osvojit	learn
 regulovaný	controlled
@@ -8483,11 +9010,13 @@ part	part
 pH	pH
 postih	recourse
 ježto	because
+kalifornský	Californian
 stesk	nostalgia
 suverenita	sovereignty
 trans	trance
 výpis	listing
 atletický	athletic
+cožpak	Had
 mluvící	speaking
 obsáhlý	comprehensive
 pořízení	acquisition
@@ -8512,6 +9041,8 @@ republikánský	republican
 udiveně	in astonishment
 unaveně	weary
 vydírání	extortion
+výztuž	Reinforcement
+zastupitelství	Prosecution
 zkažený	corrupt
 air	air
 biologie	biology
@@ -8529,6 +9060,7 @@ rival	rival
 rozdrtit	crush
 směle	boldly
 soška	statuette
+velikonoce	Easter
 hoře	mountain
 objektiv	lens
 pilně	diligently
@@ -8544,14 +9076,17 @@ přesahující	exceeding
 rasový	race
 receptor	receptor
 reformní	reform
+svíce	Candles
 štěkat	bark
 vyjednávat	negotiate
 zrzavý	ginger
 klimatizace	air conditioning
+Náchod	Nachod
 pohrávat	fool
 šipka	arrow
 vyplňovat	fill
 zveřejněný	published
+bodový	Scatter
 odpadový	waste
 podvečer	evening
 rozumně	reasonably
@@ -8561,21 +9096,28 @@ hustě	thick
 královéhradecký	Hradec Kralove
 radikálně	radically
 šlápnout	tread
+teplický	Teplice
 vegetace	vegetation
+vyvolený	Chosen
 branže	branch
 drátěný	wire
 kolébka	cradle
 koncovka	ending
+stropní	Ceiling
 učenec	scholar
+Zéland	Zealand
 obchvat	envelopment
 obratně	ably
 ploutev	flipper
 prolomit	break
+Rýn	Rhine
 selský	rural
+středeční	Wednesday
 štěrbina	slot
 vlažný	lukewarm
 vyklouznout	slip out
 životně	vitally
+BMW	BMW
 husí	goose
 chápavě	knowingly
 nezájem	lack of interest
@@ -8583,6 +9125,7 @@ pasta	paste
 port	port
 pozvánka	invitation card
 šum	noise
+vietnamský	Vietnamese
 zálivka	dressing
 alej	alley
 klání	tilt
@@ -8590,6 +9133,7 @@ odbočit	digress
 senzace	sensation
 setrvat	persevere
 slavík	nightingale
+tržnice	Market
 alergie	allergy
 celoroční	yearlong
 destička	tablet
@@ -8598,6 +9142,7 @@ mafie	mafia
 meziříčí	meziříčí
 republikán	republican
 sekvence	sequence
+kostní	Bone
 množit	proliferate
 surrealismus	surrealism
 šach	shah
@@ -8628,8 +9173,10 @@ hvězdička	asterisk
 roztrhat	tear
 diplom	diploma
 chlupatý	hairy
+kompromisní	Compromise
 kytovec	grampus
 vloupání	housebreaking
+zábavní	Entertainment
 zdatný	able-bodied
 doznat	admit
 drzý	sassy
@@ -8645,6 +9192,7 @@ klečet	kneel
 nastavený	default
 palivový	fuel
 přiřadit	assign
+saudský	Saudi
 telefonický	telephonic
 trakt	tract
 domlouvat	play
@@ -8671,10 +9219,13 @@ příslušenství	accessories
 určující	determining
 vycházka	outing
 výtěžek	yield
+zalévat	Water
 apoštol	apostle
 farmaceutický	pharmaceutical
 pekelný	infernal
+protestantský	Protestant
 stojan	easel
+úterní	Tuesday
 vzácně	rarely
 krmení	feeding
 obvodový	peripheral
@@ -8693,6 +9244,7 @@ překročení	crossing
 radioaktivní	radioactive
 sezení	seating
 dožadovat	crave
+MW	MW
 náhrobek	tombstone
 proslout	proslout
 přeběhnout	defect
@@ -8703,11 +9255,13 @@ Bruntál	Bruntál
 bubeník	drummer
 homosexualita	homosexuality
 panský	lordly
+pohybující	Moving
 popřát	wish
 průtok	flow
 spojující	linking
 sporák	cooker
 stabilizace	stabilization
+toulat	Roam
 tvrdost	hardness
 civilizovaný	civilized
 křížek	cross
@@ -8717,6 +9271,8 @@ plodina	crop
 pojatý	conceived
 prodírat	wade through
 přestoupit	change
+ÚV	CC
+Benešov	Benesov
 božstvo	deity
 naštvat	upset
 nepříjemnost	unpleasantness
@@ -8729,6 +9285,8 @@ ohniště	fireplace
 prohloubit	deepen
 prosazování	promotion
 semínko	seed
+Šárka	Sarka
+tabákový	Tobacco
 herectví	acting
 padák	parachute
 ponurý	grim
@@ -8740,17 +9298,22 @@ znázornit	typify
 chemik	chemist
 kapitalistický	capitalist
 kočí	coachman
+meditace	Meditation
 rodičovský	parental
 trio	trio
 zabručet	grunt
 kontinuita	continuity
+listopadový	November
+ME	ME
 pohovor	interview
 rozcházet	diverge
 spiknutí	conspiracy
 US-DEU	US-DEU
+zářijový	September
 guma	gum
 příď	nose
 stařenka	grandmother
+Sýkora	Sykora
 těstovina	pasta
 analogie	analogy
 homosexuál	gay
@@ -8765,10 +9328,14 @@ zbavený	bereft
 dutý	hollow
 kráter	crater
 sexy	sexy
+Zdeňa	Zdeno
 zdravotník	medic
+exportní	Export
 chudinka	poor soul
 kožešina	fur
+latina	Latin
 předposlední	penultimate
+Zbyněk	Zbynek
 ztroskotat	shipwreck
 čepel	blade
 doléhat	weigh
@@ -8796,6 +9363,7 @@ kasino	casino
 komodita	commodity
 navléknout	thread
 protein	protein
+věru	Indeed
 zahnout	turn
 fabrika	factory
 hadice	hose
@@ -8803,6 +9371,7 @@ severský	northern
 střelný	gun
 torpédo	torpedo
 bankrot	bankruptcy
+CIA	CIA
 čtveřice	quaternion
 kvetoucí	blooming
 polekat	scare
@@ -8813,11 +9382,13 @@ vytočit	dial
 vzlétnout	lift off
 čekající	waiting
 delta	delta
+eurozóna	Eurozone
 koktejl	cocktail
 nať	tops
 pronásledování	persecution
 propouštět	leak
 protahovat	protract
+přístupový	Access
 směsice	mix
 všudypřítomný	omnipresent
 výtečný	exquisite
@@ -8830,6 +9401,7 @@ výměra	acreage
 závodit	race
 finální	final
 koláž	collage
+kvantový	Quantum
 namluvit	tell
 sazka	sazka
 stokrát	hundreds of times
@@ -8841,6 +9413,7 @@ dilema	dilemma
 progresivní	progressive
 rotace	rotation
 stanovy	statutes
+synagoga	Synagogue
 vypracování	drawing
 autonomie	autonomy
 energický	energetic
@@ -8857,12 +9430,14 @@ pakt	pact
 přívod	intake
 skladový	stock
 zjišťování	discovery
+country	Country
 čilý	alert
 fara	rectory
 iniciovat	initiate
 oplátka	cachet
 podnos	tray
 poskytnutý	provided
+šept	Sept
 vložka	insert
 vousy	beard
 automatizace	automation
@@ -8882,6 +9457,7 @@ gauč	couch
 nezvyklý	unaccustomed
 plac	plac
 přejíždět	pass over
+Stalinův	Stalin
 vyčerpávající	exhaustive
 zabití	manslaughter
 zanechávat	leave
@@ -8894,6 +9470,7 @@ kooperace	cooperation
 motto	motto
 pomluva	slander
 synovec	nephew
+Táňa	Tana
 zástavba	development
 etiketa	etiquette
 jednoduchost	simplicity
@@ -8902,17 +9479,22 @@ mučení	torture
 regenerace	regeneration
 sestřenice	cousin
 totálně	completely
+Bachův	Bach
 ex	ex
 panák	stooge
+pojednou	Suddenly
 smysluplný	meaningful
+tmavě	Dark
 závora	barrier
 zdvojnásobit	double
 žaludeční	gastric
+metro	Metro
 sociologický	sociological
 Tvrdík	Tvrdík
 úmrtnost	death rate
 vichřice	gale
 zvířátko	little animal
+Krkonoše	Mountains
 lepit	glue
 taktický	tactical
 zdůvodnění	justification
@@ -8924,5 +9506,6 @@ zavládnout	reign
 blokovat	block
 jídelníček	diet
 klasik	classic
+liberál	Liberal
 kalendářní	calendar
 odolávat	resist
