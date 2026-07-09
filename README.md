@@ -13,9 +13,8 @@
 ```bash
 git clone https://github.com/melvincarvalho/vocab
 cd vocab
-npm install -g bower
-bower install
-# Open index.html in browser
+npx serve            # or: python3 -m http.server
+# then open the served URL (e.g. http://localhost:3000) in your browser
 ```
 
 Or try the [Live Demo](https://melvincarvalho.github.io/vocab/) directly.
